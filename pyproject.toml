@@ -1,0 +1,29 @@
+[project]
+name = "team-recognizer"
+version = "0.1.0"
+description = "Identify Pokémon GO tournament teams from broadcast overlay screenshots"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "numpy",
+    "opencv-python-headless",
+    "pillow",
+    "requests",
+    "tqdm",
+    "scipy",
+    "scikit-learn",
+    "torch",
+    "torchvision",
+    "timm",
+    "rapidocr-onnxruntime",
+    "rapidfuzz",
+]
+
+[project.scripts]
+recognizer = "recognizer.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["recognizer"]

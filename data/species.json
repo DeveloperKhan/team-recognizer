@@ -1,0 +1,9154 @@
+[
+  {
+    "speciesId": "abomasnow",
+    "speciesName": "Abomasnow",
+    "dex": 460,
+    "sid": 14720,
+    "showdownSlug": "abomasnow",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "abomasnow_mega",
+    "speciesName": "Abomasnow (Mega)",
+    "dex": 460,
+    "sid": 14721,
+    "showdownSlug": "abomasnow-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "abra",
+    "speciesName": "Abra",
+    "dex": 63,
+    "sid": 2016,
+    "showdownSlug": "abra",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "absol",
+    "speciesName": "Absol",
+    "dex": 359,
+    "sid": 11488,
+    "showdownSlug": "absol",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "absol_mega",
+    "speciesName": "Absol (Mega)",
+    "dex": 359,
+    "sid": 11489,
+    "showdownSlug": "absol-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "accelgor",
+    "speciesName": "Accelgor",
+    "dex": 617,
+    "sid": 19744,
+    "showdownSlug": "accelgor",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "aegislash_shield",
+    "speciesName": "Aegislash (Shield)",
+    "dex": 681,
+    "sid": 21792,
+    "showdownSlug": "aegislash",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "aerodactyl",
+    "speciesName": "Aerodactyl",
+    "dex": 142,
+    "sid": 4544,
+    "showdownSlug": "aerodactyl",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "aerodactyl_mega",
+    "speciesName": "Aerodactyl (Mega)",
+    "dex": 142,
+    "sid": 4545,
+    "showdownSlug": "aerodactyl-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "aggron",
+    "speciesName": "Aggron",
+    "dex": 306,
+    "sid": 9792,
+    "showdownSlug": "aggron",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "aggron_mega",
+    "speciesName": "Aggron (Mega)",
+    "dex": 306,
+    "sid": 9793,
+    "showdownSlug": "aggron-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "aipom",
+    "speciesName": "Aipom",
+    "dex": 190,
+    "sid": 6080,
+    "showdownSlug": "aipom",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "alakazam",
+    "speciesName": "Alakazam",
+    "dex": 65,
+    "sid": 2080,
+    "showdownSlug": "alakazam",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "alakazam_mega",
+    "speciesName": "Alakazam (Mega)",
+    "dex": 65,
+    "sid": 2081,
+    "showdownSlug": "alakazam-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "alomomola",
+    "speciesName": "Alomomola",
+    "dex": 594,
+    "sid": 19008,
+    "showdownSlug": "alomomola",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "altaria",
+    "speciesName": "Altaria",
+    "dex": 334,
+    "sid": 10688,
+    "showdownSlug": "altaria",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "altaria_mega",
+    "speciesName": "Altaria (Mega)",
+    "dex": 334,
+    "sid": 10689,
+    "showdownSlug": "altaria-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "amaura",
+    "speciesName": "Amaura",
+    "dex": 698,
+    "sid": 22336,
+    "showdownSlug": "amaura",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ambipom",
+    "speciesName": "Ambipom",
+    "dex": 424,
+    "sid": 13568,
+    "showdownSlug": "ambipom",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "amoonguss",
+    "speciesName": "Amoonguss",
+    "dex": 591,
+    "sid": 18912,
+    "showdownSlug": "amoonguss",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ampharos",
+    "speciesName": "Ampharos",
+    "dex": 181,
+    "sid": 5792,
+    "showdownSlug": "ampharos",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ampharos_mega",
+    "speciesName": "Ampharos (Mega)",
+    "dex": 181,
+    "sid": 5793,
+    "showdownSlug": "ampharos-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "annihilape",
+    "speciesName": "Annihilape",
+    "dex": 979,
+    "sid": 31328,
+    "showdownSlug": "annihilape",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "anorith",
+    "speciesName": "Anorith",
+    "dex": 347,
+    "sid": 11104,
+    "showdownSlug": "anorith",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "appletun",
+    "speciesName": "Appletun",
+    "dex": 842,
+    "sid": 26944,
+    "showdownSlug": "appletun",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "applin",
+    "speciesName": "Applin",
+    "dex": 840,
+    "sid": 26880,
+    "showdownSlug": "applin",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "araquanid",
+    "speciesName": "Araquanid",
+    "dex": 752,
+    "sid": 24064,
+    "showdownSlug": "araquanid",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "arbok",
+    "speciesName": "Arbok",
+    "dex": 24,
+    "sid": 768,
+    "showdownSlug": "arbok",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "arboliva",
+    "speciesName": "Arboliva",
+    "dex": 930,
+    "sid": 29760,
+    "showdownSlug": "arboliva",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "arcanine",
+    "speciesName": "Arcanine",
+    "dex": 59,
+    "sid": 1888,
+    "showdownSlug": "arcanine",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "arcanine_hisuian",
+    "speciesName": "Arcanine (Hisuian)",
+    "dex": 59,
+    "sid": 1889,
+    "showdownSlug": "arcanine-hisui",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "archen",
+    "speciesName": "Archen",
+    "dex": 566,
+    "sid": 18112,
+    "showdownSlug": "archen",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "archeops",
+    "speciesName": "Archeops",
+    "dex": 567,
+    "sid": 18144,
+    "showdownSlug": "archeops",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "arctibax",
+    "speciesName": "Arctibax",
+    "dex": 997,
+    "sid": 31904,
+    "showdownSlug": "arctibax",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "ariados",
+    "speciesName": "Ariados",
+    "dex": 168,
+    "sid": 5376,
+    "showdownSlug": "ariados",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "armaldo",
+    "speciesName": "Armaldo",
+    "dex": 348,
+    "sid": 11136,
+    "showdownSlug": "armaldo",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "armarouge",
+    "speciesName": "Armarouge",
+    "dex": 936,
+    "sid": 29952,
+    "showdownSlug": "armarouge",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "aromatisse",
+    "speciesName": "Aromatisse",
+    "dex": 683,
+    "sid": 21856,
+    "showdownSlug": "aromatisse",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "aron",
+    "speciesName": "Aron",
+    "dex": 304,
+    "sid": 9728,
+    "showdownSlug": "aron",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "arrokuda",
+    "speciesName": "Arrokuda",
+    "dex": 846,
+    "sid": 27072,
+    "showdownSlug": "arrokuda",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "articuno",
+    "speciesName": "Articuno",
+    "dex": 144,
+    "sid": 4608,
+    "showdownSlug": "articuno",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "articuno_galarian",
+    "speciesName": "Articuno (Galarian)",
+    "dex": 144,
+    "sid": 4609,
+    "showdownSlug": "articuno-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "audino",
+    "speciesName": "Audino",
+    "dex": 531,
+    "sid": 16992,
+    "showdownSlug": "audino",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "audino_mega",
+    "speciesName": "Audino (Mega)",
+    "dex": 531,
+    "sid": 16993,
+    "showdownSlug": "audino-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "aurorus",
+    "speciesName": "Aurorus",
+    "dex": 699,
+    "sid": 22368,
+    "showdownSlug": "aurorus",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "avalugg",
+    "speciesName": "Avalugg",
+    "dex": 713,
+    "sid": 22816,
+    "showdownSlug": "avalugg",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "avalugg_hisuian",
+    "speciesName": "Avalugg (Hisuian)",
+    "dex": 713,
+    "sid": 22817,
+    "showdownSlug": "avalugg-hisui",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "axew",
+    "speciesName": "Axew",
+    "dex": 610,
+    "sid": 19520,
+    "showdownSlug": "axew",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "azelf",
+    "speciesName": "Azelf",
+    "dex": 482,
+    "sid": 15424,
+    "showdownSlug": "azelf",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "azumarill",
+    "speciesName": "Azumarill",
+    "dex": 184,
+    "sid": 5888,
+    "showdownSlug": "azumarill",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "azurill",
+    "speciesName": "Azurill",
+    "dex": 298,
+    "sid": 9536,
+    "showdownSlug": "azurill",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bagon",
+    "speciesName": "Bagon",
+    "dex": 371,
+    "sid": 11872,
+    "showdownSlug": "bagon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "baltoy",
+    "speciesName": "Baltoy",
+    "dex": 343,
+    "sid": 10976,
+    "showdownSlug": "baltoy",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "banette",
+    "speciesName": "Banette",
+    "dex": 354,
+    "sid": 11328,
+    "showdownSlug": "banette",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "banette_mega",
+    "speciesName": "Banette (Mega)",
+    "dex": 354,
+    "sid": 11329,
+    "showdownSlug": "banette-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "barbaracle",
+    "speciesName": "Barbaracle",
+    "dex": 689,
+    "sid": 22048,
+    "showdownSlug": "barbaracle",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "barboach",
+    "speciesName": "Barboach",
+    "dex": 339,
+    "sid": 10848,
+    "showdownSlug": "barboach",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "barraskewda",
+    "speciesName": "Barraskewda",
+    "dex": 847,
+    "sid": 27104,
+    "showdownSlug": "barraskewda",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "basculin",
+    "speciesName": "Basculin",
+    "dex": 550,
+    "sid": 17600,
+    "showdownSlug": "basculin",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bastiodon",
+    "speciesName": "Bastiodon",
+    "dex": 411,
+    "sid": 13152,
+    "showdownSlug": "bastiodon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "baxcalibur",
+    "speciesName": "Baxcalibur",
+    "dex": 998,
+    "sid": 31936,
+    "showdownSlug": "baxcalibur",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bayleef",
+    "speciesName": "Bayleef",
+    "dex": 153,
+    "sid": 4896,
+    "showdownSlug": "bayleef",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "beartic",
+    "speciesName": "Beartic",
+    "dex": 614,
+    "sid": 19648,
+    "showdownSlug": "beartic",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "beautifly",
+    "speciesName": "Beautifly",
+    "dex": 267,
+    "sid": 8544,
+    "showdownSlug": "beautifly",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "beedrill",
+    "speciesName": "Beedrill",
+    "dex": 15,
+    "sid": 480,
+    "showdownSlug": "beedrill",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "beedrill_mega",
+    "speciesName": "Beedrill (Mega)",
+    "dex": 15,
+    "sid": 481,
+    "showdownSlug": "beedrill-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "beheeyem",
+    "speciesName": "Beheeyem",
+    "dex": 606,
+    "sid": 19392,
+    "showdownSlug": "beheeyem",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "beldum",
+    "speciesName": "Beldum",
+    "dex": 374,
+    "sid": 11968,
+    "showdownSlug": "beldum",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "bellibolt",
+    "speciesName": "Bellibolt",
+    "dex": 939,
+    "sid": 30048,
+    "showdownSlug": "bellibolt",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bellossom",
+    "speciesName": "Bellossom",
+    "dex": 182,
+    "sid": 5824,
+    "showdownSlug": "bellossom",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "bellsprout",
+    "speciesName": "Bellsprout",
+    "dex": 69,
+    "sid": 2208,
+    "showdownSlug": "bellsprout",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "bergmite",
+    "speciesName": "Bergmite",
+    "dex": 712,
+    "sid": 22784,
+    "showdownSlug": "bergmite",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bewear",
+    "speciesName": "Bewear",
+    "dex": 760,
+    "sid": 24320,
+    "showdownSlug": "bewear",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "bibarel",
+    "speciesName": "Bibarel",
+    "dex": 400,
+    "sid": 12800,
+    "showdownSlug": "bibarel",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "bidoof",
+    "speciesName": "Bidoof",
+    "dex": 399,
+    "sid": 12768,
+    "showdownSlug": "bidoof",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "binacle",
+    "speciesName": "Binacle",
+    "dex": 688,
+    "sid": 22016,
+    "showdownSlug": "binacle",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bisharp",
+    "speciesName": "Bisharp",
+    "dex": 625,
+    "sid": 20000,
+    "showdownSlug": "bisharp",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "blacephalon",
+    "speciesName": "Blacephalon",
+    "dex": 806,
+    "sid": 25792,
+    "showdownSlug": "blacephalon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "blastoise",
+    "speciesName": "Blastoise",
+    "dex": 9,
+    "sid": 288,
+    "showdownSlug": "blastoise",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "blastoise_mega",
+    "speciesName": "Blastoise (Mega)",
+    "dex": 9,
+    "sid": 289,
+    "showdownSlug": "blastoise-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "blaziken",
+    "speciesName": "Blaziken",
+    "dex": 257,
+    "sid": 8224,
+    "showdownSlug": "blaziken",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "blaziken_mega",
+    "speciesName": "Blaziken (Mega)",
+    "dex": 257,
+    "sid": 8225,
+    "showdownSlug": "blaziken-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "blipbug",
+    "speciesName": "Blipbug",
+    "dex": 824,
+    "sid": 26368,
+    "showdownSlug": "blipbug",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "blissey",
+    "speciesName": "Blissey",
+    "dex": 242,
+    "sid": 7744,
+    "showdownSlug": "blissey",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "blitzle",
+    "speciesName": "Blitzle",
+    "dex": 522,
+    "sid": 16704,
+    "showdownSlug": "blitzle",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "boldore",
+    "speciesName": "Boldore",
+    "dex": 525,
+    "sid": 16800,
+    "showdownSlug": "boldore",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "boltund",
+    "speciesName": "Boltund",
+    "dex": 836,
+    "sid": 26752,
+    "showdownSlug": "boltund",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bombirdier",
+    "speciesName": "Bombirdier",
+    "dex": 962,
+    "sid": 30784,
+    "showdownSlug": "bombirdier",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bonsly",
+    "speciesName": "Bonsly",
+    "dex": 438,
+    "sid": 14016,
+    "showdownSlug": "bonsly",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bouffalant",
+    "speciesName": "Bouffalant",
+    "dex": 626,
+    "sid": 20032,
+    "showdownSlug": "bouffalant",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bounsweet",
+    "speciesName": "Bounsweet",
+    "dex": 761,
+    "sid": 24352,
+    "showdownSlug": "bounsweet",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "braixen",
+    "speciesName": "Braixen",
+    "dex": 654,
+    "sid": 20928,
+    "showdownSlug": "braixen",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "brambleghast",
+    "speciesName": "Brambleghast",
+    "dex": 947,
+    "sid": 30304,
+    "showdownSlug": "brambleghast",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bramblin",
+    "speciesName": "Bramblin",
+    "dex": 946,
+    "sid": 30272,
+    "showdownSlug": "bramblin",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "braviary",
+    "speciesName": "Braviary",
+    "dex": 628,
+    "sid": 20096,
+    "showdownSlug": "braviary",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "braviary_hisuian",
+    "speciesName": "Braviary (Hisuian)",
+    "dex": 628,
+    "sid": 20097,
+    "showdownSlug": "braviary-hisui",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "breloom",
+    "speciesName": "Breloom",
+    "dex": 286,
+    "sid": 9152,
+    "showdownSlug": "breloom",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "brionne",
+    "speciesName": "Brionne",
+    "dex": 729,
+    "sid": 23328,
+    "showdownSlug": "brionne",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bronzong",
+    "speciesName": "Bronzong",
+    "dex": 437,
+    "sid": 13984,
+    "showdownSlug": "bronzong",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bronzor",
+    "speciesName": "Bronzor",
+    "dex": 436,
+    "sid": 13952,
+    "showdownSlug": "bronzor",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bruxish",
+    "speciesName": "Bruxish",
+    "dex": 779,
+    "sid": 24928,
+    "showdownSlug": "bruxish",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "budew",
+    "speciesName": "Budew",
+    "dex": 406,
+    "sid": 12992,
+    "showdownSlug": "budew",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "buizel",
+    "speciesName": "Buizel",
+    "dex": 418,
+    "sid": 13376,
+    "showdownSlug": "buizel",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bulbasaur",
+    "speciesName": "Bulbasaur",
+    "dex": 1,
+    "sid": 32,
+    "showdownSlug": "bulbasaur",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "buneary",
+    "speciesName": "Buneary",
+    "dex": 427,
+    "sid": 13664,
+    "showdownSlug": "buneary",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "bunnelby",
+    "speciesName": "Bunnelby",
+    "dex": 659,
+    "sid": 21088,
+    "showdownSlug": "bunnelby",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "burmy_plant",
+    "speciesName": "Burmy (Plant)",
+    "dex": 412,
+    "sid": 13184,
+    "showdownSlug": "burmy",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "burmy_sandy",
+    "speciesName": "Burmy (Sandy)",
+    "dex": 412,
+    "sid": 13185,
+    "showdownSlug": "burmy-sandy",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "burmy_trash",
+    "speciesName": "Burmy (Trash)",
+    "dex": 412,
+    "sid": 13186,
+    "showdownSlug": "burmy-trash",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "butterfree",
+    "speciesName": "Butterfree",
+    "dex": 12,
+    "sid": 384,
+    "showdownSlug": "butterfree",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "buzzwole",
+    "speciesName": "Buzzwole",
+    "dex": 794,
+    "sid": 25408,
+    "showdownSlug": "buzzwole",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cacnea",
+    "speciesName": "Cacnea",
+    "dex": 331,
+    "sid": 10592,
+    "showdownSlug": "cacnea",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "cacturne",
+    "speciesName": "Cacturne",
+    "dex": 332,
+    "sid": 10624,
+    "showdownSlug": "cacturne",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "camerupt",
+    "speciesName": "Camerupt",
+    "dex": 323,
+    "sid": 10336,
+    "showdownSlug": "camerupt",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "camerupt_mega",
+    "speciesName": "Camerupt (Mega)",
+    "dex": 323,
+    "sid": 10337,
+    "showdownSlug": "camerupt-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "carbink",
+    "speciesName": "Carbink",
+    "dex": 703,
+    "sid": 22496,
+    "showdownSlug": "carbink",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "carkol",
+    "speciesName": "Carkol",
+    "dex": 838,
+    "sid": 26816,
+    "showdownSlug": "carkol",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "carnivine",
+    "speciesName": "Carnivine",
+    "dex": 455,
+    "sid": 14560,
+    "showdownSlug": "carnivine",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "carracosta",
+    "speciesName": "Carracosta",
+    "dex": 565,
+    "sid": 18080,
+    "showdownSlug": "carracosta",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "carvanha",
+    "speciesName": "Carvanha",
+    "dex": 318,
+    "sid": 10176,
+    "showdownSlug": "carvanha",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "cascoon",
+    "speciesName": "Cascoon",
+    "dex": 268,
+    "sid": 8576,
+    "showdownSlug": "cascoon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "castform",
+    "speciesName": "Castform",
+    "dex": 351,
+    "sid": 11232,
+    "showdownSlug": "castform",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "castform_rainy",
+    "speciesName": "Castform (Rainy)",
+    "dex": 351,
+    "sid": 11234,
+    "showdownSlug": "castform-rainy",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "castform_snowy",
+    "speciesName": "Castform (Snowy)",
+    "dex": 351,
+    "sid": 11235,
+    "showdownSlug": "castform-snowy",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "castform_sunny",
+    "speciesName": "Castform (Sunny)",
+    "dex": 351,
+    "sid": 11233,
+    "showdownSlug": "castform-sunny",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "caterpie",
+    "speciesName": "Caterpie",
+    "dex": 10,
+    "sid": 320,
+    "showdownSlug": "caterpie",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "celebi",
+    "speciesName": "Celebi",
+    "dex": 251,
+    "sid": 8032,
+    "showdownSlug": "celebi",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "celesteela",
+    "speciesName": "Celesteela",
+    "dex": 797,
+    "sid": 25504,
+    "showdownSlug": "celesteela",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "centiskorch",
+    "speciesName": "Centiskorch",
+    "dex": 851,
+    "sid": 27232,
+    "showdownSlug": "centiskorch",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "ceruledge",
+    "speciesName": "Ceruledge",
+    "dex": 937,
+    "sid": 29984,
+    "showdownSlug": "ceruledge",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cetitan",
+    "speciesName": "Cetitan",
+    "dex": 975,
+    "sid": 31200,
+    "showdownSlug": "cetitan",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cetoddle",
+    "speciesName": "Cetoddle",
+    "dex": 974,
+    "sid": 31168,
+    "showdownSlug": "cetoddle",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "chandelure",
+    "speciesName": "Chandelure",
+    "dex": 609,
+    "sid": 19488,
+    "showdownSlug": "chandelure",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "chansey",
+    "speciesName": "Chansey",
+    "dex": 113,
+    "sid": 3616,
+    "showdownSlug": "chansey",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "charcadet",
+    "speciesName": "Charcadet",
+    "dex": 935,
+    "sid": 29920,
+    "showdownSlug": "charcadet",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "charizard",
+    "speciesName": "Charizard",
+    "dex": 6,
+    "sid": 192,
+    "showdownSlug": "charizard",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "charizard_mega_x",
+    "speciesName": "Charizard (Mega X)",
+    "dex": 6,
+    "sid": 193,
+    "showdownSlug": "charizard-megax",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "charizard_mega_y",
+    "speciesName": "Charizard (Mega Y)",
+    "dex": 6,
+    "sid": 194,
+    "showdownSlug": "charizard-megay",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "charjabug",
+    "speciesName": "Charjabug",
+    "dex": 737,
+    "sid": 23584,
+    "showdownSlug": "charjabug",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "charmander",
+    "speciesName": "Charmander",
+    "dex": 4,
+    "sid": 128,
+    "showdownSlug": "charmander",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "charmeleon",
+    "speciesName": "Charmeleon",
+    "dex": 5,
+    "sid": 160,
+    "showdownSlug": "charmeleon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "chatot",
+    "speciesName": "Chatot",
+    "dex": 441,
+    "sid": 14112,
+    "showdownSlug": "chatot",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cherrim_overcast",
+    "speciesName": "Cherrim (Overcast)",
+    "dex": 421,
+    "sid": 13472,
+    "showdownSlug": "cherrim",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cherrim_sunny",
+    "speciesName": "Cherrim (Sunshine)",
+    "dex": 421,
+    "sid": 13473,
+    "showdownSlug": "cherrim-sunshine",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cherubi",
+    "speciesName": "Cherubi",
+    "dex": 420,
+    "sid": 13440,
+    "showdownSlug": "cherubi",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "chesnaught",
+    "speciesName": "Chesnaught",
+    "dex": 652,
+    "sid": 20864,
+    "showdownSlug": "chesnaught",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "chesnaught_mega",
+    "speciesName": "Chesnaught (Mega)",
+    "dex": 652,
+    "sid": 20865,
+    "showdownSlug": "chesnaught-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "chespin",
+    "speciesName": "Chespin",
+    "dex": 650,
+    "sid": 20800,
+    "showdownSlug": "chespin",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "chikorita",
+    "speciesName": "Chikorita",
+    "dex": 152,
+    "sid": 4864,
+    "showdownSlug": "chikorita",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "chimchar",
+    "speciesName": "Chimchar",
+    "dex": 390,
+    "sid": 12480,
+    "showdownSlug": "chimchar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "chimecho",
+    "speciesName": "Chimecho",
+    "dex": 358,
+    "sid": 11456,
+    "showdownSlug": "chimecho",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "chinchou",
+    "speciesName": "Chinchou",
+    "dex": 170,
+    "sid": 5440,
+    "showdownSlug": "chinchou",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "chingling",
+    "speciesName": "Chingling",
+    "dex": 433,
+    "sid": 13856,
+    "showdownSlug": "chingling",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cinccino",
+    "speciesName": "Cinccino",
+    "dex": 573,
+    "sid": 18336,
+    "showdownSlug": "cinccino",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cinderace",
+    "speciesName": "Cinderace",
+    "dex": 815,
+    "sid": 26080,
+    "showdownSlug": "cinderace",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "clamperl",
+    "speciesName": "Clamperl",
+    "dex": 366,
+    "sid": 11712,
+    "showdownSlug": "clamperl",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "clauncher",
+    "speciesName": "Clauncher",
+    "dex": 692,
+    "sid": 22144,
+    "showdownSlug": "clauncher",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "clawitzer",
+    "speciesName": "Clawitzer",
+    "dex": 693,
+    "sid": 22176,
+    "showdownSlug": "clawitzer",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "claydol",
+    "speciesName": "Claydol",
+    "dex": 344,
+    "sid": 11008,
+    "showdownSlug": "claydol",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "clefable",
+    "speciesName": "Clefable",
+    "dex": 36,
+    "sid": 1152,
+    "showdownSlug": "clefable",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "clefairy",
+    "speciesName": "Clefairy",
+    "dex": 35,
+    "sid": 1120,
+    "showdownSlug": "clefairy",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cleffa",
+    "speciesName": "Cleffa",
+    "dex": 173,
+    "sid": 5536,
+    "showdownSlug": "cleffa",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "clobbopus",
+    "speciesName": "Clobbopus",
+    "dex": 852,
+    "sid": 27264,
+    "showdownSlug": "clobbopus",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "clodsire",
+    "speciesName": "Clodsire",
+    "dex": 980,
+    "sid": 31360,
+    "showdownSlug": "clodsire",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cloyster",
+    "speciesName": "Cloyster",
+    "dex": 91,
+    "sid": 2912,
+    "showdownSlug": "cloyster",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "coalossal",
+    "speciesName": "Coalossal",
+    "dex": 839,
+    "sid": 26848,
+    "showdownSlug": "coalossal",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cobalion",
+    "speciesName": "Cobalion",
+    "dex": 638,
+    "sid": 20416,
+    "showdownSlug": "cobalion",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cofagrigus",
+    "speciesName": "Cofagrigus",
+    "dex": 563,
+    "sid": 18016,
+    "showdownSlug": "cofagrigus",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "combee",
+    "speciesName": "Combee",
+    "dex": 415,
+    "sid": 13280,
+    "showdownSlug": "combee",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "combusken",
+    "speciesName": "Combusken",
+    "dex": 256,
+    "sid": 8192,
+    "showdownSlug": "combusken",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "comfey",
+    "speciesName": "Comfey",
+    "dex": 764,
+    "sid": 24448,
+    "showdownSlug": "comfey",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "conkeldurr",
+    "speciesName": "Conkeldurr",
+    "dex": 534,
+    "sid": 17088,
+    "showdownSlug": "conkeldurr",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "corphish",
+    "speciesName": "Corphish",
+    "dex": 341,
+    "sid": 10912,
+    "showdownSlug": "corphish",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "corsola",
+    "speciesName": "Corsola",
+    "dex": 222,
+    "sid": 7104,
+    "showdownSlug": "corsola",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "corsola_galarian",
+    "speciesName": "Corsola (Galarian)",
+    "dex": 222,
+    "sid": 7105,
+    "showdownSlug": "corsola-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "corviknight",
+    "speciesName": "Corviknight",
+    "dex": 823,
+    "sid": 26336,
+    "showdownSlug": "corviknight",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "corvisquire",
+    "speciesName": "Corvisquire",
+    "dex": 822,
+    "sid": 26304,
+    "showdownSlug": "corvisquire",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "cottonee",
+    "speciesName": "Cottonee",
+    "dex": 546,
+    "sid": 17472,
+    "showdownSlug": "cottonee",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "crabominable",
+    "speciesName": "Crabominable",
+    "dex": 740,
+    "sid": 23680,
+    "showdownSlug": "crabominable",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "crabrawler",
+    "speciesName": "Crabrawler",
+    "dex": 739,
+    "sid": 23648,
+    "showdownSlug": "crabrawler",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cradily",
+    "speciesName": "Cradily",
+    "dex": 346,
+    "sid": 11072,
+    "showdownSlug": "cradily",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "cramorant",
+    "speciesName": "Cramorant",
+    "dex": 845,
+    "sid": 27040,
+    "showdownSlug": "cramorant",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cranidos",
+    "speciesName": "Cranidos",
+    "dex": 408,
+    "sid": 13056,
+    "showdownSlug": "cranidos",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "crawdaunt",
+    "speciesName": "Crawdaunt",
+    "dex": 342,
+    "sid": 10944,
+    "showdownSlug": "crawdaunt",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "cresselia",
+    "speciesName": "Cresselia",
+    "dex": 488,
+    "sid": 15616,
+    "showdownSlug": "cresselia",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "croagunk",
+    "speciesName": "Croagunk",
+    "dex": 453,
+    "sid": 14496,
+    "showdownSlug": "croagunk",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "crobat",
+    "speciesName": "Crobat",
+    "dex": 169,
+    "sid": 5408,
+    "showdownSlug": "crobat",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "crocalor",
+    "speciesName": "Crocalor",
+    "dex": 910,
+    "sid": 29120,
+    "showdownSlug": "crocalor",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "croconaw",
+    "speciesName": "Croconaw",
+    "dex": 159,
+    "sid": 5088,
+    "showdownSlug": "croconaw",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "crustle",
+    "speciesName": "Crustle",
+    "dex": 558,
+    "sid": 17856,
+    "showdownSlug": "crustle",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "cryogonal",
+    "speciesName": "Cryogonal",
+    "dex": 615,
+    "sid": 19680,
+    "showdownSlug": "cryogonal",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cubchoo",
+    "speciesName": "Cubchoo",
+    "dex": 613,
+    "sid": 19616,
+    "showdownSlug": "cubchoo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cubone",
+    "speciesName": "Cubone",
+    "dex": 104,
+    "sid": 3328,
+    "showdownSlug": "cubone",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "cursola",
+    "speciesName": "Cursola",
+    "dex": 864,
+    "sid": 27648,
+    "showdownSlug": "cursola",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cutiefly",
+    "speciesName": "Cutiefly",
+    "dex": 742,
+    "sid": 23744,
+    "showdownSlug": "cutiefly",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "cyndaquil",
+    "speciesName": "Cyndaquil",
+    "dex": 155,
+    "sid": 4960,
+    "showdownSlug": "cyndaquil",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dachsbun",
+    "speciesName": "Dachsbun",
+    "dex": 927,
+    "sid": 29664,
+    "showdownSlug": "dachsbun",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "darkrai",
+    "speciesName": "Darkrai",
+    "dex": 491,
+    "sid": 15712,
+    "showdownSlug": "darkrai",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "darmanitan_galarian_standard",
+    "speciesName": "Darmanitan (Galarian)",
+    "dex": 555,
+    "sid": 17762,
+    "showdownSlug": "darmanitan-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "darmanitan_standard",
+    "speciesName": "Darmanitan (Standard)",
+    "dex": 555,
+    "sid": 17760,
+    "showdownSlug": "darmanitan",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dartrix",
+    "speciesName": "Dartrix",
+    "dex": 723,
+    "sid": 23136,
+    "showdownSlug": "dartrix",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "darumaka",
+    "speciesName": "Darumaka",
+    "dex": 554,
+    "sid": 17728,
+    "showdownSlug": "darumaka",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "darumaka_galarian",
+    "speciesName": "Darumaka (Galarian)",
+    "dex": 554,
+    "sid": 17729,
+    "showdownSlug": "darumaka-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "decidueye",
+    "speciesName": "Decidueye",
+    "dex": 724,
+    "sid": 23168,
+    "showdownSlug": "decidueye",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "decidueye_hisuian",
+    "speciesName": "Decidueye (Hisuian)",
+    "dex": 724,
+    "sid": 23169,
+    "showdownSlug": "decidueye-hisui",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dedenne",
+    "speciesName": "Dedenne",
+    "dex": 702,
+    "sid": 22464,
+    "showdownSlug": "dedenne",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "deerling",
+    "speciesName": "Deerling",
+    "dex": 585,
+    "sid": 18720,
+    "showdownSlug": "deerling",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "deino",
+    "speciesName": "Deino",
+    "dex": 633,
+    "sid": 20256,
+    "showdownSlug": "deino",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "delcatty",
+    "speciesName": "Delcatty",
+    "dex": 301,
+    "sid": 9632,
+    "showdownSlug": "delcatty",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "delibird",
+    "speciesName": "Delibird",
+    "dex": 225,
+    "sid": 7200,
+    "showdownSlug": "delibird",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "delphox",
+    "speciesName": "Delphox",
+    "dex": 655,
+    "sid": 20960,
+    "showdownSlug": "delphox",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "delphox_mega",
+    "speciesName": "Delphox (Mega)",
+    "dex": 655,
+    "sid": 20961,
+    "showdownSlug": "delphox-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "deoxys",
+    "speciesName": "Deoxys",
+    "dex": 386,
+    "sid": 12352,
+    "showdownSlug": "deoxys",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "deoxys_attack",
+    "speciesName": "Deoxys (Attack)",
+    "dex": 386,
+    "sid": 12353,
+    "showdownSlug": "deoxys-attack",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "deoxys_defense",
+    "speciesName": "Deoxys (Defense)",
+    "dex": 386,
+    "sid": 12354,
+    "showdownSlug": "deoxys-defense",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "deoxys_speed",
+    "speciesName": "Deoxys (Speed)",
+    "dex": 386,
+    "sid": 12355,
+    "showdownSlug": "deoxys-speed",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dewgong",
+    "speciesName": "Dewgong",
+    "dex": 87,
+    "sid": 2784,
+    "showdownSlug": "dewgong",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dewott",
+    "speciesName": "Dewott",
+    "dex": 502,
+    "sid": 16064,
+    "showdownSlug": "dewott",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dewpider",
+    "speciesName": "Dewpider",
+    "dex": 751,
+    "sid": 24032,
+    "showdownSlug": "dewpider",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dhelmise",
+    "speciesName": "Dhelmise",
+    "dex": 781,
+    "sid": 24992,
+    "showdownSlug": "dhelmise",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dialga",
+    "speciesName": "Dialga",
+    "dex": 483,
+    "sid": 15456,
+    "showdownSlug": "dialga",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dialga_origin",
+    "speciesName": "Dialga (Origin)",
+    "dex": 483,
+    "sid": 15457,
+    "showdownSlug": "dialga-origin",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "diancie",
+    "speciesName": "Diancie",
+    "dex": 719,
+    "sid": 23008,
+    "showdownSlug": "diancie",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "diancie_mega",
+    "speciesName": "Diancie (Mega)",
+    "dex": 719,
+    "sid": 23009,
+    "showdownSlug": "diancie-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "diggersby",
+    "speciesName": "Diggersby",
+    "dex": 660,
+    "sid": 21120,
+    "showdownSlug": "diggersby",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "diglett",
+    "speciesName": "Diglett",
+    "dex": 50,
+    "sid": 1600,
+    "showdownSlug": "diglett",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "diglett_alolan",
+    "speciesName": "Diglett (Alolan)",
+    "dex": 50,
+    "sid": 1601,
+    "showdownSlug": "diglett-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dipplin",
+    "speciesName": "Dipplin",
+    "dex": 1011,
+    "sid": 32352,
+    "showdownSlug": "dipplin",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dodrio",
+    "speciesName": "Dodrio",
+    "dex": 85,
+    "sid": 2720,
+    "showdownSlug": "dodrio",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "doduo",
+    "speciesName": "Doduo",
+    "dex": 84,
+    "sid": 2688,
+    "showdownSlug": "doduo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dolliv",
+    "speciesName": "Dolliv",
+    "dex": 929,
+    "sid": 29728,
+    "showdownSlug": "dolliv",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dondozo",
+    "speciesName": "Dondozo",
+    "dex": 977,
+    "sid": 31264,
+    "showdownSlug": "dondozo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "donphan",
+    "speciesName": "Donphan",
+    "dex": 232,
+    "sid": 7424,
+    "showdownSlug": "donphan",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dottler",
+    "speciesName": "Dottler",
+    "dex": 825,
+    "sid": 26400,
+    "showdownSlug": "dottler",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "doublade",
+    "speciesName": "Doublade",
+    "dex": 680,
+    "sid": 21760,
+    "showdownSlug": "doublade",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dragalge",
+    "speciesName": "Dragalge",
+    "dex": 691,
+    "sid": 22112,
+    "showdownSlug": "dragalge",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dragapult",
+    "speciesName": "Dragapult",
+    "dex": 887,
+    "sid": 28384,
+    "showdownSlug": "dragapult",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dragonair",
+    "speciesName": "Dragonair",
+    "dex": 148,
+    "sid": 4736,
+    "showdownSlug": "dragonair",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dragonite",
+    "speciesName": "Dragonite",
+    "dex": 149,
+    "sid": 4768,
+    "showdownSlug": "dragonite",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dragonite_mega",
+    "speciesName": "Dragonite (Mega)",
+    "dex": 149,
+    "sid": 4769,
+    "showdownSlug": "dragonite-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "drakloak",
+    "speciesName": "Drakloak",
+    "dex": 886,
+    "sid": 28352,
+    "showdownSlug": "drakloak",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "drampa",
+    "speciesName": "Drampa",
+    "dex": 780,
+    "sid": 24960,
+    "showdownSlug": "drampa",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "drapion",
+    "speciesName": "Drapion",
+    "dex": 452,
+    "sid": 14464,
+    "showdownSlug": "drapion",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dratini",
+    "speciesName": "Dratini",
+    "dex": 147,
+    "sid": 4704,
+    "showdownSlug": "dratini",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dreepy",
+    "speciesName": "Dreepy",
+    "dex": 885,
+    "sid": 28320,
+    "showdownSlug": "dreepy",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "drifblim",
+    "speciesName": "Drifblim",
+    "dex": 426,
+    "sid": 13632,
+    "showdownSlug": "drifblim",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "drifloon",
+    "speciesName": "Drifloon",
+    "dex": 425,
+    "sid": 13600,
+    "showdownSlug": "drifloon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "drilbur",
+    "speciesName": "Drilbur",
+    "dex": 529,
+    "sid": 16928,
+    "showdownSlug": "drilbur",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "drizzile",
+    "speciesName": "Drizzile",
+    "dex": 817,
+    "sid": 26144,
+    "showdownSlug": "drizzile",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "drowzee",
+    "speciesName": "Drowzee",
+    "dex": 96,
+    "sid": 3072,
+    "showdownSlug": "drowzee",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "druddigon",
+    "speciesName": "Druddigon",
+    "dex": 621,
+    "sid": 19872,
+    "showdownSlug": "druddigon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dubwool",
+    "speciesName": "Dubwool",
+    "dex": 832,
+    "sid": 26624,
+    "showdownSlug": "dubwool",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "ducklett",
+    "speciesName": "Ducklett",
+    "dex": 580,
+    "sid": 18560,
+    "showdownSlug": "ducklett",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dudunsparce",
+    "speciesName": "Dudunsparce",
+    "dex": 982,
+    "sid": 31424,
+    "showdownSlug": "dudunsparce",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dudunsparce_three",
+    "speciesName": "Dudunsparce_three",
+    "dex": 982,
+    "sid": 31425,
+    "showdownSlug": "dudunsparce-threesegment",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dudunsparce_two",
+    "speciesName": "Dudunsparce_two",
+    "dex": 982,
+    "sid": 31424,
+    "showdownSlug": "dudunsparce",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dugtrio",
+    "speciesName": "Dugtrio",
+    "dex": 51,
+    "sid": 1632,
+    "showdownSlug": "dugtrio",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dugtrio_alolan",
+    "speciesName": "Dugtrio (Alolan)",
+    "dex": 51,
+    "sid": 1633,
+    "showdownSlug": "dugtrio-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dunsparce",
+    "speciesName": "Dunsparce",
+    "dex": 206,
+    "sid": 6592,
+    "showdownSlug": "dunsparce",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "duosion",
+    "speciesName": "Duosion",
+    "dex": 578,
+    "sid": 18496,
+    "showdownSlug": "duosion",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "duraludon",
+    "speciesName": "Duraludon",
+    "dex": 884,
+    "sid": 28288,
+    "showdownSlug": "duraludon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "durant",
+    "speciesName": "Durant",
+    "dex": 632,
+    "sid": 20224,
+    "showdownSlug": "durant",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dusclops",
+    "speciesName": "Dusclops",
+    "dex": 356,
+    "sid": 11392,
+    "showdownSlug": "dusclops",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dusknoir",
+    "speciesName": "Dusknoir",
+    "dex": 477,
+    "sid": 15264,
+    "showdownSlug": "dusknoir",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "duskull",
+    "speciesName": "Duskull",
+    "dex": 355,
+    "sid": 11360,
+    "showdownSlug": "duskull",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "dustox",
+    "speciesName": "Dustox",
+    "dex": 269,
+    "sid": 8608,
+    "showdownSlug": "dustox",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "dwebble",
+    "speciesName": "Dwebble",
+    "dex": 557,
+    "sid": 17824,
+    "showdownSlug": "dwebble",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "eelektrik",
+    "speciesName": "Eelektrik",
+    "dex": 603,
+    "sid": 19296,
+    "showdownSlug": "eelektrik",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "eelektross",
+    "speciesName": "Eelektross",
+    "dex": 604,
+    "sid": 19328,
+    "showdownSlug": "eelektross",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "eevee",
+    "speciesName": "Eevee",
+    "dex": 133,
+    "sid": 4256,
+    "showdownSlug": "eevee",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "ekans",
+    "speciesName": "Ekans",
+    "dex": 23,
+    "sid": 736,
+    "showdownSlug": "ekans",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "eldegoss",
+    "speciesName": "Eldegoss",
+    "dex": 830,
+    "sid": 26560,
+    "showdownSlug": "eldegoss",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "electabuzz",
+    "speciesName": "Electabuzz",
+    "dex": 125,
+    "sid": 4000,
+    "showdownSlug": "electabuzz",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "electivire",
+    "speciesName": "Electivire",
+    "dex": 466,
+    "sid": 14912,
+    "showdownSlug": "electivire",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "electrike",
+    "speciesName": "Electrike",
+    "dex": 309,
+    "sid": 9888,
+    "showdownSlug": "electrike",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "electrode",
+    "speciesName": "Electrode",
+    "dex": 101,
+    "sid": 3232,
+    "showdownSlug": "electrode",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "electrode_hisuian",
+    "speciesName": "Electrode (Hisuian)",
+    "dex": 101,
+    "sid": 3233,
+    "showdownSlug": "electrode-hisui",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "elekid",
+    "speciesName": "Elekid",
+    "dex": 239,
+    "sid": 7648,
+    "showdownSlug": "elekid",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "elgyem",
+    "speciesName": "Elgyem",
+    "dex": 605,
+    "sid": 19360,
+    "showdownSlug": "elgyem",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "emboar",
+    "speciesName": "Emboar",
+    "dex": 500,
+    "sid": 16000,
+    "showdownSlug": "emboar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "emolga",
+    "speciesName": "Emolga",
+    "dex": 587,
+    "sid": 18784,
+    "showdownSlug": "emolga",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "empoleon",
+    "speciesName": "Empoleon",
+    "dex": 395,
+    "sid": 12640,
+    "showdownSlug": "empoleon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "enamorus_incarnate",
+    "speciesName": "Enamorus (Incarnate)",
+    "dex": 905,
+    "sid": 28960,
+    "showdownSlug": "enamorus",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "enamorus_therian",
+    "speciesName": "Enamorus (Therian)",
+    "dex": 905,
+    "sid": 28961,
+    "showdownSlug": "enamorus-therian",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "entei",
+    "speciesName": "Entei",
+    "dex": 244,
+    "sid": 7808,
+    "showdownSlug": "entei",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "escavalier",
+    "speciesName": "Escavalier",
+    "dex": 589,
+    "sid": 18848,
+    "showdownSlug": "escavalier",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "espathra",
+    "speciesName": "Espathra",
+    "dex": 956,
+    "sid": 30592,
+    "showdownSlug": "espathra",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "espeon",
+    "speciesName": "Espeon",
+    "dex": 196,
+    "sid": 6272,
+    "showdownSlug": "espeon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "espurr",
+    "speciesName": "Espurr",
+    "dex": 677,
+    "sid": 21664,
+    "showdownSlug": "espurr",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "eternatus",
+    "speciesName": "Eternatus",
+    "dex": 890,
+    "sid": 28480,
+    "showdownSlug": "eternatus",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "excadrill",
+    "speciesName": "Excadrill",
+    "dex": 530,
+    "sid": 16960,
+    "showdownSlug": "excadrill",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "exeggcute",
+    "speciesName": "Exeggcute",
+    "dex": 102,
+    "sid": 3264,
+    "showdownSlug": "exeggcute",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "exeggutor",
+    "speciesName": "Exeggutor",
+    "dex": 103,
+    "sid": 3296,
+    "showdownSlug": "exeggutor",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "exeggutor_alolan",
+    "speciesName": "Exeggutor (Alolan)",
+    "dex": 103,
+    "sid": 3297,
+    "showdownSlug": "exeggutor-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "exploud",
+    "speciesName": "Exploud",
+    "dex": 295,
+    "sid": 9440,
+    "showdownSlug": "exploud",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "falinks",
+    "speciesName": "Falinks",
+    "dex": 870,
+    "sid": 27840,
+    "showdownSlug": "falinks",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "falinks_mega",
+    "speciesName": "Falinks (Mega)",
+    "dex": 870,
+    "sid": 27841,
+    "showdownSlug": "falinks-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "farfetchd",
+    "speciesName": "Farfetch'd",
+    "dex": 83,
+    "sid": 2656,
+    "showdownSlug": "farfetchd",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "farfetchd_galarian",
+    "speciesName": "Farfetch'd (Galarian)",
+    "dex": 83,
+    "sid": 2657,
+    "showdownSlug": "farfetchd-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "fearow",
+    "speciesName": "Fearow",
+    "dex": 22,
+    "sid": 704,
+    "showdownSlug": "fearow",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "feebas",
+    "speciesName": "Feebas",
+    "dex": 349,
+    "sid": 11168,
+    "showdownSlug": "feebas",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "fennekin",
+    "speciesName": "Fennekin",
+    "dex": 653,
+    "sid": 20896,
+    "showdownSlug": "fennekin",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "feraligatr",
+    "speciesName": "Feraligatr",
+    "dex": 160,
+    "sid": 5120,
+    "showdownSlug": "feraligatr",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ferroseed",
+    "speciesName": "Ferroseed",
+    "dex": 597,
+    "sid": 19104,
+    "showdownSlug": "ferroseed",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ferrothorn",
+    "speciesName": "Ferrothorn",
+    "dex": 598,
+    "sid": 19136,
+    "showdownSlug": "ferrothorn",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "fidough",
+    "speciesName": "Fidough",
+    "dex": 926,
+    "sid": 29632,
+    "showdownSlug": "fidough",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "finneon",
+    "speciesName": "Finneon",
+    "dex": 456,
+    "sid": 14592,
+    "showdownSlug": "finneon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "flaaffy",
+    "speciesName": "Flaaffy",
+    "dex": 180,
+    "sid": 5760,
+    "showdownSlug": "flaaffy",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "flabebe",
+    "speciesName": "Flabebe",
+    "dex": 669,
+    "sid": 21408,
+    "showdownSlug": "flabebe",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "flamigo",
+    "speciesName": "Flamigo",
+    "dex": 973,
+    "sid": 31136,
+    "showdownSlug": "flamigo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "flapple",
+    "speciesName": "Flapple",
+    "dex": 841,
+    "sid": 26912,
+    "showdownSlug": "flapple",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "flareon",
+    "speciesName": "Flareon",
+    "dex": 136,
+    "sid": 4352,
+    "showdownSlug": "flareon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "fletchinder",
+    "speciesName": "Fletchinder",
+    "dex": 662,
+    "sid": 21184,
+    "showdownSlug": "fletchinder",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "fletchling",
+    "speciesName": "Fletchling",
+    "dex": 661,
+    "sid": 21152,
+    "showdownSlug": "fletchling",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "flittle",
+    "speciesName": "Flittle",
+    "dex": 955,
+    "sid": 30560,
+    "showdownSlug": "flittle",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "floatzel",
+    "speciesName": "Floatzel",
+    "dex": 419,
+    "sid": 13408,
+    "showdownSlug": "floatzel",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "floette",
+    "speciesName": "Floette",
+    "dex": 670,
+    "sid": 21440,
+    "showdownSlug": "floette",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "floragato",
+    "speciesName": "Floragato",
+    "dex": 907,
+    "sid": 29024,
+    "showdownSlug": "floragato",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "florges",
+    "speciesName": "Florges",
+    "dex": 671,
+    "sid": 21472,
+    "showdownSlug": "florges",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "flygon",
+    "speciesName": "Flygon",
+    "dex": 330,
+    "sid": 10560,
+    "showdownSlug": "flygon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "fomantis",
+    "speciesName": "Fomantis",
+    "dex": 753,
+    "sid": 24096,
+    "showdownSlug": "fomantis",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "foongus",
+    "speciesName": "Foongus",
+    "dex": 590,
+    "sid": 18880,
+    "showdownSlug": "foongus",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "forretress",
+    "speciesName": "Forretress",
+    "dex": 205,
+    "sid": 6560,
+    "showdownSlug": "forretress",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "fraxure",
+    "speciesName": "Fraxure",
+    "dex": 611,
+    "sid": 19552,
+    "showdownSlug": "fraxure",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "frigibax",
+    "speciesName": "Frigibax",
+    "dex": 996,
+    "sid": 31872,
+    "showdownSlug": "frigibax",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "frillish",
+    "speciesName": "Frillish",
+    "dex": 592,
+    "sid": 18944,
+    "showdownSlug": "frillish",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "froakie",
+    "speciesName": "Froakie",
+    "dex": 656,
+    "sid": 20992,
+    "showdownSlug": "froakie",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "frogadier",
+    "speciesName": "Frogadier",
+    "dex": 657,
+    "sid": 21024,
+    "showdownSlug": "frogadier",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "froslass",
+    "speciesName": "Froslass",
+    "dex": 478,
+    "sid": 15296,
+    "showdownSlug": "froslass",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "frosmoth",
+    "speciesName": "Frosmoth",
+    "dex": 873,
+    "sid": 27936,
+    "showdownSlug": "frosmoth",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "fuecoco",
+    "speciesName": "Fuecoco",
+    "dex": 909,
+    "sid": 29088,
+    "showdownSlug": "fuecoco",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "furfrou",
+    "speciesName": "Furfrou",
+    "dex": 676,
+    "sid": 21632,
+    "showdownSlug": "furfrou",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "furret",
+    "speciesName": "Furret",
+    "dex": 162,
+    "sid": 5184,
+    "showdownSlug": "furret",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gabite",
+    "speciesName": "Gabite",
+    "dex": 444,
+    "sid": 14208,
+    "showdownSlug": "gabite",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gallade",
+    "speciesName": "Gallade",
+    "dex": 475,
+    "sid": 15200,
+    "showdownSlug": "gallade",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gallade_mega",
+    "speciesName": "Gallade (Mega)",
+    "dex": 475,
+    "sid": 15201,
+    "showdownSlug": "gallade-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "galvantula",
+    "speciesName": "Galvantula",
+    "dex": 596,
+    "sid": 19072,
+    "showdownSlug": "galvantula",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "garbodor",
+    "speciesName": "Garbodor",
+    "dex": 569,
+    "sid": 18208,
+    "showdownSlug": "garbodor",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "garchomp",
+    "speciesName": "Garchomp",
+    "dex": 445,
+    "sid": 14240,
+    "showdownSlug": "garchomp",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "garchomp_mega",
+    "speciesName": "Garchomp (Mega)",
+    "dex": 445,
+    "sid": 14241,
+    "showdownSlug": "garchomp-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gardevoir",
+    "speciesName": "Gardevoir",
+    "dex": 282,
+    "sid": 9024,
+    "showdownSlug": "gardevoir",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gardevoir_mega",
+    "speciesName": "Gardevoir (Mega)",
+    "dex": 282,
+    "sid": 9025,
+    "showdownSlug": "gardevoir-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "garganacl",
+    "speciesName": "Garganacl",
+    "dex": 934,
+    "sid": 29888,
+    "showdownSlug": "garganacl",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gastly",
+    "speciesName": "Gastly",
+    "dex": 92,
+    "sid": 2944,
+    "showdownSlug": "gastly",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gastrodon_east_sea",
+    "speciesName": "Gastrodon (East)",
+    "dex": 423,
+    "sid": 13537,
+    "showdownSlug": "gastrodon-east",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gastrodon_west_sea",
+    "speciesName": "Gastrodon (West)",
+    "dex": 423,
+    "sid": 13536,
+    "showdownSlug": "gastrodon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "genesect",
+    "speciesName": "Genesect",
+    "dex": 649,
+    "sid": 20768,
+    "showdownSlug": "genesect",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "genesect_burn",
+    "speciesName": "Genesect (Burn)",
+    "dex": 649,
+    "sid": 20771,
+    "showdownSlug": "genesect-burn",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "genesect_chill",
+    "speciesName": "Genesect (Chill)",
+    "dex": 649,
+    "sid": 20772,
+    "showdownSlug": "genesect-chill",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "genesect_douse",
+    "speciesName": "Genesect (Douse)",
+    "dex": 649,
+    "sid": 20769,
+    "showdownSlug": "genesect-douse",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "genesect_shock",
+    "speciesName": "Genesect (Shock)",
+    "dex": 649,
+    "sid": 20770,
+    "showdownSlug": "genesect-shock",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gengar",
+    "speciesName": "Gengar",
+    "dex": 94,
+    "sid": 3008,
+    "showdownSlug": "gengar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gengar_mega",
+    "speciesName": "Gengar (Mega)",
+    "dex": 94,
+    "sid": 3009,
+    "showdownSlug": "gengar-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "geodude",
+    "speciesName": "Geodude",
+    "dex": 74,
+    "sid": 2368,
+    "showdownSlug": "geodude",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "geodude_alolan",
+    "speciesName": "Geodude (Alolan)",
+    "dex": 74,
+    "sid": 2369,
+    "showdownSlug": "geodude-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gholdengo",
+    "speciesName": "Gholdengo",
+    "dex": 1000,
+    "sid": 32000,
+    "showdownSlug": "gholdengo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gible",
+    "speciesName": "Gible",
+    "dex": 443,
+    "sid": 14176,
+    "showdownSlug": "gible",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gigalith",
+    "speciesName": "Gigalith",
+    "dex": 526,
+    "sid": 16832,
+    "showdownSlug": "gigalith",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gimmighoul",
+    "speciesName": "Gimmighoul",
+    "dex": 999,
+    "sid": 31968,
+    "showdownSlug": "gimmighoul",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "girafarig",
+    "speciesName": "Girafarig",
+    "dex": 203,
+    "sid": 6496,
+    "showdownSlug": "girafarig",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "giratina_altered",
+    "speciesName": "Giratina (Altered)",
+    "dex": 487,
+    "sid": 15584,
+    "showdownSlug": "giratina",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "giratina_origin",
+    "speciesName": "Giratina (Origin)",
+    "dex": 487,
+    "sid": 15585,
+    "showdownSlug": "giratina-origin",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "glaceon",
+    "speciesName": "Glaceon",
+    "dex": 471,
+    "sid": 15072,
+    "showdownSlug": "glaceon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "glalie",
+    "speciesName": "Glalie",
+    "dex": 362,
+    "sid": 11584,
+    "showdownSlug": "glalie",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "glalie_mega",
+    "speciesName": "Glalie (Mega)",
+    "dex": 362,
+    "sid": 11585,
+    "showdownSlug": "glalie-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "glameow",
+    "speciesName": "Glameow",
+    "dex": 431,
+    "sid": 13792,
+    "showdownSlug": "glameow",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gligar",
+    "speciesName": "Gligar",
+    "dex": 207,
+    "sid": 6624,
+    "showdownSlug": "gligar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "glimmet",
+    "speciesName": "Glimmet",
+    "dex": 969,
+    "sid": 31008,
+    "showdownSlug": "glimmet",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "glimmora",
+    "speciesName": "Glimmora",
+    "dex": 970,
+    "sid": 31040,
+    "showdownSlug": "glimmora",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gliscor",
+    "speciesName": "Gliscor",
+    "dex": 472,
+    "sid": 15104,
+    "showdownSlug": "gliscor",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gloom",
+    "speciesName": "Gloom",
+    "dex": 44,
+    "sid": 1408,
+    "showdownSlug": "gloom",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gogoat",
+    "speciesName": "Gogoat",
+    "dex": 673,
+    "sid": 21536,
+    "showdownSlug": "gogoat",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "golbat",
+    "speciesName": "Golbat",
+    "dex": 42,
+    "sid": 1344,
+    "showdownSlug": "golbat",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "goldeen",
+    "speciesName": "Goldeen",
+    "dex": 118,
+    "sid": 3776,
+    "showdownSlug": "goldeen",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "golduck",
+    "speciesName": "Golduck",
+    "dex": 55,
+    "sid": 1760,
+    "showdownSlug": "golduck",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "golem",
+    "speciesName": "Golem",
+    "dex": 76,
+    "sid": 2432,
+    "showdownSlug": "golem",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "golem_alolan",
+    "speciesName": "Golem (Alolan)",
+    "dex": 76,
+    "sid": 2433,
+    "showdownSlug": "golem-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "golett",
+    "speciesName": "Golett",
+    "dex": 622,
+    "sid": 19904,
+    "showdownSlug": "golett",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "golisopod",
+    "speciesName": "Golisopod",
+    "dex": 768,
+    "sid": 24576,
+    "showdownSlug": "golisopod",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "golurk",
+    "speciesName": "Golurk",
+    "dex": 623,
+    "sid": 19936,
+    "showdownSlug": "golurk",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "goodra",
+    "speciesName": "Goodra",
+    "dex": 706,
+    "sid": 22592,
+    "showdownSlug": "goodra",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "goomy",
+    "speciesName": "Goomy",
+    "dex": 704,
+    "sid": 22528,
+    "showdownSlug": "goomy",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gorebyss",
+    "speciesName": "Gorebyss",
+    "dex": 368,
+    "sid": 11776,
+    "showdownSlug": "gorebyss",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gossifleur",
+    "speciesName": "Gossifleur",
+    "dex": 829,
+    "sid": 26528,
+    "showdownSlug": "gossifleur",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gothita",
+    "speciesName": "Gothita",
+    "dex": 574,
+    "sid": 18368,
+    "showdownSlug": "gothita",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gothitelle",
+    "speciesName": "Gothitelle",
+    "dex": 576,
+    "sid": 18432,
+    "showdownSlug": "gothitelle",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gothorita",
+    "speciesName": "Gothorita",
+    "dex": 575,
+    "sid": 18400,
+    "showdownSlug": "gothorita",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gourgeist_average",
+    "speciesName": "Gourgeist (Average)",
+    "dex": 711,
+    "sid": 22752,
+    "showdownSlug": "gourgeist",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gourgeist_large",
+    "speciesName": "Gourgeist (Large)",
+    "dex": 711,
+    "sid": 22754,
+    "showdownSlug": "gourgeist-large",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gourgeist_small",
+    "speciesName": "Gourgeist (Small)",
+    "dex": 711,
+    "sid": 22753,
+    "showdownSlug": "gourgeist-small",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gourgeist_super",
+    "speciesName": "Gourgeist (Super)",
+    "dex": 711,
+    "sid": 22755,
+    "showdownSlug": "gourgeist-super",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "grafaiai",
+    "speciesName": "Grafaiai",
+    "dex": 945,
+    "sid": 30240,
+    "showdownSlug": "grafaiai",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "granbull",
+    "speciesName": "Granbull",
+    "dex": 210,
+    "sid": 6720,
+    "showdownSlug": "granbull",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "grapploct",
+    "speciesName": "Grapploct",
+    "dex": 853,
+    "sid": 27296,
+    "showdownSlug": "grapploct",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "graveler",
+    "speciesName": "Graveler",
+    "dex": 75,
+    "sid": 2400,
+    "showdownSlug": "graveler",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "graveler_alolan",
+    "speciesName": "Graveler (Alolan)",
+    "dex": 75,
+    "sid": 2401,
+    "showdownSlug": "graveler-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "greavard",
+    "speciesName": "Greavard",
+    "dex": 971,
+    "sid": 31072,
+    "showdownSlug": "greavard",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "greedent",
+    "speciesName": "Greedent",
+    "dex": 820,
+    "sid": 26240,
+    "showdownSlug": "greedent",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "greninja",
+    "speciesName": "Greninja",
+    "dex": 658,
+    "sid": 21056,
+    "showdownSlug": "greninja",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "greninja_mega",
+    "speciesName": "Greninja (Mega)",
+    "dex": 658,
+    "sid": 21059,
+    "showdownSlug": "greninja-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "grimer",
+    "speciesName": "Grimer",
+    "dex": 88,
+    "sid": 2816,
+    "showdownSlug": "grimer",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "grimer_alolan",
+    "speciesName": "Grimer (Alolan)",
+    "dex": 88,
+    "sid": 2817,
+    "showdownSlug": "grimer-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "grimmsnarl",
+    "speciesName": "Grimmsnarl",
+    "dex": 861,
+    "sid": 27552,
+    "showdownSlug": "grimmsnarl",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "grookey",
+    "speciesName": "Grookey",
+    "dex": 810,
+    "sid": 25920,
+    "showdownSlug": "grookey",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "grotle",
+    "speciesName": "Grotle",
+    "dex": 388,
+    "sid": 12416,
+    "showdownSlug": "grotle",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "groudon",
+    "speciesName": "Groudon",
+    "dex": 383,
+    "sid": 12256,
+    "showdownSlug": "groudon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "groudon_primal",
+    "speciesName": "Groudon (Primal)",
+    "dex": 383,
+    "sid": 12257,
+    "showdownSlug": "groudon-primal",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "grovyle",
+    "speciesName": "Grovyle",
+    "dex": 253,
+    "sid": 8096,
+    "showdownSlug": "grovyle",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "growlithe",
+    "speciesName": "Growlithe",
+    "dex": 58,
+    "sid": 1856,
+    "showdownSlug": "growlithe",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "growlithe_hisuian",
+    "speciesName": "Growlithe (Hisuian)",
+    "dex": 58,
+    "sid": 1857,
+    "showdownSlug": "growlithe-hisui",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "grubbin",
+    "speciesName": "Grubbin",
+    "dex": 736,
+    "sid": 23552,
+    "showdownSlug": "grubbin",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "grumpig",
+    "speciesName": "Grumpig",
+    "dex": 326,
+    "sid": 10432,
+    "showdownSlug": "grumpig",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gulpin",
+    "speciesName": "Gulpin",
+    "dex": 316,
+    "sid": 10112,
+    "showdownSlug": "gulpin",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gumshoos",
+    "speciesName": "Gumshoos",
+    "dex": 735,
+    "sid": 23520,
+    "showdownSlug": "gumshoos",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gurdurr",
+    "speciesName": "Gurdurr",
+    "dex": 533,
+    "sid": 17056,
+    "showdownSlug": "gurdurr",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "guzzlord",
+    "speciesName": "Guzzlord",
+    "dex": 799,
+    "sid": 25568,
+    "showdownSlug": "guzzlord",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "gyarados",
+    "speciesName": "Gyarados",
+    "dex": 130,
+    "sid": 4160,
+    "showdownSlug": "gyarados",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "gyarados_mega",
+    "speciesName": "Gyarados (Mega)",
+    "dex": 130,
+    "sid": 4161,
+    "showdownSlug": "gyarados-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "hakamo_o",
+    "speciesName": "Hakamo-o",
+    "dex": 783,
+    "sid": 25056,
+    "showdownSlug": "hakamoo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "happiny",
+    "speciesName": "Happiny",
+    "dex": 440,
+    "sid": 14080,
+    "showdownSlug": "happiny",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "hariyama",
+    "speciesName": "Hariyama",
+    "dex": 297,
+    "sid": 9504,
+    "showdownSlug": "hariyama",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "hatenna",
+    "speciesName": "Hatenna",
+    "dex": 856,
+    "sid": 27392,
+    "showdownSlug": "hatenna",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "hatterene",
+    "speciesName": "Hatterene",
+    "dex": 858,
+    "sid": 27456,
+    "showdownSlug": "hatterene",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "hattrem",
+    "speciesName": "Hattrem",
+    "dex": 857,
+    "sid": 27424,
+    "showdownSlug": "hattrem",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "haunter",
+    "speciesName": "Haunter",
+    "dex": 93,
+    "sid": 2976,
+    "showdownSlug": "haunter",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "hawlucha",
+    "speciesName": "Hawlucha",
+    "dex": 701,
+    "sid": 22432,
+    "showdownSlug": "hawlucha",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "haxorus",
+    "speciesName": "Haxorus",
+    "dex": 612,
+    "sid": 19584,
+    "showdownSlug": "haxorus",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "heatmor",
+    "speciesName": "Heatmor",
+    "dex": 631,
+    "sid": 20192,
+    "showdownSlug": "heatmor",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "heatran",
+    "speciesName": "Heatran",
+    "dex": 485,
+    "sid": 15520,
+    "showdownSlug": "heatran",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "heliolisk",
+    "speciesName": "Heliolisk",
+    "dex": 695,
+    "sid": 22240,
+    "showdownSlug": "heliolisk",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "helioptile",
+    "speciesName": "Helioptile",
+    "dex": 694,
+    "sid": 22208,
+    "showdownSlug": "helioptile",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "heracross",
+    "speciesName": "Heracross",
+    "dex": 214,
+    "sid": 6848,
+    "showdownSlug": "heracross",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "heracross_mega",
+    "speciesName": "Heracross (Mega)",
+    "dex": 214,
+    "sid": 6849,
+    "showdownSlug": "heracross-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "herdier",
+    "speciesName": "Herdier",
+    "dex": 507,
+    "sid": 16224,
+    "showdownSlug": "herdier",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "hippopotas",
+    "speciesName": "Hippopotas",
+    "dex": 449,
+    "sid": 14368,
+    "showdownSlug": "hippopotas",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "hippowdon",
+    "speciesName": "Hippowdon",
+    "dex": 450,
+    "sid": 14400,
+    "showdownSlug": "hippowdon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "hitmonchan",
+    "speciesName": "Hitmonchan",
+    "dex": 107,
+    "sid": 3424,
+    "showdownSlug": "hitmonchan",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "hitmonlee",
+    "speciesName": "Hitmonlee",
+    "dex": 106,
+    "sid": 3392,
+    "showdownSlug": "hitmonlee",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "hitmontop",
+    "speciesName": "Hitmontop",
+    "dex": 237,
+    "sid": 7584,
+    "showdownSlug": "hitmontop",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ho_oh",
+    "speciesName": "Ho-Oh",
+    "dex": 250,
+    "sid": 8000,
+    "showdownSlug": "hooh",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "honchkrow",
+    "speciesName": "Honchkrow",
+    "dex": 430,
+    "sid": 13760,
+    "showdownSlug": "honchkrow",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "honedge",
+    "speciesName": "Honedge",
+    "dex": 679,
+    "sid": 21728,
+    "showdownSlug": "honedge",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "hoopa",
+    "speciesName": "Hoopa",
+    "dex": 720,
+    "sid": 23040,
+    "showdownSlug": "hoopa",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "hoopa_unbound",
+    "speciesName": "Hoopa (Unbound)",
+    "dex": 720,
+    "sid": 23041,
+    "showdownSlug": "hoopa-unbound",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "hoothoot",
+    "speciesName": "Hoothoot",
+    "dex": 163,
+    "sid": 5216,
+    "showdownSlug": "hoothoot",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "hoppip",
+    "speciesName": "Hoppip",
+    "dex": 187,
+    "sid": 5984,
+    "showdownSlug": "hoppip",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "horsea",
+    "speciesName": "Horsea",
+    "dex": 116,
+    "sid": 3712,
+    "showdownSlug": "horsea",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "houndoom",
+    "speciesName": "Houndoom",
+    "dex": 229,
+    "sid": 7328,
+    "showdownSlug": "houndoom",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "houndoom_mega",
+    "speciesName": "Houndoom (Mega)",
+    "dex": 229,
+    "sid": 7329,
+    "showdownSlug": "houndoom-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "houndour",
+    "speciesName": "Houndour",
+    "dex": 228,
+    "sid": 7296,
+    "showdownSlug": "houndour",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "houndstone",
+    "speciesName": "Houndstone",
+    "dex": 972,
+    "sid": 31104,
+    "showdownSlug": "houndstone",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "huntail",
+    "speciesName": "Huntail",
+    "dex": 367,
+    "sid": 11744,
+    "showdownSlug": "huntail",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "hydrapple",
+    "speciesName": "Hydrapple",
+    "dex": 1019,
+    "sid": 32608,
+    "showdownSlug": "hydrapple",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "hydreigon",
+    "speciesName": "Hydreigon",
+    "dex": 635,
+    "sid": 20320,
+    "showdownSlug": "hydreigon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "hypno",
+    "speciesName": "Hypno",
+    "dex": 97,
+    "sid": 3104,
+    "showdownSlug": "hypno",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "igglybuff",
+    "speciesName": "Igglybuff",
+    "dex": 174,
+    "sid": 5568,
+    "showdownSlug": "igglybuff",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "illumise",
+    "speciesName": "Illumise",
+    "dex": 314,
+    "sid": 10048,
+    "showdownSlug": "illumise",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "impidimp",
+    "speciesName": "Impidimp",
+    "dex": 859,
+    "sid": 27488,
+    "showdownSlug": "impidimp",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "incineroar",
+    "speciesName": "Incineroar",
+    "dex": 727,
+    "sid": 23264,
+    "showdownSlug": "incineroar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "indeedee",
+    "speciesName": "Indeedee",
+    "dex": 876,
+    "sid": 28032,
+    "showdownSlug": "indeedee",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "indeedee_female",
+    "speciesName": "Indeedee (Female)",
+    "dex": 876,
+    "sid": 28033,
+    "showdownSlug": "indeedee-f",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "indeedee_male",
+    "speciesName": "Indeedee (Male)",
+    "dex": 876,
+    "sid": 28032,
+    "showdownSlug": "indeedee",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "infernape",
+    "speciesName": "Infernape",
+    "dex": 392,
+    "sid": 12544,
+    "showdownSlug": "infernape",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "inkay",
+    "speciesName": "Inkay",
+    "dex": 686,
+    "sid": 21952,
+    "showdownSlug": "inkay",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "inteleon",
+    "speciesName": "Inteleon",
+    "dex": 818,
+    "sid": 26176,
+    "showdownSlug": "inteleon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ivysaur",
+    "speciesName": "Ivysaur",
+    "dex": 2,
+    "sid": 64,
+    "showdownSlug": "ivysaur",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "jangmo_o",
+    "speciesName": "Jangmo-o",
+    "dex": 782,
+    "sid": 25024,
+    "showdownSlug": "jangmoo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "jellicent",
+    "speciesName": "Jellicent",
+    "dex": 593,
+    "sid": 18976,
+    "showdownSlug": "jellicent",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "jigglypuff",
+    "speciesName": "Jigglypuff",
+    "dex": 39,
+    "sid": 1248,
+    "showdownSlug": "jigglypuff",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "jirachi",
+    "speciesName": "Jirachi",
+    "dex": 385,
+    "sid": 12320,
+    "showdownSlug": "jirachi",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "jolteon",
+    "speciesName": "Jolteon",
+    "dex": 135,
+    "sid": 4320,
+    "showdownSlug": "jolteon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "joltik",
+    "speciesName": "Joltik",
+    "dex": 595,
+    "sid": 19040,
+    "showdownSlug": "joltik",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "jumpluff",
+    "speciesName": "Jumpluff",
+    "dex": 189,
+    "sid": 6048,
+    "showdownSlug": "jumpluff",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "jynx",
+    "speciesName": "Jynx",
+    "dex": 124,
+    "sid": 3968,
+    "showdownSlug": "jynx",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kabuto",
+    "speciesName": "Kabuto",
+    "dex": 140,
+    "sid": 4480,
+    "showdownSlug": "kabuto",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "kabutops",
+    "speciesName": "Kabutops",
+    "dex": 141,
+    "sid": 4512,
+    "showdownSlug": "kabutops",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "kadabra",
+    "speciesName": "Kadabra",
+    "dex": 64,
+    "sid": 2048,
+    "showdownSlug": "kadabra",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "kakuna",
+    "speciesName": "Kakuna",
+    "dex": 14,
+    "sid": 448,
+    "showdownSlug": "kakuna",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "kangaskhan",
+    "speciesName": "Kangaskhan",
+    "dex": 115,
+    "sid": 3680,
+    "showdownSlug": "kangaskhan",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kangaskhan_mega",
+    "speciesName": "Kangaskhan (Mega)",
+    "dex": 115,
+    "sid": 3681,
+    "showdownSlug": "kangaskhan-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "karrablast",
+    "speciesName": "Karrablast",
+    "dex": 588,
+    "sid": 18816,
+    "showdownSlug": "karrablast",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "kartana",
+    "speciesName": "Kartana",
+    "dex": 798,
+    "sid": 25536,
+    "showdownSlug": "kartana",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kecleon",
+    "speciesName": "Kecleon",
+    "dex": 352,
+    "sid": 11264,
+    "showdownSlug": "kecleon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "keldeo_ordinary",
+    "speciesName": "Keldeo (Ordinary)",
+    "dex": 647,
+    "sid": 20704,
+    "showdownSlug": "keldeo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "keldeo_resolute",
+    "speciesName": "Keldeo (Resolute)",
+    "dex": 647,
+    "sid": 20705,
+    "showdownSlug": "keldeo-resolute",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kilowattrel",
+    "speciesName": "Kilowattrel",
+    "dex": 941,
+    "sid": 30112,
+    "showdownSlug": "kilowattrel",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kingambit",
+    "speciesName": "Kingambit",
+    "dex": 983,
+    "sid": 31456,
+    "showdownSlug": "kingambit",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kingdra",
+    "speciesName": "Kingdra",
+    "dex": 230,
+    "sid": 7360,
+    "showdownSlug": "kingdra",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "kingler",
+    "speciesName": "Kingler",
+    "dex": 99,
+    "sid": 3168,
+    "showdownSlug": "kingler",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "kirlia",
+    "speciesName": "Kirlia",
+    "dex": 281,
+    "sid": 8992,
+    "showdownSlug": "kirlia",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "klang",
+    "speciesName": "Klang",
+    "dex": 600,
+    "sid": 19200,
+    "showdownSlug": "klang",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "klawf",
+    "speciesName": "Klawf",
+    "dex": 950,
+    "sid": 30400,
+    "showdownSlug": "klawf",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kleavor",
+    "speciesName": "Kleavor",
+    "dex": 900,
+    "sid": 28800,
+    "showdownSlug": "kleavor",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "klefki",
+    "speciesName": "Klefki",
+    "dex": 707,
+    "sid": 22624,
+    "showdownSlug": "klefki",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "klink",
+    "speciesName": "Klink",
+    "dex": 599,
+    "sid": 19168,
+    "showdownSlug": "klink",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "klinklang",
+    "speciesName": "Klinklang",
+    "dex": 601,
+    "sid": 19232,
+    "showdownSlug": "klinklang",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "koffing",
+    "speciesName": "Koffing",
+    "dex": 109,
+    "sid": 3488,
+    "showdownSlug": "koffing",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "komala",
+    "speciesName": "Komala",
+    "dex": 775,
+    "sid": 24800,
+    "showdownSlug": "komala",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kommo_o",
+    "speciesName": "Kommo-o",
+    "dex": 784,
+    "sid": 25088,
+    "showdownSlug": "kommoo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "krabby",
+    "speciesName": "Krabby",
+    "dex": 98,
+    "sid": 3136,
+    "showdownSlug": "krabby",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "kricketot",
+    "speciesName": "Kricketot",
+    "dex": 401,
+    "sid": 12832,
+    "showdownSlug": "kricketot",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kricketune",
+    "speciesName": "Kricketune",
+    "dex": 402,
+    "sid": 12864,
+    "showdownSlug": "kricketune",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "krokorok",
+    "speciesName": "Krokorok",
+    "dex": 552,
+    "sid": 17664,
+    "showdownSlug": "krokorok",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "krookodile",
+    "speciesName": "Krookodile",
+    "dex": 553,
+    "sid": 17696,
+    "showdownSlug": "krookodile",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kubfu",
+    "speciesName": "Kubfu",
+    "dex": 891,
+    "sid": 28512,
+    "showdownSlug": "kubfu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kyogre",
+    "speciesName": "Kyogre",
+    "dex": 382,
+    "sid": 12224,
+    "showdownSlug": "kyogre",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "kyogre_primal",
+    "speciesName": "Kyogre (Primal)",
+    "dex": 382,
+    "sid": 12225,
+    "showdownSlug": "kyogre-primal",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kyurem",
+    "speciesName": "Kyurem",
+    "dex": 646,
+    "sid": 20672,
+    "showdownSlug": "kyurem",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kyurem_black",
+    "speciesName": "Kyurem (Black)",
+    "dex": 646,
+    "sid": 20674,
+    "showdownSlug": "kyurem-black",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "kyurem_white",
+    "speciesName": "Kyurem (White)",
+    "dex": 646,
+    "sid": 20673,
+    "showdownSlug": "kyurem-white",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lairon",
+    "speciesName": "Lairon",
+    "dex": 305,
+    "sid": 9760,
+    "showdownSlug": "lairon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "lampent",
+    "speciesName": "Lampent",
+    "dex": 608,
+    "sid": 19456,
+    "showdownSlug": "lampent",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "landorus_incarnate",
+    "speciesName": "Landorus (Incarnate)",
+    "dex": 645,
+    "sid": 20640,
+    "showdownSlug": "landorus",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "landorus_therian",
+    "speciesName": "Landorus (Therian)",
+    "dex": 645,
+    "sid": 20641,
+    "showdownSlug": "landorus-therian",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lanturn",
+    "speciesName": "Lanturn",
+    "dex": 171,
+    "sid": 5472,
+    "showdownSlug": "lanturn",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lapras",
+    "speciesName": "Lapras",
+    "dex": 131,
+    "sid": 4192,
+    "showdownSlug": "lapras",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "larvesta",
+    "speciesName": "Larvesta",
+    "dex": 636,
+    "sid": 20352,
+    "showdownSlug": "larvesta",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "larvitar",
+    "speciesName": "Larvitar",
+    "dex": 246,
+    "sid": 7872,
+    "showdownSlug": "larvitar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "latias",
+    "speciesName": "Latias",
+    "dex": 380,
+    "sid": 12160,
+    "showdownSlug": "latias",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "latias_mega",
+    "speciesName": "Latias (Mega)",
+    "dex": 380,
+    "sid": 12161,
+    "showdownSlug": "latias-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "latios",
+    "speciesName": "Latios",
+    "dex": 381,
+    "sid": 12192,
+    "showdownSlug": "latios",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "latios_mega",
+    "speciesName": "Latios (Mega)",
+    "dex": 381,
+    "sid": 12193,
+    "showdownSlug": "latios-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "leafeon",
+    "speciesName": "Leafeon",
+    "dex": 470,
+    "sid": 15040,
+    "showdownSlug": "leafeon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "leavanny",
+    "speciesName": "Leavanny",
+    "dex": 542,
+    "sid": 17344,
+    "showdownSlug": "leavanny",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lechonk",
+    "speciesName": "Lechonk",
+    "dex": 915,
+    "sid": 29280,
+    "showdownSlug": "lechonk",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "ledian",
+    "speciesName": "Ledian",
+    "dex": 166,
+    "sid": 5312,
+    "showdownSlug": "ledian",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ledyba",
+    "speciesName": "Ledyba",
+    "dex": 165,
+    "sid": 5280,
+    "showdownSlug": "ledyba",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "lickilicky",
+    "speciesName": "Lickilicky",
+    "dex": 463,
+    "sid": 14816,
+    "showdownSlug": "lickilicky",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lickitung",
+    "speciesName": "Lickitung",
+    "dex": 108,
+    "sid": 3456,
+    "showdownSlug": "lickitung",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "liepard",
+    "speciesName": "Liepard",
+    "dex": 510,
+    "sid": 16320,
+    "showdownSlug": "liepard",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "lileep",
+    "speciesName": "Lileep",
+    "dex": 345,
+    "sid": 11040,
+    "showdownSlug": "lileep",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "lilligant",
+    "speciesName": "Lilligant",
+    "dex": 549,
+    "sid": 17568,
+    "showdownSlug": "lilligant",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lilligant_hisuian",
+    "speciesName": "Lilligant (Hisuian)",
+    "dex": 549,
+    "sid": 17569,
+    "showdownSlug": "lilligant-hisui",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lillipup",
+    "speciesName": "Lillipup",
+    "dex": 506,
+    "sid": 16192,
+    "showdownSlug": "lillipup",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "linoone",
+    "speciesName": "Linoone",
+    "dex": 264,
+    "sid": 8448,
+    "showdownSlug": "linoone",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "linoone_galarian",
+    "speciesName": "Linoone (Galarian)",
+    "dex": 264,
+    "sid": 8449,
+    "showdownSlug": "linoone-galar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "litleo",
+    "speciesName": "Litleo",
+    "dex": 667,
+    "sid": 21344,
+    "showdownSlug": "litleo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "litten",
+    "speciesName": "Litten",
+    "dex": 725,
+    "sid": 23200,
+    "showdownSlug": "litten",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "litwick",
+    "speciesName": "Litwick",
+    "dex": 607,
+    "sid": 19424,
+    "showdownSlug": "litwick",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "lokix",
+    "speciesName": "Lokix",
+    "dex": 920,
+    "sid": 29440,
+    "showdownSlug": "lokix",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lombre",
+    "speciesName": "Lombre",
+    "dex": 271,
+    "sid": 8672,
+    "showdownSlug": "lombre",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lopunny",
+    "speciesName": "Lopunny",
+    "dex": 428,
+    "sid": 13696,
+    "showdownSlug": "lopunny",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lopunny_mega",
+    "speciesName": "Lopunny (Mega)",
+    "dex": 428,
+    "sid": 13697,
+    "showdownSlug": "lopunny-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lotad",
+    "speciesName": "Lotad",
+    "dex": 270,
+    "sid": 8640,
+    "showdownSlug": "lotad",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "loudred",
+    "speciesName": "Loudred",
+    "dex": 294,
+    "sid": 9408,
+    "showdownSlug": "loudred",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "lucario",
+    "speciesName": "Lucario",
+    "dex": 448,
+    "sid": 14336,
+    "showdownSlug": "lucario",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lucario_mega",
+    "speciesName": "Lucario (Mega)",
+    "dex": 448,
+    "sid": 14337,
+    "showdownSlug": "lucario-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "ludicolo",
+    "speciesName": "Ludicolo",
+    "dex": 272,
+    "sid": 8704,
+    "showdownSlug": "ludicolo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lugia",
+    "speciesName": "Lugia",
+    "dex": 249,
+    "sid": 7968,
+    "showdownSlug": "lugia",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "lumineon",
+    "speciesName": "Lumineon",
+    "dex": 457,
+    "sid": 14624,
+    "showdownSlug": "lumineon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lunala",
+    "speciesName": "Lunala",
+    "dex": 792,
+    "sid": 25344,
+    "showdownSlug": "lunala",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lunatone",
+    "speciesName": "Lunatone",
+    "dex": 337,
+    "sid": 10784,
+    "showdownSlug": "lunatone",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lurantis",
+    "speciesName": "Lurantis",
+    "dex": 754,
+    "sid": 24128,
+    "showdownSlug": "lurantis",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "luvdisc",
+    "speciesName": "Luvdisc",
+    "dex": 370,
+    "sid": 11840,
+    "showdownSlug": "luvdisc",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "luxio",
+    "speciesName": "Luxio",
+    "dex": 404,
+    "sid": 12928,
+    "showdownSlug": "luxio",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "luxray",
+    "speciesName": "Luxray",
+    "dex": 405,
+    "sid": 12960,
+    "showdownSlug": "luxray",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "lycanroc_dusk",
+    "speciesName": "Lycanroc (Dusk)",
+    "dex": 745,
+    "sid": 23842,
+    "showdownSlug": "lycanroc-dusk",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lycanroc_midday",
+    "speciesName": "Lycanroc (Midday)",
+    "dex": 745,
+    "sid": 23840,
+    "showdownSlug": "lycanroc",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "lycanroc_midnight",
+    "speciesName": "Lycanroc (Midnight)",
+    "dex": 745,
+    "sid": 23841,
+    "showdownSlug": "lycanroc-midnight",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mabosstiff",
+    "speciesName": "Mabosstiff",
+    "dex": 943,
+    "sid": 30176,
+    "showdownSlug": "mabosstiff",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "machamp",
+    "speciesName": "Machamp",
+    "dex": 68,
+    "sid": 2176,
+    "showdownSlug": "machamp",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "machoke",
+    "speciesName": "Machoke",
+    "dex": 67,
+    "sid": 2144,
+    "showdownSlug": "machoke",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "machop",
+    "speciesName": "Machop",
+    "dex": 66,
+    "sid": 2112,
+    "showdownSlug": "machop",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "magby",
+    "speciesName": "Magby",
+    "dex": 240,
+    "sid": 7680,
+    "showdownSlug": "magby",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "magcargo",
+    "speciesName": "Magcargo",
+    "dex": 219,
+    "sid": 7008,
+    "showdownSlug": "magcargo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "magikarp",
+    "speciesName": "Magikarp",
+    "dex": 129,
+    "sid": 4128,
+    "showdownSlug": "magikarp",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "magmar",
+    "speciesName": "Magmar",
+    "dex": 126,
+    "sid": 4032,
+    "showdownSlug": "magmar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "magmortar",
+    "speciesName": "Magmortar",
+    "dex": 467,
+    "sid": 14944,
+    "showdownSlug": "magmortar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "magnemite",
+    "speciesName": "Magnemite",
+    "dex": 81,
+    "sid": 2592,
+    "showdownSlug": "magnemite",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "magneton",
+    "speciesName": "Magneton",
+    "dex": 82,
+    "sid": 2624,
+    "showdownSlug": "magneton",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "magnezone",
+    "speciesName": "Magnezone",
+    "dex": 462,
+    "sid": 14784,
+    "showdownSlug": "magnezone",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "makuhita",
+    "speciesName": "Makuhita",
+    "dex": 296,
+    "sid": 9472,
+    "showdownSlug": "makuhita",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "malamar",
+    "speciesName": "Malamar",
+    "dex": 687,
+    "sid": 21984,
+    "showdownSlug": "malamar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "malamar_mega",
+    "speciesName": "Malamar (Mega)",
+    "dex": 687,
+    "sid": 21985,
+    "showdownSlug": "malamar-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "mamoswine",
+    "speciesName": "Mamoswine",
+    "dex": 473,
+    "sid": 15136,
+    "showdownSlug": "mamoswine",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "mandibuzz",
+    "speciesName": "Mandibuzz",
+    "dex": 630,
+    "sid": 20160,
+    "showdownSlug": "mandibuzz",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "manectric",
+    "speciesName": "Manectric",
+    "dex": 310,
+    "sid": 9920,
+    "showdownSlug": "manectric",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "manectric_mega",
+    "speciesName": "Manectric (Mega)",
+    "dex": 310,
+    "sid": 9921,
+    "showdownSlug": "manectric-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "mankey",
+    "speciesName": "Mankey",
+    "dex": 56,
+    "sid": 1792,
+    "showdownSlug": "mankey",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "mantine",
+    "speciesName": "Mantine",
+    "dex": 226,
+    "sid": 7232,
+    "showdownSlug": "mantine",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mantyke",
+    "speciesName": "Mantyke",
+    "dex": 458,
+    "sid": 14656,
+    "showdownSlug": "mantyke",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "maractus",
+    "speciesName": "Maractus",
+    "dex": 556,
+    "sid": 17792,
+    "showdownSlug": "maractus",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mareanie",
+    "speciesName": "Mareanie",
+    "dex": 747,
+    "sid": 23904,
+    "showdownSlug": "mareanie",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mareep",
+    "speciesName": "Mareep",
+    "dex": 179,
+    "sid": 5728,
+    "showdownSlug": "mareep",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "marill",
+    "speciesName": "Marill",
+    "dex": 183,
+    "sid": 5856,
+    "showdownSlug": "marill",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "marowak",
+    "speciesName": "Marowak",
+    "dex": 105,
+    "sid": 3360,
+    "showdownSlug": "marowak",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "marowak_alolan",
+    "speciesName": "Marowak (Alolan)",
+    "dex": 105,
+    "sid": 3361,
+    "showdownSlug": "marowak-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "marshadow",
+    "speciesName": "Marshadow",
+    "dex": 802,
+    "sid": 25664,
+    "showdownSlug": "marshadow",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "marshtomp",
+    "speciesName": "Marshtomp",
+    "dex": 259,
+    "sid": 8288,
+    "showdownSlug": "marshtomp",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "maschiff",
+    "speciesName": "Maschiff",
+    "dex": 942,
+    "sid": 30144,
+    "showdownSlug": "maschiff",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "masquerain",
+    "speciesName": "Masquerain",
+    "dex": 284,
+    "sid": 9088,
+    "showdownSlug": "masquerain",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "maushold",
+    "speciesName": "Maushold",
+    "dex": 925,
+    "sid": 29600,
+    "showdownSlug": "maushold",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mawile",
+    "speciesName": "Mawile",
+    "dex": 303,
+    "sid": 9696,
+    "showdownSlug": "mawile",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "mawile_mega",
+    "speciesName": "Mawile (Mega)",
+    "dex": 303,
+    "sid": 9697,
+    "showdownSlug": "mawile-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "medicham",
+    "speciesName": "Medicham",
+    "dex": 308,
+    "sid": 9856,
+    "showdownSlug": "medicham",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "medicham_mega",
+    "speciesName": "Medicham (Mega)",
+    "dex": 308,
+    "sid": 9857,
+    "showdownSlug": "medicham-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "meditite",
+    "speciesName": "Meditite",
+    "dex": 307,
+    "sid": 9824,
+    "showdownSlug": "meditite",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "meganium",
+    "speciesName": "Meganium",
+    "dex": 154,
+    "sid": 4928,
+    "showdownSlug": "meganium",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "melmetal",
+    "speciesName": "Melmetal",
+    "dex": 809,
+    "sid": 25888,
+    "showdownSlug": "melmetal",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "meloetta_aria",
+    "speciesName": "Meloetta (Aria)",
+    "dex": 648,
+    "sid": 20736,
+    "showdownSlug": "meloetta",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "meltan",
+    "speciesName": "Meltan",
+    "dex": 808,
+    "sid": 25856,
+    "showdownSlug": "meltan",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "meowscarada",
+    "speciesName": "Meowscarada",
+    "dex": 908,
+    "sid": 29056,
+    "showdownSlug": "meowscarada",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "meowstic",
+    "speciesName": "Meowstic (Male)",
+    "dex": 678,
+    "sid": 21696,
+    "showdownSlug": "meowstic",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "meowstic_female",
+    "speciesName": "Meowstic (Female)",
+    "dex": 678,
+    "sid": 21697,
+    "showdownSlug": "meowstic-f",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "meowth",
+    "speciesName": "Meowth",
+    "dex": 52,
+    "sid": 1664,
+    "showdownSlug": "meowth",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "meowth_alolan",
+    "speciesName": "Meowth (Alolan)",
+    "dex": 52,
+    "sid": 1665,
+    "showdownSlug": "meowth-alola",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "meowth_galarian",
+    "speciesName": "Meowth (Galarian)",
+    "dex": 52,
+    "sid": 1666,
+    "showdownSlug": "meowth-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mesprit",
+    "speciesName": "Mesprit",
+    "dex": 481,
+    "sid": 15392,
+    "showdownSlug": "mesprit",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "metagross",
+    "speciesName": "Metagross",
+    "dex": 376,
+    "sid": 12032,
+    "showdownSlug": "metagross",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "metagross_mega",
+    "speciesName": "Metagross (Mega)",
+    "dex": 376,
+    "sid": 12033,
+    "showdownSlug": "metagross-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "metang",
+    "speciesName": "Metang",
+    "dex": 375,
+    "sid": 12000,
+    "showdownSlug": "metang",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "metapod",
+    "speciesName": "Metapod",
+    "dex": 11,
+    "sid": 352,
+    "showdownSlug": "metapod",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "mew",
+    "speciesName": "Mew",
+    "dex": 151,
+    "sid": 4832,
+    "showdownSlug": "mew",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mewtwo",
+    "speciesName": "Mewtwo",
+    "dex": 150,
+    "sid": 4800,
+    "showdownSlug": "mewtwo",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "mewtwo_armored",
+    "speciesName": "Mewtwo (Armored)",
+    "dex": 150,
+    "sid": 4800,
+    "showdownSlug": "mewtwo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mewtwo_mega_x",
+    "speciesName": "Mewtwo (Mega X)",
+    "dex": 150,
+    "sid": 4801,
+    "showdownSlug": "mewtwo-megax",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "mewtwo_mega_y",
+    "speciesName": "Mewtwo (Mega Y)",
+    "dex": 150,
+    "sid": 4802,
+    "showdownSlug": "mewtwo-megay",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "mienfoo",
+    "speciesName": "Mienfoo",
+    "dex": 619,
+    "sid": 19808,
+    "showdownSlug": "mienfoo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mienshao",
+    "speciesName": "Mienshao",
+    "dex": 620,
+    "sid": 19840,
+    "showdownSlug": "mienshao",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mightyena",
+    "speciesName": "Mightyena",
+    "dex": 262,
+    "sid": 8384,
+    "showdownSlug": "mightyena",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "milotic",
+    "speciesName": "Milotic",
+    "dex": 350,
+    "sid": 11200,
+    "showdownSlug": "milotic",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "miltank",
+    "speciesName": "Miltank",
+    "dex": 241,
+    "sid": 7712,
+    "showdownSlug": "miltank",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mime_jr",
+    "speciesName": "Mime (Jr)",
+    "dex": 439,
+    "sid": 14048,
+    "showdownSlug": "mimejr",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mimikyu",
+    "speciesName": "Mimikyu",
+    "dex": 778,
+    "sid": 24896,
+    "showdownSlug": "mimikyu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "minccino",
+    "speciesName": "Minccino",
+    "dex": 572,
+    "sid": 18304,
+    "showdownSlug": "minccino",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "minior_core",
+    "speciesName": "Minior (Core)",
+    "dex": 774,
+    "sid": 24775,
+    "showdownSlug": "minior",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "minun",
+    "speciesName": "Minun",
+    "dex": 312,
+    "sid": 9984,
+    "showdownSlug": "minun",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "misdreavus",
+    "speciesName": "Misdreavus",
+    "dex": 200,
+    "sid": 6400,
+    "showdownSlug": "misdreavus",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "mismagius",
+    "speciesName": "Mismagius",
+    "dex": 429,
+    "sid": 13728,
+    "showdownSlug": "mismagius",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "moltres",
+    "speciesName": "Moltres",
+    "dex": 146,
+    "sid": 4672,
+    "showdownSlug": "moltres",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "moltres_galarian",
+    "speciesName": "Moltres (Galarian)",
+    "dex": 146,
+    "sid": 4673,
+    "showdownSlug": "moltres-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "monferno",
+    "speciesName": "Monferno",
+    "dex": 391,
+    "sid": 12512,
+    "showdownSlug": "monferno",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "morelull",
+    "speciesName": "Morelull",
+    "dex": 755,
+    "sid": 24160,
+    "showdownSlug": "morelull",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "morgrem",
+    "speciesName": "Morgrem",
+    "dex": 860,
+    "sid": 27520,
+    "showdownSlug": "morgrem",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "morpeko_full_belly",
+    "speciesName": "Morpeko (Full Belly)",
+    "dex": 877,
+    "sid": 28064,
+    "showdownSlug": "morpeko",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mothim",
+    "speciesName": "Mothim",
+    "dex": 414,
+    "sid": 13248,
+    "showdownSlug": "mothim",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mr_mime",
+    "speciesName": "Mr. Mime",
+    "dex": 122,
+    "sid": 3904,
+    "showdownSlug": "mrmime",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mr_mime_galarian",
+    "speciesName": "Mr. Mime (Galarian)",
+    "dex": 122,
+    "sid": 3905,
+    "showdownSlug": "mrmime-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mr_rime",
+    "speciesName": "Mr. Rime",
+    "dex": 866,
+    "sid": 27712,
+    "showdownSlug": "mrrime",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mudbray",
+    "speciesName": "Mudbray",
+    "dex": 749,
+    "sid": 23968,
+    "showdownSlug": "mudbray",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "mudkip",
+    "speciesName": "Mudkip",
+    "dex": 258,
+    "sid": 8256,
+    "showdownSlug": "mudkip",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "mudsdale",
+    "speciesName": "Mudsdale",
+    "dex": 750,
+    "sid": 24000,
+    "showdownSlug": "mudsdale",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "muk",
+    "speciesName": "Muk",
+    "dex": 89,
+    "sid": 2848,
+    "showdownSlug": "muk",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "muk_alolan",
+    "speciesName": "Muk (Alolan)",
+    "dex": 89,
+    "sid": 2849,
+    "showdownSlug": "muk-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "munchlax",
+    "speciesName": "Munchlax",
+    "dex": 446,
+    "sid": 14272,
+    "showdownSlug": "munchlax",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "munna",
+    "speciesName": "Munna",
+    "dex": 517,
+    "sid": 16544,
+    "showdownSlug": "munna",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "murkrow",
+    "speciesName": "Murkrow",
+    "dex": 198,
+    "sid": 6336,
+    "showdownSlug": "murkrow",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "musharna",
+    "speciesName": "Musharna",
+    "dex": 518,
+    "sid": 16576,
+    "showdownSlug": "musharna",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "nacli",
+    "speciesName": "Nacli",
+    "dex": 932,
+    "sid": 29824,
+    "showdownSlug": "nacli",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "naclstack",
+    "speciesName": "Naclstack",
+    "dex": 933,
+    "sid": 29856,
+    "showdownSlug": "naclstack",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "naganadel",
+    "speciesName": "Naganadel",
+    "dex": 804,
+    "sid": 25728,
+    "showdownSlug": "naganadel",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "natu",
+    "speciesName": "Natu",
+    "dex": 177,
+    "sid": 5664,
+    "showdownSlug": "natu",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "necrozma",
+    "speciesName": "Necrozma",
+    "dex": 800,
+    "sid": 25600,
+    "showdownSlug": "necrozma",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "necrozma_dawn_wings",
+    "speciesName": "Necrozma (Dawn Wings)",
+    "dex": 800,
+    "sid": 25602,
+    "showdownSlug": "necrozma-dawnwings",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "necrozma_dusk_mane",
+    "speciesName": "Necrozma (Dusk Mane)",
+    "dex": 800,
+    "sid": 25601,
+    "showdownSlug": "necrozma-duskmane",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "nickit",
+    "speciesName": "Nickit",
+    "dex": 827,
+    "sid": 26464,
+    "showdownSlug": "nickit",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "nidoking",
+    "speciesName": "Nidoking",
+    "dex": 34,
+    "sid": 1088,
+    "showdownSlug": "nidoking",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "nidoqueen",
+    "speciesName": "Nidoqueen",
+    "dex": 31,
+    "sid": 992,
+    "showdownSlug": "nidoqueen",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "nidoran_female",
+    "speciesName": "Nidoran Female",
+    "dex": 29,
+    "sid": 928,
+    "showdownSlug": "nidoranf",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "nidoran_male",
+    "speciesName": "Nidoran Male",
+    "dex": 32,
+    "sid": 1024,
+    "showdownSlug": "nidoranm",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "nidorina",
+    "speciesName": "Nidorina",
+    "dex": 30,
+    "sid": 960,
+    "showdownSlug": "nidorina",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "nidorino",
+    "speciesName": "Nidorino",
+    "dex": 33,
+    "sid": 1056,
+    "showdownSlug": "nidorino",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "nihilego",
+    "speciesName": "Nihilego",
+    "dex": 793,
+    "sid": 25376,
+    "showdownSlug": "nihilego",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "nincada",
+    "speciesName": "Nincada",
+    "dex": 290,
+    "sid": 9280,
+    "showdownSlug": "nincada",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "ninetales",
+    "speciesName": "Ninetales",
+    "dex": 38,
+    "sid": 1216,
+    "showdownSlug": "ninetales",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ninetales_alolan",
+    "speciesName": "Ninetales (Alolan)",
+    "dex": 38,
+    "sid": 1217,
+    "showdownSlug": "ninetales-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ninjask",
+    "speciesName": "Ninjask",
+    "dex": 291,
+    "sid": 9312,
+    "showdownSlug": "ninjask",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "noctowl",
+    "speciesName": "Noctowl",
+    "dex": 164,
+    "sid": 5248,
+    "showdownSlug": "noctowl",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "noibat",
+    "speciesName": "Noibat",
+    "dex": 714,
+    "sid": 22848,
+    "showdownSlug": "noibat",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "noivern",
+    "speciesName": "Noivern",
+    "dex": 715,
+    "sid": 22880,
+    "showdownSlug": "noivern",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "nosepass",
+    "speciesName": "Nosepass",
+    "dex": 299,
+    "sid": 9568,
+    "showdownSlug": "nosepass",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "numel",
+    "speciesName": "Numel",
+    "dex": 322,
+    "sid": 10304,
+    "showdownSlug": "numel",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "nuzleaf",
+    "speciesName": "Nuzleaf",
+    "dex": 274,
+    "sid": 8768,
+    "showdownSlug": "nuzleaf",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "nymble",
+    "speciesName": "Nymble",
+    "dex": 919,
+    "sid": 29408,
+    "showdownSlug": "nymble",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "obstagoon",
+    "speciesName": "Obstagoon",
+    "dex": 862,
+    "sid": 27584,
+    "showdownSlug": "obstagoon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "octillery",
+    "speciesName": "Octillery",
+    "dex": 224,
+    "sid": 7168,
+    "showdownSlug": "octillery",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "oddish",
+    "speciesName": "Oddish",
+    "dex": 43,
+    "sid": 1376,
+    "showdownSlug": "oddish",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "oinkologne",
+    "speciesName": "Oinkologne",
+    "dex": 916,
+    "sid": 29312,
+    "showdownSlug": "oinkologne",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "oinkologne_female",
+    "speciesName": "Oinkologne (Female)",
+    "dex": 916,
+    "sid": 29313,
+    "showdownSlug": "oinkologne-f",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "omanyte",
+    "speciesName": "Omanyte",
+    "dex": 138,
+    "sid": 4416,
+    "showdownSlug": "omanyte",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "omastar",
+    "speciesName": "Omastar",
+    "dex": 139,
+    "sid": 4448,
+    "showdownSlug": "omastar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "onix",
+    "speciesName": "Onix",
+    "dex": 95,
+    "sid": 3040,
+    "showdownSlug": "onix",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "oranguru",
+    "speciesName": "Oranguru",
+    "dex": 765,
+    "sid": 24480,
+    "showdownSlug": "oranguru",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "orbeetle",
+    "speciesName": "Orbeetle",
+    "dex": 826,
+    "sid": 26432,
+    "showdownSlug": "orbeetle",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "oricorio_baile",
+    "speciesName": "Oricorio (Baile)",
+    "dex": 741,
+    "sid": 23712,
+    "showdownSlug": "oricorio",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "oricorio_pau",
+    "speciesName": "Oricorio (Pa'u)",
+    "dex": 741,
+    "sid": 23714,
+    "showdownSlug": "oricorio-pau",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "oricorio_pom_pom",
+    "speciesName": "Oricorio (Pom-Pom)",
+    "dex": 741,
+    "sid": 23713,
+    "showdownSlug": "oricorio-pompom",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "oricorio_sensu",
+    "speciesName": "Oricorio (Sensu)",
+    "dex": 741,
+    "sid": 23715,
+    "showdownSlug": "oricorio-sensu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "orthworm",
+    "speciesName": "Orthworm",
+    "dex": 968,
+    "sid": 30976,
+    "showdownSlug": "orthworm",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "oshawott",
+    "speciesName": "Oshawott",
+    "dex": 501,
+    "sid": 16032,
+    "showdownSlug": "oshawott",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "overqwil",
+    "speciesName": "Overqwil",
+    "dex": 904,
+    "sid": 28928,
+    "showdownSlug": "overqwil",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pachirisu",
+    "speciesName": "Pachirisu",
+    "dex": 417,
+    "sid": 13344,
+    "showdownSlug": "pachirisu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "palkia",
+    "speciesName": "Palkia",
+    "dex": 484,
+    "sid": 15488,
+    "showdownSlug": "palkia",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "palkia_origin",
+    "speciesName": "Palkia (Origin)",
+    "dex": 484,
+    "sid": 15489,
+    "showdownSlug": "palkia-origin",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "palossand",
+    "speciesName": "Palossand",
+    "dex": 770,
+    "sid": 24640,
+    "showdownSlug": "palossand",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "palpitoad",
+    "speciesName": "Palpitoad",
+    "dex": 536,
+    "sid": 17152,
+    "showdownSlug": "palpitoad",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pancham",
+    "speciesName": "Pancham",
+    "dex": 674,
+    "sid": 21568,
+    "showdownSlug": "pancham",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "pangoro",
+    "speciesName": "Pangoro",
+    "dex": 675,
+    "sid": 21600,
+    "showdownSlug": "pangoro",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "panpour",
+    "speciesName": "Panpour",
+    "dex": 515,
+    "sid": 16480,
+    "showdownSlug": "panpour",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pansage",
+    "speciesName": "Pansage",
+    "dex": 511,
+    "sid": 16352,
+    "showdownSlug": "pansage",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pansear",
+    "speciesName": "Pansear",
+    "dex": 513,
+    "sid": 16416,
+    "showdownSlug": "pansear",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "paras",
+    "speciesName": "Paras",
+    "dex": 46,
+    "sid": 1472,
+    "showdownSlug": "paras",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "parasect",
+    "speciesName": "Parasect",
+    "dex": 47,
+    "sid": 1504,
+    "showdownSlug": "parasect",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "passimian",
+    "speciesName": "Passimian",
+    "dex": 766,
+    "sid": 24512,
+    "showdownSlug": "passimian",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "patrat",
+    "speciesName": "Patrat",
+    "dex": 504,
+    "sid": 16128,
+    "showdownSlug": "patrat",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "pawmi",
+    "speciesName": "Pawmi",
+    "dex": 921,
+    "sid": 29472,
+    "showdownSlug": "pawmi",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pawmo",
+    "speciesName": "Pawmo",
+    "dex": 922,
+    "sid": 29504,
+    "showdownSlug": "pawmo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pawmot",
+    "speciesName": "Pawmot",
+    "dex": 923,
+    "sid": 29536,
+    "showdownSlug": "pawmot",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pawniard",
+    "speciesName": "Pawniard",
+    "dex": 624,
+    "sid": 19968,
+    "showdownSlug": "pawniard",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pelipper",
+    "speciesName": "Pelipper",
+    "dex": 279,
+    "sid": 8928,
+    "showdownSlug": "pelipper",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "perrserker",
+    "speciesName": "Perrserker",
+    "dex": 863,
+    "sid": 27616,
+    "showdownSlug": "perrserker",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "persian",
+    "speciesName": "Persian",
+    "dex": 53,
+    "sid": 1696,
+    "showdownSlug": "persian",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "persian_alolan",
+    "speciesName": "Persian (Alolan)",
+    "dex": 53,
+    "sid": 1697,
+    "showdownSlug": "persian-alola",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "petilil",
+    "speciesName": "Petilil",
+    "dex": 548,
+    "sid": 17536,
+    "showdownSlug": "petilil",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "phanpy",
+    "speciesName": "Phanpy",
+    "dex": 231,
+    "sid": 7392,
+    "showdownSlug": "phanpy",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "phantump",
+    "speciesName": "Phantump",
+    "dex": 708,
+    "sid": 22656,
+    "showdownSlug": "phantump",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "pheromosa",
+    "speciesName": "Pheromosa",
+    "dex": 795,
+    "sid": 25440,
+    "showdownSlug": "pheromosa",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pichu",
+    "speciesName": "Pichu",
+    "dex": 172,
+    "sid": 5504,
+    "showdownSlug": "pichu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pidgeot",
+    "speciesName": "Pidgeot",
+    "dex": 18,
+    "sid": 576,
+    "showdownSlug": "pidgeot",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "pidgeot_mega",
+    "speciesName": "Pidgeot (Mega)",
+    "dex": 18,
+    "sid": 577,
+    "showdownSlug": "pidgeot-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pidgeotto",
+    "speciesName": "Pidgeotto",
+    "dex": 17,
+    "sid": 544,
+    "showdownSlug": "pidgeotto",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "pidgey",
+    "speciesName": "Pidgey",
+    "dex": 16,
+    "sid": 512,
+    "showdownSlug": "pidgey",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "pidove",
+    "speciesName": "Pidove",
+    "dex": 519,
+    "sid": 16608,
+    "showdownSlug": "pidove",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "pignite",
+    "speciesName": "Pignite",
+    "dex": 499,
+    "sid": 15968,
+    "showdownSlug": "pignite",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "pikachu",
+    "speciesName": "Pikachu",
+    "dex": 25,
+    "sid": 800,
+    "showdownSlug": "pikachu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pikachu_5th_anniversary",
+    "speciesName": "Pikachu (5th Anniversary)",
+    "dex": 25,
+    "sid": 800,
+    "showdownSlug": "pikachu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pikachu_flying",
+    "speciesName": "Pikachu (Flying)",
+    "dex": 25,
+    "sid": 800,
+    "showdownSlug": "pikachu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pikachu_horizons",
+    "speciesName": "Pikachu (Horizons)",
+    "dex": 25,
+    "sid": 800,
+    "showdownSlug": "pikachu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pikachu_kariyushi",
+    "speciesName": "Pikachu (Kariyushi)",
+    "dex": 25,
+    "sid": 800,
+    "showdownSlug": "pikachu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pikachu_libre",
+    "speciesName": "Pikachu (Libre)",
+    "dex": 25,
+    "sid": 814,
+    "showdownSlug": "pikachu-libre",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pikachu_pop_star",
+    "speciesName": "Pikachu (Pop Star)",
+    "dex": 25,
+    "sid": 812,
+    "showdownSlug": "pikachu-popstar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pikachu_rock_star",
+    "speciesName": "Pikachu (Rock Star)",
+    "dex": 25,
+    "sid": 810,
+    "showdownSlug": "pikachu-rockstar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pikachu_shaymin",
+    "speciesName": "Pikachu (Shaymin Scarf)",
+    "dex": 25,
+    "sid": 800,
+    "showdownSlug": "pikachu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pikipek",
+    "speciesName": "Pikipek",
+    "dex": 731,
+    "sid": 23392,
+    "showdownSlug": "pikipek",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "piloswine",
+    "speciesName": "Piloswine",
+    "dex": 221,
+    "sid": 7072,
+    "showdownSlug": "piloswine",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "pineco",
+    "speciesName": "Pineco",
+    "dex": 204,
+    "sid": 6528,
+    "showdownSlug": "pineco",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "pinsir",
+    "speciesName": "Pinsir",
+    "dex": 127,
+    "sid": 4064,
+    "showdownSlug": "pinsir",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "pinsir_mega",
+    "speciesName": "Pinsir (Mega)",
+    "dex": 127,
+    "sid": 4065,
+    "showdownSlug": "pinsir-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "piplup",
+    "speciesName": "Piplup",
+    "dex": 393,
+    "sid": 12576,
+    "showdownSlug": "piplup",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "plusle",
+    "speciesName": "Plusle",
+    "dex": 311,
+    "sid": 9952,
+    "showdownSlug": "plusle",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "poipole",
+    "speciesName": "Poipole",
+    "dex": 803,
+    "sid": 25696,
+    "showdownSlug": "poipole",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "politoed",
+    "speciesName": "Politoed",
+    "dex": 186,
+    "sid": 5952,
+    "showdownSlug": "politoed",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "poliwag",
+    "speciesName": "Poliwag",
+    "dex": 60,
+    "sid": 1920,
+    "showdownSlug": "poliwag",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "poliwhirl",
+    "speciesName": "Poliwhirl",
+    "dex": 61,
+    "sid": 1952,
+    "showdownSlug": "poliwhirl",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "poliwrath",
+    "speciesName": "Poliwrath",
+    "dex": 62,
+    "sid": 1984,
+    "showdownSlug": "poliwrath",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "poltchageist",
+    "speciesName": "Poltchageist",
+    "dex": 1012,
+    "sid": 32384,
+    "showdownSlug": "poltchageist",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "polteageist",
+    "speciesName": "Polteageist",
+    "dex": 855,
+    "sid": 27360,
+    "showdownSlug": "polteageist",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "ponyta",
+    "speciesName": "Ponyta",
+    "dex": 77,
+    "sid": 2464,
+    "showdownSlug": "ponyta",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ponyta_galarian",
+    "speciesName": "Ponyta (Galarian)",
+    "dex": 77,
+    "sid": 2465,
+    "showdownSlug": "ponyta-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "poochyena",
+    "speciesName": "Poochyena",
+    "dex": 261,
+    "sid": 8352,
+    "showdownSlug": "poochyena",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "popplio",
+    "speciesName": "Popplio",
+    "dex": 728,
+    "sid": 23296,
+    "showdownSlug": "popplio",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "porygon",
+    "speciesName": "Porygon",
+    "dex": 137,
+    "sid": 4384,
+    "showdownSlug": "porygon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "porygon2",
+    "speciesName": "Porygon2",
+    "dex": 233,
+    "sid": 7456,
+    "showdownSlug": "porygon2",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "porygon_z",
+    "speciesName": "Porygon-Z",
+    "dex": 474,
+    "sid": 15168,
+    "showdownSlug": "porygonz",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "primarina",
+    "speciesName": "Primarina",
+    "dex": 730,
+    "sid": 23360,
+    "showdownSlug": "primarina",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "primeape",
+    "speciesName": "Primeape",
+    "dex": 57,
+    "sid": 1824,
+    "showdownSlug": "primeape",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "prinplup",
+    "speciesName": "Prinplup",
+    "dex": 394,
+    "sid": 12608,
+    "showdownSlug": "prinplup",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "probopass",
+    "speciesName": "Probopass",
+    "dex": 476,
+    "sid": 15232,
+    "showdownSlug": "probopass",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "psyduck",
+    "speciesName": "Psyduck",
+    "dex": 54,
+    "sid": 1728,
+    "showdownSlug": "psyduck",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "pumpkaboo_average",
+    "speciesName": "Pumpkaboo (Average)",
+    "dex": 710,
+    "sid": 22720,
+    "showdownSlug": "pumpkaboo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pumpkaboo_large",
+    "speciesName": "Pumpkaboo (Large)",
+    "dex": 710,
+    "sid": 22722,
+    "showdownSlug": "pumpkaboo-large",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pumpkaboo_small",
+    "speciesName": "Pumpkaboo (Small)",
+    "dex": 710,
+    "sid": 22721,
+    "showdownSlug": "pumpkaboo-small",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pumpkaboo_super",
+    "speciesName": "Pumpkaboo (Super)",
+    "dex": 710,
+    "sid": 22723,
+    "showdownSlug": "pumpkaboo-super",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "pupitar",
+    "speciesName": "Pupitar",
+    "dex": 247,
+    "sid": 7904,
+    "showdownSlug": "pupitar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "purrloin",
+    "speciesName": "Purrloin",
+    "dex": 509,
+    "sid": 16288,
+    "showdownSlug": "purrloin",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "purugly",
+    "speciesName": "Purugly",
+    "dex": 432,
+    "sid": 13824,
+    "showdownSlug": "purugly",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "pyroar",
+    "speciesName": "Pyroar",
+    "dex": 668,
+    "sid": 21376,
+    "showdownSlug": "pyroar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "quagsire",
+    "speciesName": "Quagsire",
+    "dex": 195,
+    "sid": 6240,
+    "showdownSlug": "quagsire",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "quaquaval",
+    "speciesName": "Quaquaval",
+    "dex": 914,
+    "sid": 29248,
+    "showdownSlug": "quaquaval",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "quaxly",
+    "speciesName": "Quaxly",
+    "dex": 912,
+    "sid": 29184,
+    "showdownSlug": "quaxly",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "quaxwell",
+    "speciesName": "Quaxwell",
+    "dex": 913,
+    "sid": 29216,
+    "showdownSlug": "quaxwell",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "quilava",
+    "speciesName": "Quilava",
+    "dex": 156,
+    "sid": 4992,
+    "showdownSlug": "quilava",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "quilladin",
+    "speciesName": "Quilladin",
+    "dex": 651,
+    "sid": 20832,
+    "showdownSlug": "quilladin",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "qwilfish",
+    "speciesName": "Qwilfish",
+    "dex": 211,
+    "sid": 6752,
+    "showdownSlug": "qwilfish",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "qwilfish_hisuian",
+    "speciesName": "Qwilfish (Hisuian)",
+    "dex": 211,
+    "sid": 6753,
+    "showdownSlug": "qwilfish-hisui",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "raboot",
+    "speciesName": "Raboot",
+    "dex": 814,
+    "sid": 26048,
+    "showdownSlug": "raboot",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "raichu",
+    "speciesName": "Raichu",
+    "dex": 26,
+    "sid": 832,
+    "showdownSlug": "raichu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "raichu_alolan",
+    "speciesName": "Raichu (Alolan)",
+    "dex": 26,
+    "sid": 833,
+    "showdownSlug": "raichu-alola",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "raichu_mega_x",
+    "speciesName": "Raichu (Mega X)",
+    "dex": 26,
+    "sid": 834,
+    "showdownSlug": "raichu-megax",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "raichu_mega_y",
+    "speciesName": "Raichu (Mega Y)",
+    "dex": 26,
+    "sid": 835,
+    "showdownSlug": "raichu-megay",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "raikou",
+    "speciesName": "Raikou",
+    "dex": 243,
+    "sid": 7776,
+    "showdownSlug": "raikou",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ralts",
+    "speciesName": "Ralts",
+    "dex": 280,
+    "sid": 8960,
+    "showdownSlug": "ralts",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "rampardos",
+    "speciesName": "Rampardos",
+    "dex": 409,
+    "sid": 13088,
+    "showdownSlug": "rampardos",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "rapidash",
+    "speciesName": "Rapidash",
+    "dex": 78,
+    "sid": 2496,
+    "showdownSlug": "rapidash",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "rapidash_galarian",
+    "speciesName": "Rapidash (Galarian)",
+    "dex": 78,
+    "sid": 2497,
+    "showdownSlug": "rapidash-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "raticate",
+    "speciesName": "Raticate",
+    "dex": 20,
+    "sid": 640,
+    "showdownSlug": "raticate",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "raticate_alolan",
+    "speciesName": "Raticate (Alolan)",
+    "dex": 20,
+    "sid": 641,
+    "showdownSlug": "raticate-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "rattata",
+    "speciesName": "Rattata",
+    "dex": 19,
+    "sid": 608,
+    "showdownSlug": "rattata",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "rattata_alolan",
+    "speciesName": "Rattata (Alolan)",
+    "dex": 19,
+    "sid": 609,
+    "showdownSlug": "rattata-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "rayquaza",
+    "speciesName": "Rayquaza",
+    "dex": 384,
+    "sid": 12288,
+    "showdownSlug": "rayquaza",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "rayquaza_mega",
+    "speciesName": "Rayquaza (Mega)",
+    "dex": 384,
+    "sid": 12289,
+    "showdownSlug": "rayquaza-mega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "regice",
+    "speciesName": "Regice",
+    "dex": 378,
+    "sid": 12096,
+    "showdownSlug": "regice",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "regidrago",
+    "speciesName": "Regidrago",
+    "dex": 895,
+    "sid": 28640,
+    "showdownSlug": "regidrago",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "regieleki",
+    "speciesName": "Regieleki",
+    "dex": 894,
+    "sid": 28608,
+    "showdownSlug": "regieleki",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "regigigas",
+    "speciesName": "Regigigas",
+    "dex": 486,
+    "sid": 15552,
+    "showdownSlug": "regigigas",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "regirock",
+    "speciesName": "Regirock",
+    "dex": 377,
+    "sid": 12064,
+    "showdownSlug": "regirock",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "registeel",
+    "speciesName": "Registeel",
+    "dex": 379,
+    "sid": 12128,
+    "showdownSlug": "registeel",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "relicanth",
+    "speciesName": "Relicanth",
+    "dex": 369,
+    "sid": 11808,
+    "showdownSlug": "relicanth",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "remoraid",
+    "speciesName": "Remoraid",
+    "dex": 223,
+    "sid": 7136,
+    "showdownSlug": "remoraid",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "reshiram",
+    "speciesName": "Reshiram",
+    "dex": 643,
+    "sid": 20576,
+    "showdownSlug": "reshiram",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "reuniclus",
+    "speciesName": "Reuniclus",
+    "dex": 579,
+    "sid": 18528,
+    "showdownSlug": "reuniclus",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "revavroom",
+    "speciesName": "Revavroom",
+    "dex": 966,
+    "sid": 30912,
+    "showdownSlug": "revavroom",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "rhydon",
+    "speciesName": "Rhydon",
+    "dex": 112,
+    "sid": 3584,
+    "showdownSlug": "rhydon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "rhyhorn",
+    "speciesName": "Rhyhorn",
+    "dex": 111,
+    "sid": 3552,
+    "showdownSlug": "rhyhorn",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "rhyperior",
+    "speciesName": "Rhyperior",
+    "dex": 464,
+    "sid": 14848,
+    "showdownSlug": "rhyperior",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ribombee",
+    "speciesName": "Ribombee",
+    "dex": 743,
+    "sid": 23776,
+    "showdownSlug": "ribombee",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "rillaboom",
+    "speciesName": "Rillaboom",
+    "dex": 812,
+    "sid": 25984,
+    "showdownSlug": "rillaboom",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "riolu",
+    "speciesName": "Riolu",
+    "dex": 447,
+    "sid": 14304,
+    "showdownSlug": "riolu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "rockruff",
+    "speciesName": "Rockruff",
+    "dex": 744,
+    "sid": 23808,
+    "showdownSlug": "rockruff",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "roggenrola",
+    "speciesName": "Roggenrola",
+    "dex": 524,
+    "sid": 16768,
+    "showdownSlug": "roggenrola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "rolycoly",
+    "speciesName": "Rolycoly",
+    "dex": 837,
+    "sid": 26784,
+    "showdownSlug": "rolycoly",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "rookidee",
+    "speciesName": "Rookidee",
+    "dex": 821,
+    "sid": 26272,
+    "showdownSlug": "rookidee",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "roselia",
+    "speciesName": "Roselia",
+    "dex": 315,
+    "sid": 10080,
+    "showdownSlug": "roselia",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "roserade",
+    "speciesName": "Roserade",
+    "dex": 407,
+    "sid": 13024,
+    "showdownSlug": "roserade",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "rotom",
+    "speciesName": "Rotom",
+    "dex": 479,
+    "sid": 15328,
+    "showdownSlug": "rotom",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "rotom_fan",
+    "speciesName": "Rotom (Fan)",
+    "dex": 479,
+    "sid": 15332,
+    "showdownSlug": "rotom-fan",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "rotom_frost",
+    "speciesName": "Rotom (Frost)",
+    "dex": 479,
+    "sid": 15331,
+    "showdownSlug": "rotom-frost",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "rotom_heat",
+    "speciesName": "Rotom (Heat)",
+    "dex": 479,
+    "sid": 15329,
+    "showdownSlug": "rotom-heat",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "rotom_mow",
+    "speciesName": "Rotom (Mow)",
+    "dex": 479,
+    "sid": 15333,
+    "showdownSlug": "rotom-mow",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "rotom_wash",
+    "speciesName": "Rotom (Wash)",
+    "dex": 479,
+    "sid": 15330,
+    "showdownSlug": "rotom-wash",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "rowlet",
+    "speciesName": "Rowlet",
+    "dex": 722,
+    "sid": 23104,
+    "showdownSlug": "rowlet",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "rufflet",
+    "speciesName": "Rufflet",
+    "dex": 627,
+    "sid": 20064,
+    "showdownSlug": "rufflet",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "runerigus",
+    "speciesName": "Runerigus",
+    "dex": 867,
+    "sid": 27744,
+    "showdownSlug": "runerigus",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sableye",
+    "speciesName": "Sableye",
+    "dex": 302,
+    "sid": 9664,
+    "showdownSlug": "sableye",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sableye_mega",
+    "speciesName": "Sableye (Mega)",
+    "dex": 302,
+    "sid": 9665,
+    "showdownSlug": "sableye-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "salamence",
+    "speciesName": "Salamence",
+    "dex": 373,
+    "sid": 11936,
+    "showdownSlug": "salamence",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "salamence_mega",
+    "speciesName": "Salamence (Mega)",
+    "dex": 373,
+    "sid": 11937,
+    "showdownSlug": "salamence-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "salandit",
+    "speciesName": "Salandit",
+    "dex": 757,
+    "sid": 24224,
+    "showdownSlug": "salandit",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "salazzle",
+    "speciesName": "Salazzle",
+    "dex": 758,
+    "sid": 24256,
+    "showdownSlug": "salazzle",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "samurott",
+    "speciesName": "Samurott",
+    "dex": 503,
+    "sid": 16096,
+    "showdownSlug": "samurott",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "samurott_hisuian",
+    "speciesName": "Samurott (Hisuian)",
+    "dex": 503,
+    "sid": 16097,
+    "showdownSlug": "samurott-hisui",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sandaconda",
+    "speciesName": "Sandaconda",
+    "dex": 844,
+    "sid": 27008,
+    "showdownSlug": "sandaconda",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sandile",
+    "speciesName": "Sandile",
+    "dex": 551,
+    "sid": 17632,
+    "showdownSlug": "sandile",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sandshrew",
+    "speciesName": "Sandshrew",
+    "dex": 27,
+    "sid": 864,
+    "showdownSlug": "sandshrew",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sandshrew_alolan",
+    "speciesName": "Sandshrew (Alolan)",
+    "dex": 27,
+    "sid": 865,
+    "showdownSlug": "sandshrew-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sandslash",
+    "speciesName": "Sandslash",
+    "dex": 28,
+    "sid": 896,
+    "showdownSlug": "sandslash",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sandslash_alolan",
+    "speciesName": "Sandslash (Alolan)",
+    "dex": 28,
+    "sid": 897,
+    "showdownSlug": "sandslash-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sandygast",
+    "speciesName": "Sandygast",
+    "dex": 769,
+    "sid": 24608,
+    "showdownSlug": "sandygast",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sawk",
+    "speciesName": "Sawk",
+    "dex": 539,
+    "sid": 17248,
+    "showdownSlug": "sawk",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sawsbuck",
+    "speciesName": "Sawsbuck",
+    "dex": 586,
+    "sid": 18752,
+    "showdownSlug": "sawsbuck",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "scatterbug",
+    "speciesName": "Scatterbug",
+    "dex": 664,
+    "sid": 21248,
+    "showdownSlug": "scatterbug",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sceptile",
+    "speciesName": "Sceptile",
+    "dex": 254,
+    "sid": 8128,
+    "showdownSlug": "sceptile",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sceptile_mega",
+    "speciesName": "Sceptile (Mega)",
+    "dex": 254,
+    "sid": 8129,
+    "showdownSlug": "sceptile-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "scizor",
+    "speciesName": "Scizor",
+    "dex": 212,
+    "sid": 6784,
+    "showdownSlug": "scizor",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "scizor_mega",
+    "speciesName": "Scizor (Mega)",
+    "dex": 212,
+    "sid": 6785,
+    "showdownSlug": "scizor-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "scolipede",
+    "speciesName": "Scolipede",
+    "dex": 545,
+    "sid": 17440,
+    "showdownSlug": "scolipede",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "scorbunny",
+    "speciesName": "Scorbunny",
+    "dex": 813,
+    "sid": 26016,
+    "showdownSlug": "scorbunny",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "scrafty",
+    "speciesName": "Scrafty",
+    "dex": 560,
+    "sid": 17920,
+    "showdownSlug": "scrafty",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "scraggy",
+    "speciesName": "Scraggy",
+    "dex": 559,
+    "sid": 17888,
+    "showdownSlug": "scraggy",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "scyther",
+    "speciesName": "Scyther",
+    "dex": 123,
+    "sid": 3936,
+    "showdownSlug": "scyther",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "seadra",
+    "speciesName": "Seadra",
+    "dex": 117,
+    "sid": 3744,
+    "showdownSlug": "seadra",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "seaking",
+    "speciesName": "Seaking",
+    "dex": 119,
+    "sid": 3808,
+    "showdownSlug": "seaking",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sealeo",
+    "speciesName": "Sealeo",
+    "dex": 364,
+    "sid": 11648,
+    "showdownSlug": "sealeo",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "seedot",
+    "speciesName": "Seedot",
+    "dex": 273,
+    "sid": 8736,
+    "showdownSlug": "seedot",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "seel",
+    "speciesName": "Seel",
+    "dex": 86,
+    "sid": 2752,
+    "showdownSlug": "seel",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "seismitoad",
+    "speciesName": "Seismitoad",
+    "dex": 537,
+    "sid": 17184,
+    "showdownSlug": "seismitoad",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sentret",
+    "speciesName": "Sentret",
+    "dex": 161,
+    "sid": 5152,
+    "showdownSlug": "sentret",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "serperior",
+    "speciesName": "Serperior",
+    "dex": 497,
+    "sid": 15904,
+    "showdownSlug": "serperior",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "servine",
+    "speciesName": "Servine",
+    "dex": 496,
+    "sid": 15872,
+    "showdownSlug": "servine",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "seviper",
+    "speciesName": "Seviper",
+    "dex": 336,
+    "sid": 10752,
+    "showdownSlug": "seviper",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sewaddle",
+    "speciesName": "Sewaddle",
+    "dex": 540,
+    "sid": 17280,
+    "showdownSlug": "sewaddle",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sharpedo",
+    "speciesName": "Sharpedo",
+    "dex": 319,
+    "sid": 10208,
+    "showdownSlug": "sharpedo",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sharpedo_mega",
+    "speciesName": "Sharpedo (Mega)",
+    "dex": 319,
+    "sid": 10209,
+    "showdownSlug": "sharpedo-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "shaymin_land",
+    "speciesName": "Shaymin (Land)",
+    "dex": 492,
+    "sid": 15744,
+    "showdownSlug": "shaymin",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "shaymin_sky",
+    "speciesName": "Shaymin (Sky)",
+    "dex": 492,
+    "sid": 15745,
+    "showdownSlug": "shaymin-sky",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "shelgon",
+    "speciesName": "Shelgon",
+    "dex": 372,
+    "sid": 11904,
+    "showdownSlug": "shelgon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "shellder",
+    "speciesName": "Shellder",
+    "dex": 90,
+    "sid": 2880,
+    "showdownSlug": "shellder",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "shellos_east_sea",
+    "speciesName": "Shellos (East)",
+    "dex": 422,
+    "sid": 13505,
+    "showdownSlug": "shellos-east",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "shellos_west_sea",
+    "speciesName": "Shellos (West)",
+    "dex": 422,
+    "sid": 13504,
+    "showdownSlug": "shellos",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "shelmet",
+    "speciesName": "Shelmet",
+    "dex": 616,
+    "sid": 19712,
+    "showdownSlug": "shelmet",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "shieldon",
+    "speciesName": "Shieldon",
+    "dex": 410,
+    "sid": 13120,
+    "showdownSlug": "shieldon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "shiftry",
+    "speciesName": "Shiftry",
+    "dex": 275,
+    "sid": 8800,
+    "showdownSlug": "shiftry",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "shiinotic",
+    "speciesName": "Shiinotic",
+    "dex": 756,
+    "sid": 24192,
+    "showdownSlug": "shiinotic",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "shinx",
+    "speciesName": "Shinx",
+    "dex": 403,
+    "sid": 12896,
+    "showdownSlug": "shinx",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "shroodle",
+    "speciesName": "Shroodle",
+    "dex": 944,
+    "sid": 30208,
+    "showdownSlug": "shroodle",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "shroomish",
+    "speciesName": "Shroomish",
+    "dex": 285,
+    "sid": 9120,
+    "showdownSlug": "shroomish",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "shuckle",
+    "speciesName": "Shuckle",
+    "dex": 213,
+    "sid": 6816,
+    "showdownSlug": "shuckle",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "shuppet",
+    "speciesName": "Shuppet",
+    "dex": 353,
+    "sid": 11296,
+    "showdownSlug": "shuppet",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sigilyph",
+    "speciesName": "Sigilyph",
+    "dex": 561,
+    "sid": 17952,
+    "showdownSlug": "sigilyph",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "silcoon",
+    "speciesName": "Silcoon",
+    "dex": 266,
+    "sid": 8512,
+    "showdownSlug": "silcoon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "silicobra",
+    "speciesName": "Silicobra",
+    "dex": 843,
+    "sid": 26976,
+    "showdownSlug": "silicobra",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "simipour",
+    "speciesName": "Simipour",
+    "dex": 516,
+    "sid": 16512,
+    "showdownSlug": "simipour",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "simisage",
+    "speciesName": "Simisage",
+    "dex": 512,
+    "sid": 16384,
+    "showdownSlug": "simisage",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "simisear",
+    "speciesName": "Simisear",
+    "dex": 514,
+    "sid": 16448,
+    "showdownSlug": "simisear",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sinistcha",
+    "speciesName": "Sinistcha",
+    "dex": 1013,
+    "sid": 32416,
+    "showdownSlug": "sinistcha",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sinistea",
+    "speciesName": "Sinistea",
+    "dex": 854,
+    "sid": 27328,
+    "showdownSlug": "sinistea",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sirfetchd",
+    "speciesName": "Sirfetch'd",
+    "dex": 865,
+    "sid": 27680,
+    "showdownSlug": "sirfetchd",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sizzlipede",
+    "speciesName": "Sizzlipede",
+    "dex": 850,
+    "sid": 27200,
+    "showdownSlug": "sizzlipede",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "skarmory",
+    "speciesName": "Skarmory",
+    "dex": 227,
+    "sid": 7264,
+    "showdownSlug": "skarmory",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "skarmory_mega",
+    "speciesName": "Skarmory (Mega)",
+    "dex": 227,
+    "sid": 7265,
+    "showdownSlug": "skarmory-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "skeledirge",
+    "speciesName": "Skeledirge",
+    "dex": 911,
+    "sid": 29152,
+    "showdownSlug": "skeledirge",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "skiddo",
+    "speciesName": "Skiddo",
+    "dex": 672,
+    "sid": 21504,
+    "showdownSlug": "skiddo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "skiploom",
+    "speciesName": "Skiploom",
+    "dex": 188,
+    "sid": 6016,
+    "showdownSlug": "skiploom",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "skitty",
+    "speciesName": "Skitty",
+    "dex": 300,
+    "sid": 9600,
+    "showdownSlug": "skitty",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "skorupi",
+    "speciesName": "Skorupi",
+    "dex": 451,
+    "sid": 14432,
+    "showdownSlug": "skorupi",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "skrelp",
+    "speciesName": "Skrelp",
+    "dex": 690,
+    "sid": 22080,
+    "showdownSlug": "skrelp",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "skuntank",
+    "speciesName": "Skuntank",
+    "dex": 435,
+    "sid": 13920,
+    "showdownSlug": "skuntank",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "skwovet",
+    "speciesName": "Skwovet",
+    "dex": 819,
+    "sid": 26208,
+    "showdownSlug": "skwovet",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "slaking",
+    "speciesName": "Slaking",
+    "dex": 289,
+    "sid": 9248,
+    "showdownSlug": "slaking",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "slakoth",
+    "speciesName": "Slakoth",
+    "dex": 287,
+    "sid": 9184,
+    "showdownSlug": "slakoth",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sliggoo",
+    "speciesName": "Sliggoo",
+    "dex": 705,
+    "sid": 22560,
+    "showdownSlug": "sliggoo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "slowbro",
+    "speciesName": "Slowbro",
+    "dex": 80,
+    "sid": 2560,
+    "showdownSlug": "slowbro",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "slowbro_galarian",
+    "speciesName": "Slowbro (Galarian)",
+    "dex": 80,
+    "sid": 2562,
+    "showdownSlug": "slowbro-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "slowbro_mega",
+    "speciesName": "Slowbro (Mega)",
+    "dex": 80,
+    "sid": 2561,
+    "showdownSlug": "slowbro-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "slowking",
+    "speciesName": "Slowking",
+    "dex": 199,
+    "sid": 6368,
+    "showdownSlug": "slowking",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "slowking_galarian",
+    "speciesName": "Slowking (Galarian)",
+    "dex": 199,
+    "sid": 6369,
+    "showdownSlug": "slowking-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "slowpoke",
+    "speciesName": "Slowpoke",
+    "dex": 79,
+    "sid": 2528,
+    "showdownSlug": "slowpoke",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "slowpoke_galarian",
+    "speciesName": "Slowpoke (Galarian)",
+    "dex": 79,
+    "sid": 2529,
+    "showdownSlug": "slowpoke-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "slugma",
+    "speciesName": "Slugma",
+    "dex": 218,
+    "sid": 6976,
+    "showdownSlug": "slugma",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "slurpuff",
+    "speciesName": "Slurpuff",
+    "dex": 685,
+    "sid": 21920,
+    "showdownSlug": "slurpuff",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "smeargle",
+    "speciesName": "Smeargle",
+    "dex": 235,
+    "sid": 7520,
+    "showdownSlug": "smeargle",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "smoliv",
+    "speciesName": "Smoliv",
+    "dex": 928,
+    "sid": 29696,
+    "showdownSlug": "smoliv",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "smoochum",
+    "speciesName": "Smoochum",
+    "dex": 238,
+    "sid": 7616,
+    "showdownSlug": "smoochum",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sneasel",
+    "speciesName": "Sneasel",
+    "dex": 215,
+    "sid": 6880,
+    "showdownSlug": "sneasel",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sneasel_hisuian",
+    "speciesName": "Sneasel (Hisuian)",
+    "dex": 215,
+    "sid": 6881,
+    "showdownSlug": "sneasel-hisui",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sneasler",
+    "speciesName": "Sneasler",
+    "dex": 903,
+    "sid": 28896,
+    "showdownSlug": "sneasler",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "snivy",
+    "speciesName": "Snivy",
+    "dex": 495,
+    "sid": 15840,
+    "showdownSlug": "snivy",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "snom",
+    "speciesName": "Snom",
+    "dex": 872,
+    "sid": 27904,
+    "showdownSlug": "snom",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "snorlax",
+    "speciesName": "Snorlax",
+    "dex": 143,
+    "sid": 4576,
+    "showdownSlug": "snorlax",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "snorunt",
+    "speciesName": "Snorunt",
+    "dex": 361,
+    "sid": 11552,
+    "showdownSlug": "snorunt",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "snover",
+    "speciesName": "Snover",
+    "dex": 459,
+    "sid": 14688,
+    "showdownSlug": "snover",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "snubbull",
+    "speciesName": "Snubbull",
+    "dex": 209,
+    "sid": 6688,
+    "showdownSlug": "snubbull",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sobble",
+    "speciesName": "Sobble",
+    "dex": 816,
+    "sid": 26112,
+    "showdownSlug": "sobble",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "solgaleo",
+    "speciesName": "Solgaleo",
+    "dex": 791,
+    "sid": 25312,
+    "showdownSlug": "solgaleo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "solosis",
+    "speciesName": "Solosis",
+    "dex": 577,
+    "sid": 18464,
+    "showdownSlug": "solosis",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "solrock",
+    "speciesName": "Solrock",
+    "dex": 338,
+    "sid": 10816,
+    "showdownSlug": "solrock",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "spearow",
+    "speciesName": "Spearow",
+    "dex": 21,
+    "sid": 672,
+    "showdownSlug": "spearow",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "spheal",
+    "speciesName": "Spheal",
+    "dex": 363,
+    "sid": 11616,
+    "showdownSlug": "spheal",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "spidops",
+    "speciesName": "Spidops",
+    "dex": 918,
+    "sid": 29376,
+    "showdownSlug": "spidops",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "spinarak",
+    "speciesName": "Spinarak",
+    "dex": 167,
+    "sid": 5344,
+    "showdownSlug": "spinarak",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "spinda",
+    "speciesName": "Spinda",
+    "dex": 327,
+    "sid": 10464,
+    "showdownSlug": "spinda",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "spiritomb",
+    "speciesName": "Spiritomb",
+    "dex": 442,
+    "sid": 14144,
+    "showdownSlug": "spiritomb",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "spoink",
+    "speciesName": "Spoink",
+    "dex": 325,
+    "sid": 10400,
+    "showdownSlug": "spoink",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sprigatito",
+    "speciesName": "Sprigatito",
+    "dex": 906,
+    "sid": 28992,
+    "showdownSlug": "sprigatito",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "spritzee",
+    "speciesName": "Spritzee",
+    "dex": 682,
+    "sid": 21824,
+    "showdownSlug": "spritzee",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "squawkabilly",
+    "speciesName": "Squawkabilly",
+    "dex": 931,
+    "sid": 29792,
+    "showdownSlug": "squawkabilly",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "squawkabilly_blue",
+    "speciesName": "Squawkabilly_blue",
+    "dex": 931,
+    "sid": 29793,
+    "showdownSlug": "squawkabilly-blue",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "squawkabilly_green",
+    "speciesName": "Squawkabilly_green",
+    "dex": 931,
+    "sid": 29792,
+    "showdownSlug": "squawkabilly",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "squawkabilly_white",
+    "speciesName": "Squawkabilly_white",
+    "dex": 931,
+    "sid": 29795,
+    "showdownSlug": "squawkabilly-white",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "squawkabilly_yellow",
+    "speciesName": "Squawkabilly_yellow",
+    "dex": 931,
+    "sid": 29794,
+    "showdownSlug": "squawkabilly-yellow",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "squirtle",
+    "speciesName": "Squirtle",
+    "dex": 7,
+    "sid": 224,
+    "showdownSlug": "squirtle",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "stakataka",
+    "speciesName": "Stakataka",
+    "dex": 805,
+    "sid": 25760,
+    "showdownSlug": "stakataka",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "stantler",
+    "speciesName": "Stantler",
+    "dex": 234,
+    "sid": 7488,
+    "showdownSlug": "stantler",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "staraptor",
+    "speciesName": "Staraptor",
+    "dex": 398,
+    "sid": 12736,
+    "showdownSlug": "staraptor",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "staraptor_mega",
+    "speciesName": "Staraptor (Mega)",
+    "dex": 398,
+    "sid": 12737,
+    "showdownSlug": "staraptor-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "staravia",
+    "speciesName": "Staravia",
+    "dex": 397,
+    "sid": 12704,
+    "showdownSlug": "staravia",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "starly",
+    "speciesName": "Starly",
+    "dex": 396,
+    "sid": 12672,
+    "showdownSlug": "starly",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "starmie",
+    "speciesName": "Starmie",
+    "dex": 121,
+    "sid": 3872,
+    "showdownSlug": "starmie",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "starmie_mega",
+    "speciesName": "Starmie (Mega)",
+    "dex": 121,
+    "sid": 3873,
+    "showdownSlug": "starmie-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "staryu",
+    "speciesName": "Staryu",
+    "dex": 120,
+    "sid": 3840,
+    "showdownSlug": "staryu",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "steelix",
+    "speciesName": "Steelix",
+    "dex": 208,
+    "sid": 6656,
+    "showdownSlug": "steelix",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "steelix_mega",
+    "speciesName": "Steelix (Mega)",
+    "dex": 208,
+    "sid": 6657,
+    "showdownSlug": "steelix-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "steenee",
+    "speciesName": "Steenee",
+    "dex": 762,
+    "sid": 24384,
+    "showdownSlug": "steenee",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "stonjourner",
+    "speciesName": "Stonjourner",
+    "dex": 874,
+    "sid": 27968,
+    "showdownSlug": "stonjourner",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "stoutland",
+    "speciesName": "Stoutland",
+    "dex": 508,
+    "sid": 16256,
+    "showdownSlug": "stoutland",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "stufful",
+    "speciesName": "Stufful",
+    "dex": 759,
+    "sid": 24288,
+    "showdownSlug": "stufful",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "stunfisk",
+    "speciesName": "Stunfisk",
+    "dex": 618,
+    "sid": 19776,
+    "showdownSlug": "stunfisk",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "stunfisk_galarian",
+    "speciesName": "Stunfisk (Galarian)",
+    "dex": 618,
+    "sid": 19777,
+    "showdownSlug": "stunfisk-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "stunky",
+    "speciesName": "Stunky",
+    "dex": 434,
+    "sid": 13888,
+    "showdownSlug": "stunky",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sudowoodo",
+    "speciesName": "Sudowoodo",
+    "dex": 185,
+    "sid": 5920,
+    "showdownSlug": "sudowoodo",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "suicune",
+    "speciesName": "Suicune",
+    "dex": 245,
+    "sid": 7840,
+    "showdownSlug": "suicune",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "sunflora",
+    "speciesName": "Sunflora",
+    "dex": 192,
+    "sid": 6144,
+    "showdownSlug": "sunflora",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sunkern",
+    "speciesName": "Sunkern",
+    "dex": 191,
+    "sid": 6112,
+    "showdownSlug": "sunkern",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "surskit",
+    "speciesName": "Surskit",
+    "dex": 283,
+    "sid": 9056,
+    "showdownSlug": "surskit",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "swablu",
+    "speciesName": "Swablu",
+    "dex": 333,
+    "sid": 10656,
+    "showdownSlug": "swablu",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "swadloon",
+    "speciesName": "Swadloon",
+    "dex": 541,
+    "sid": 17312,
+    "showdownSlug": "swadloon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "swalot",
+    "speciesName": "Swalot",
+    "dex": 317,
+    "sid": 10144,
+    "showdownSlug": "swalot",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "swampert",
+    "speciesName": "Swampert",
+    "dex": 260,
+    "sid": 8320,
+    "showdownSlug": "swampert",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "swampert_mega",
+    "speciesName": "Swampert (Mega)",
+    "dex": 260,
+    "sid": 8321,
+    "showdownSlug": "swampert-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "swanna",
+    "speciesName": "Swanna",
+    "dex": 581,
+    "sid": 18592,
+    "showdownSlug": "swanna",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "swellow",
+    "speciesName": "Swellow",
+    "dex": 277,
+    "sid": 8864,
+    "showdownSlug": "swellow",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "swinub",
+    "speciesName": "Swinub",
+    "dex": 220,
+    "sid": 7040,
+    "showdownSlug": "swinub",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "swirlix",
+    "speciesName": "Swirlix",
+    "dex": 684,
+    "sid": 21888,
+    "showdownSlug": "swirlix",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "swoobat",
+    "speciesName": "Swoobat",
+    "dex": 528,
+    "sid": 16896,
+    "showdownSlug": "swoobat",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "sylveon",
+    "speciesName": "Sylveon",
+    "dex": 700,
+    "sid": 22400,
+    "showdownSlug": "sylveon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tadbulb",
+    "speciesName": "Tadbulb",
+    "dex": 938,
+    "sid": 30016,
+    "showdownSlug": "tadbulb",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "taillow",
+    "speciesName": "Taillow",
+    "dex": 276,
+    "sid": 8832,
+    "showdownSlug": "taillow",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "talonflame",
+    "speciesName": "Talonflame",
+    "dex": 663,
+    "sid": 21216,
+    "showdownSlug": "talonflame",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tandemaus",
+    "speciesName": "Tandemaus",
+    "dex": 924,
+    "sid": 29568,
+    "showdownSlug": "tandemaus",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tangela",
+    "speciesName": "Tangela",
+    "dex": 114,
+    "sid": 3648,
+    "showdownSlug": "tangela",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tangrowth",
+    "speciesName": "Tangrowth",
+    "dex": 465,
+    "sid": 14880,
+    "showdownSlug": "tangrowth",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tapu_bulu",
+    "speciesName": "Tapu Bulu",
+    "dex": 787,
+    "sid": 25184,
+    "showdownSlug": "tapubulu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tapu_fini",
+    "speciesName": "Tapu Fini",
+    "dex": 788,
+    "sid": 25216,
+    "showdownSlug": "tapufini",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tapu_koko",
+    "speciesName": "Tapu Koko",
+    "dex": 785,
+    "sid": 25120,
+    "showdownSlug": "tapukoko",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tapu_lele",
+    "speciesName": "Tapu Lele",
+    "dex": 786,
+    "sid": 25152,
+    "showdownSlug": "tapulele",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tarountula",
+    "speciesName": "Tarountula",
+    "dex": 917,
+    "sid": 29344,
+    "showdownSlug": "tarountula",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tatsugiri_curly",
+    "speciesName": "Tatsugiri (Curly)",
+    "dex": 978,
+    "sid": 31296,
+    "showdownSlug": "tatsugiri",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tatsugiri_droopy",
+    "speciesName": "Tatsugiri (Droopy)",
+    "dex": 978,
+    "sid": 31297,
+    "showdownSlug": "tatsugiri-droopy",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tatsugiri_stretchy",
+    "speciesName": "Tatsugiri (Stretchy)",
+    "dex": 978,
+    "sid": 31298,
+    "showdownSlug": "tatsugiri-stretchy",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tauros",
+    "speciesName": "Tauros",
+    "dex": 128,
+    "sid": 4096,
+    "showdownSlug": "tauros",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tauros_aqua",
+    "speciesName": "Tauros (Aqua)",
+    "dex": 128,
+    "sid": 4099,
+    "showdownSlug": "tauros-paldeaaqua",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tauros_blaze",
+    "speciesName": "Tauros (Blaze)",
+    "dex": 128,
+    "sid": 4098,
+    "showdownSlug": "tauros-paldeablaze",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tauros_combat",
+    "speciesName": "Tauros (Combat)",
+    "dex": 128,
+    "sid": 4097,
+    "showdownSlug": "tauros-paldeacombat",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "teddiursa",
+    "speciesName": "Teddiursa",
+    "dex": 216,
+    "sid": 6912,
+    "showdownSlug": "teddiursa",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tentacool",
+    "speciesName": "Tentacool",
+    "dex": 72,
+    "sid": 2304,
+    "showdownSlug": "tentacool",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tentacruel",
+    "speciesName": "Tentacruel",
+    "dex": 73,
+    "sid": 2336,
+    "showdownSlug": "tentacruel",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tepig",
+    "speciesName": "Tepig",
+    "dex": 498,
+    "sid": 15936,
+    "showdownSlug": "tepig",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "terrakion",
+    "speciesName": "Terrakion",
+    "dex": 639,
+    "sid": 20448,
+    "showdownSlug": "terrakion",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "thievul",
+    "speciesName": "Thievul",
+    "dex": 828,
+    "sid": 26496,
+    "showdownSlug": "thievul",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "throh",
+    "speciesName": "Throh",
+    "dex": 538,
+    "sid": 17216,
+    "showdownSlug": "throh",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "thundurus_incarnate",
+    "speciesName": "Thundurus (Incarnate)",
+    "dex": 642,
+    "sid": 20544,
+    "showdownSlug": "thundurus",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "thundurus_therian",
+    "speciesName": "Thundurus (Therian)",
+    "dex": 642,
+    "sid": 20545,
+    "showdownSlug": "thundurus-therian",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "thwackey",
+    "speciesName": "Thwackey",
+    "dex": 811,
+    "sid": 25952,
+    "showdownSlug": "thwackey",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "timburr",
+    "speciesName": "Timburr",
+    "dex": 532,
+    "sid": 17024,
+    "showdownSlug": "timburr",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tinkatink",
+    "speciesName": "Tinkatink",
+    "dex": 957,
+    "sid": 30624,
+    "showdownSlug": "tinkatink",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tinkaton",
+    "speciesName": "Tinkaton",
+    "dex": 959,
+    "sid": 30688,
+    "showdownSlug": "tinkaton",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tinkatuff",
+    "speciesName": "Tinkatuff",
+    "dex": 958,
+    "sid": 30656,
+    "showdownSlug": "tinkatuff",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tirtouga",
+    "speciesName": "Tirtouga",
+    "dex": 564,
+    "sid": 18048,
+    "showdownSlug": "tirtouga",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "toedscool",
+    "speciesName": "Toedscool",
+    "dex": 948,
+    "sid": 30336,
+    "showdownSlug": "toedscool",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "toedscruel",
+    "speciesName": "Toedscruel",
+    "dex": 949,
+    "sid": 30368,
+    "showdownSlug": "toedscruel",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "togedemaru",
+    "speciesName": "Togedemaru",
+    "dex": 777,
+    "sid": 24864,
+    "showdownSlug": "togedemaru",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "togekiss",
+    "speciesName": "Togekiss",
+    "dex": 468,
+    "sid": 14976,
+    "showdownSlug": "togekiss",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "togepi",
+    "speciesName": "Togepi",
+    "dex": 175,
+    "sid": 5600,
+    "showdownSlug": "togepi",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "togetic",
+    "speciesName": "Togetic",
+    "dex": 176,
+    "sid": 5632,
+    "showdownSlug": "togetic",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "torchic",
+    "speciesName": "Torchic",
+    "dex": 255,
+    "sid": 8160,
+    "showdownSlug": "torchic",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "torkoal",
+    "speciesName": "Torkoal",
+    "dex": 324,
+    "sid": 10368,
+    "showdownSlug": "torkoal",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tornadus_incarnate",
+    "speciesName": "Tornadus (Incarnate)",
+    "dex": 641,
+    "sid": 20512,
+    "showdownSlug": "tornadus",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tornadus_therian",
+    "speciesName": "Tornadus (Therian)",
+    "dex": 641,
+    "sid": 20513,
+    "showdownSlug": "tornadus-therian",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "torracat",
+    "speciesName": "Torracat",
+    "dex": 726,
+    "sid": 23232,
+    "showdownSlug": "torracat",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "torterra",
+    "speciesName": "Torterra",
+    "dex": 389,
+    "sid": 12448,
+    "showdownSlug": "torterra",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "totodile",
+    "speciesName": "Totodile",
+    "dex": 158,
+    "sid": 5056,
+    "showdownSlug": "totodile",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "toucannon",
+    "speciesName": "Toucannon",
+    "dex": 733,
+    "sid": 23456,
+    "showdownSlug": "toucannon",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "toxapex",
+    "speciesName": "Toxapex",
+    "dex": 748,
+    "sid": 23936,
+    "showdownSlug": "toxapex",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "toxel",
+    "speciesName": "Toxel",
+    "dex": 848,
+    "sid": 27136,
+    "showdownSlug": "toxel",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "toxicroak",
+    "speciesName": "Toxicroak",
+    "dex": 454,
+    "sid": 14528,
+    "showdownSlug": "toxicroak",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "toxtricity",
+    "speciesName": "Toxtricity",
+    "dex": 849,
+    "sid": 27168,
+    "showdownSlug": "toxtricity",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tranquill",
+    "speciesName": "Tranquill",
+    "dex": 520,
+    "sid": 16640,
+    "showdownSlug": "tranquill",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "trapinch",
+    "speciesName": "Trapinch",
+    "dex": 328,
+    "sid": 10496,
+    "showdownSlug": "trapinch",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "treecko",
+    "speciesName": "Treecko",
+    "dex": 252,
+    "sid": 8064,
+    "showdownSlug": "treecko",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "trevenant",
+    "speciesName": "Trevenant",
+    "dex": 709,
+    "sid": 22688,
+    "showdownSlug": "trevenant",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tropius",
+    "speciesName": "Tropius",
+    "dex": 357,
+    "sid": 11424,
+    "showdownSlug": "tropius",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "trubbish",
+    "speciesName": "Trubbish",
+    "dex": 568,
+    "sid": 18176,
+    "showdownSlug": "trubbish",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "trumbeak",
+    "speciesName": "Trumbeak",
+    "dex": 732,
+    "sid": 23424,
+    "showdownSlug": "trumbeak",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tsareena",
+    "speciesName": "Tsareena",
+    "dex": 763,
+    "sid": 24416,
+    "showdownSlug": "tsareena",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "turtonator",
+    "speciesName": "Turtonator",
+    "dex": 776,
+    "sid": 24832,
+    "showdownSlug": "turtonator",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "turtwig",
+    "speciesName": "Turtwig",
+    "dex": 387,
+    "sid": 12384,
+    "showdownSlug": "turtwig",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tympole",
+    "speciesName": "Tympole",
+    "dex": 535,
+    "sid": 17120,
+    "showdownSlug": "tympole",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tynamo",
+    "speciesName": "Tynamo",
+    "dex": 602,
+    "sid": 19264,
+    "showdownSlug": "tynamo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "typhlosion",
+    "speciesName": "Typhlosion",
+    "dex": 157,
+    "sid": 5024,
+    "showdownSlug": "typhlosion",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "typhlosion_hisuian",
+    "speciesName": "Typhlosion (Hisuian)",
+    "dex": 157,
+    "sid": 5025,
+    "showdownSlug": "typhlosion-hisui",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tyranitar",
+    "speciesName": "Tyranitar",
+    "dex": 248,
+    "sid": 7936,
+    "showdownSlug": "tyranitar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tyranitar_mega",
+    "speciesName": "Tyranitar (Mega)",
+    "dex": 248,
+    "sid": 7937,
+    "showdownSlug": "tyranitar-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tyrantrum",
+    "speciesName": "Tyrantrum",
+    "dex": 697,
+    "sid": 22304,
+    "showdownSlug": "tyrantrum",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "tyrogue",
+    "speciesName": "Tyrogue",
+    "dex": 236,
+    "sid": 7552,
+    "showdownSlug": "tyrogue",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "tyrunt",
+    "speciesName": "Tyrunt",
+    "dex": 696,
+    "sid": 22272,
+    "showdownSlug": "tyrunt",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "umbreon",
+    "speciesName": "Umbreon",
+    "dex": 197,
+    "sid": 6304,
+    "showdownSlug": "umbreon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "unfezant",
+    "speciesName": "Unfezant",
+    "dex": 521,
+    "sid": 16672,
+    "showdownSlug": "unfezant",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "unown",
+    "speciesName": "Unown",
+    "dex": 201,
+    "sid": 6432,
+    "showdownSlug": "unown",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "ursaluna",
+    "speciesName": "Ursaluna",
+    "dex": 901,
+    "sid": 28832,
+    "showdownSlug": "ursaluna",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "ursaring",
+    "speciesName": "Ursaring",
+    "dex": 217,
+    "sid": 6944,
+    "showdownSlug": "ursaring",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "urshifu_rapid_strike",
+    "speciesName": "Urshifu (Rapid Strike)",
+    "dex": 892,
+    "sid": 28545,
+    "showdownSlug": "urshifu-rapidstrike",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "urshifu_single_strike",
+    "speciesName": "Urshifu (Single Strike)",
+    "dex": 892,
+    "sid": 28544,
+    "showdownSlug": "urshifu",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "uxie",
+    "speciesName": "Uxie",
+    "dex": 480,
+    "sid": 15360,
+    "showdownSlug": "uxie",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "vanillish",
+    "speciesName": "Vanillish",
+    "dex": 583,
+    "sid": 18656,
+    "showdownSlug": "vanillish",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "vanillite",
+    "speciesName": "Vanillite",
+    "dex": 582,
+    "sid": 18624,
+    "showdownSlug": "vanillite",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "vanilluxe",
+    "speciesName": "Vanilluxe",
+    "dex": 584,
+    "sid": 18688,
+    "showdownSlug": "vanilluxe",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "vaporeon",
+    "speciesName": "Vaporeon",
+    "dex": 134,
+    "sid": 4288,
+    "showdownSlug": "vaporeon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "varoom",
+    "speciesName": "Varoom",
+    "dex": 965,
+    "sid": 30880,
+    "showdownSlug": "varoom",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "venipede",
+    "speciesName": "Venipede",
+    "dex": 543,
+    "sid": 17376,
+    "showdownSlug": "venipede",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "venomoth",
+    "speciesName": "Venomoth",
+    "dex": 49,
+    "sid": 1568,
+    "showdownSlug": "venomoth",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "venonat",
+    "speciesName": "Venonat",
+    "dex": 48,
+    "sid": 1536,
+    "showdownSlug": "venonat",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "venusaur",
+    "speciesName": "Venusaur",
+    "dex": 3,
+    "sid": 96,
+    "showdownSlug": "venusaur",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "venusaur_mega",
+    "speciesName": "Venusaur (Mega)",
+    "dex": 3,
+    "sid": 97,
+    "showdownSlug": "venusaur-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "vespiquen",
+    "speciesName": "Vespiquen",
+    "dex": 416,
+    "sid": 13312,
+    "showdownSlug": "vespiquen",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "vibrava",
+    "speciesName": "Vibrava",
+    "dex": 329,
+    "sid": 10528,
+    "showdownSlug": "vibrava",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "victini",
+    "speciesName": "Victini",
+    "dex": 494,
+    "sid": 15808,
+    "showdownSlug": "victini",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "victreebel",
+    "speciesName": "Victreebel",
+    "dex": 71,
+    "sid": 2272,
+    "showdownSlug": "victreebel",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "victreebel_mega",
+    "speciesName": "Victreebel (Mega)",
+    "dex": 71,
+    "sid": 2273,
+    "showdownSlug": "victreebel-mega",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "vigoroth",
+    "speciesName": "Vigoroth",
+    "dex": 288,
+    "sid": 9216,
+    "showdownSlug": "vigoroth",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "vikavolt",
+    "speciesName": "Vikavolt",
+    "dex": 738,
+    "sid": 23616,
+    "showdownSlug": "vikavolt",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "vileplume",
+    "speciesName": "Vileplume",
+    "dex": 45,
+    "sid": 1440,
+    "showdownSlug": "vileplume",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "virizion",
+    "speciesName": "Virizion",
+    "dex": 640,
+    "sid": 20480,
+    "showdownSlug": "virizion",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "vivillon",
+    "speciesName": "Vivillon",
+    "dex": 666,
+    "sid": 21318,
+    "showdownSlug": "vivillon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "volbeat",
+    "speciesName": "Volbeat",
+    "dex": 313,
+    "sid": 10016,
+    "showdownSlug": "volbeat",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "volcanion",
+    "speciesName": "Volcanion",
+    "dex": 721,
+    "sid": 23072,
+    "showdownSlug": "volcanion",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "volcarona",
+    "speciesName": "Volcarona",
+    "dex": 637,
+    "sid": 20384,
+    "showdownSlug": "volcarona",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "voltorb",
+    "speciesName": "Voltorb",
+    "dex": 100,
+    "sid": 3200,
+    "showdownSlug": "voltorb",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "voltorb_hisuian",
+    "speciesName": "Voltorb (Hisuian)",
+    "dex": 100,
+    "sid": 3201,
+    "showdownSlug": "voltorb-hisui",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "vullaby",
+    "speciesName": "Vullaby",
+    "dex": 629,
+    "sid": 20128,
+    "showdownSlug": "vullaby",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "vulpix",
+    "speciesName": "Vulpix",
+    "dex": 37,
+    "sid": 1184,
+    "showdownSlug": "vulpix",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "vulpix_alolan",
+    "speciesName": "Vulpix (Alolan)",
+    "dex": 37,
+    "sid": 1185,
+    "showdownSlug": "vulpix-alola",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "wailmer",
+    "speciesName": "Wailmer",
+    "dex": 320,
+    "sid": 10240,
+    "showdownSlug": "wailmer",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "wailord",
+    "speciesName": "Wailord",
+    "dex": 321,
+    "sid": 10272,
+    "showdownSlug": "wailord",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "walrein",
+    "speciesName": "Walrein",
+    "dex": 365,
+    "sid": 11680,
+    "showdownSlug": "walrein",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "wartortle",
+    "speciesName": "Wartortle",
+    "dex": 8,
+    "sid": 256,
+    "showdownSlug": "wartortle",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "watchog",
+    "speciesName": "Watchog",
+    "dex": 505,
+    "sid": 16160,
+    "showdownSlug": "watchog",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "wattrel",
+    "speciesName": "Wattrel",
+    "dex": 940,
+    "sid": 30080,
+    "showdownSlug": "wattrel",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "weavile",
+    "speciesName": "Weavile",
+    "dex": 461,
+    "sid": 14752,
+    "showdownSlug": "weavile",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "weedle",
+    "speciesName": "Weedle",
+    "dex": 13,
+    "sid": 416,
+    "showdownSlug": "weedle",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "weepinbell",
+    "speciesName": "Weepinbell",
+    "dex": 70,
+    "sid": 2240,
+    "showdownSlug": "weepinbell",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "weezing",
+    "speciesName": "Weezing",
+    "dex": 110,
+    "sid": 3520,
+    "showdownSlug": "weezing",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "weezing_galarian",
+    "speciesName": "Weezing (Galarian)",
+    "dex": 110,
+    "sid": 3521,
+    "showdownSlug": "weezing-galar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "whimsicott",
+    "speciesName": "Whimsicott",
+    "dex": 547,
+    "sid": 17504,
+    "showdownSlug": "whimsicott",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "whirlipede",
+    "speciesName": "Whirlipede",
+    "dex": 544,
+    "sid": 17408,
+    "showdownSlug": "whirlipede",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "whiscash",
+    "speciesName": "Whiscash",
+    "dex": 340,
+    "sid": 10880,
+    "showdownSlug": "whiscash",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "whismur",
+    "speciesName": "Whismur",
+    "dex": 293,
+    "sid": 9376,
+    "showdownSlug": "whismur",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "wigglytuff",
+    "speciesName": "Wigglytuff",
+    "dex": 40,
+    "sid": 1280,
+    "showdownSlug": "wigglytuff",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "wiglett",
+    "speciesName": "Wiglett",
+    "dex": 960,
+    "sid": 30720,
+    "showdownSlug": "wiglett",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "wimpod",
+    "speciesName": "Wimpod",
+    "dex": 767,
+    "sid": 24544,
+    "showdownSlug": "wimpod",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "wingull",
+    "speciesName": "Wingull",
+    "dex": 278,
+    "sid": 8896,
+    "showdownSlug": "wingull",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "wobbuffet",
+    "speciesName": "Wobbuffet",
+    "dex": 202,
+    "sid": 6464,
+    "showdownSlug": "wobbuffet",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "woobat",
+    "speciesName": "Woobat",
+    "dex": 527,
+    "sid": 16864,
+    "showdownSlug": "woobat",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "wooloo",
+    "speciesName": "Wooloo",
+    "dex": 831,
+    "sid": 26592,
+    "showdownSlug": "wooloo",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "wooper",
+    "speciesName": "Wooper",
+    "dex": 194,
+    "sid": 6208,
+    "showdownSlug": "wooper",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "wooper_paldean",
+    "speciesName": "Wooper (Paldean)",
+    "dex": 194,
+    "sid": 6209,
+    "showdownSlug": "wooper-paldea",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "wormadam_plant",
+    "speciesName": "Wormadam (Plant)",
+    "dex": 413,
+    "sid": 13216,
+    "showdownSlug": "wormadam",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "wormadam_sandy",
+    "speciesName": "Wormadam (Sandy)",
+    "dex": 413,
+    "sid": 13217,
+    "showdownSlug": "wormadam-sandy",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "wormadam_trash",
+    "speciesName": "Wormadam (Trash)",
+    "dex": 413,
+    "sid": 13218,
+    "showdownSlug": "wormadam-trash",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "wugtrio",
+    "speciesName": "Wugtrio",
+    "dex": 961,
+    "sid": 30752,
+    "showdownSlug": "wugtrio",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "wurmple",
+    "speciesName": "Wurmple",
+    "dex": 265,
+    "sid": 8480,
+    "showdownSlug": "wurmple",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "wynaut",
+    "speciesName": "Wynaut",
+    "dex": 360,
+    "sid": 11520,
+    "showdownSlug": "wynaut",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "wyrdeer",
+    "speciesName": "Wyrdeer",
+    "dex": 899,
+    "sid": 28768,
+    "showdownSlug": "wyrdeer",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "xatu",
+    "speciesName": "Xatu",
+    "dex": 178,
+    "sid": 5696,
+    "showdownSlug": "xatu",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "xerneas",
+    "speciesName": "Xerneas",
+    "dex": 716,
+    "sid": 22913,
+    "showdownSlug": "xerneas",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "xurkitree",
+    "speciesName": "Xurkitree",
+    "dex": 796,
+    "sid": 25472,
+    "showdownSlug": "xurkitree",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "yamask",
+    "speciesName": "Yamask",
+    "dex": 562,
+    "sid": 17984,
+    "showdownSlug": "yamask",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "yamask_galarian",
+    "speciesName": "Yamask (Galarian)",
+    "dex": 562,
+    "sid": 17985,
+    "showdownSlug": "yamask-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "yamper",
+    "speciesName": "Yamper",
+    "dex": 835,
+    "sid": 26720,
+    "showdownSlug": "yamper",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "yanma",
+    "speciesName": "Yanma",
+    "dex": 193,
+    "sid": 6176,
+    "showdownSlug": "yanma",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "yanmega",
+    "speciesName": "Yanmega",
+    "dex": 469,
+    "sid": 15008,
+    "showdownSlug": "yanmega",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "yungoos",
+    "speciesName": "Yungoos",
+    "dex": 734,
+    "sid": 23488,
+    "showdownSlug": "yungoos",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "yveltal",
+    "speciesName": "Yveltal",
+    "dex": 717,
+    "sid": 22944,
+    "showdownSlug": "yveltal",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zacian_crowned_sword",
+    "speciesName": "Zacian (Crowned Sword)",
+    "dex": 888,
+    "sid": 28417,
+    "showdownSlug": "zacian-crowned",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zacian_hero",
+    "speciesName": "Zacian (Hero)",
+    "dex": 888,
+    "sid": 28416,
+    "showdownSlug": "zacian",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zamazenta_crowned_shield",
+    "speciesName": "Zamazenta (Crowned Shield)",
+    "dex": 889,
+    "sid": 28449,
+    "showdownSlug": "zamazenta-crowned",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zamazenta_hero",
+    "speciesName": "Zamazenta (Hero)",
+    "dex": 889,
+    "sid": 28448,
+    "showdownSlug": "zamazenta",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zangoose",
+    "speciesName": "Zangoose",
+    "dex": 335,
+    "sid": 10720,
+    "showdownSlug": "zangoose",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zapdos",
+    "speciesName": "Zapdos",
+    "dex": 145,
+    "sid": 4640,
+    "showdownSlug": "zapdos",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "zapdos_galarian",
+    "speciesName": "Zapdos (Galarian)",
+    "dex": 145,
+    "sid": 4641,
+    "showdownSlug": "zapdos-galar",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zarude",
+    "speciesName": "Zarude",
+    "dex": 893,
+    "sid": 28576,
+    "showdownSlug": "zarude",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zebstrika",
+    "speciesName": "Zebstrika",
+    "dex": 523,
+    "sid": 16736,
+    "showdownSlug": "zebstrika",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "zekrom",
+    "speciesName": "Zekrom",
+    "dex": 644,
+    "sid": 20608,
+    "showdownSlug": "zekrom",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "zeraora",
+    "speciesName": "Zeraora",
+    "dex": 807,
+    "sid": 25824,
+    "showdownSlug": "zeraora",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zigzagoon",
+    "speciesName": "Zigzagoon",
+    "dex": 263,
+    "sid": 8416,
+    "showdownSlug": "zigzagoon",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zigzagoon_galarian",
+    "speciesName": "Zigzagoon (Galarian)",
+    "dex": 263,
+    "sid": 8417,
+    "showdownSlug": "zigzagoon-galar",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "zoroark",
+    "speciesName": "Zoroark",
+    "dex": 571,
+    "sid": 18272,
+    "showdownSlug": "zoroark",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zoroark_hisuian",
+    "speciesName": "Zoroark (Hisuian)",
+    "dex": 571,
+    "sid": 18273,
+    "showdownSlug": "zoroark-hisui",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zorua",
+    "speciesName": "Zorua",
+    "dex": 570,
+    "sid": 18240,
+    "showdownSlug": "zorua",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zorua_hisuian",
+    "speciesName": "Zorua (Hisuian)",
+    "dex": 570,
+    "sid": 18241,
+    "showdownSlug": "zorua-hisui",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zubat",
+    "speciesName": "Zubat",
+    "dex": 41,
+    "sid": 1312,
+    "showdownSlug": "zubat",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "zweilous",
+    "speciesName": "Zweilous",
+    "dex": 634,
+    "sid": 20288,
+    "showdownSlug": "zweilous",
+    "shadowEligible": true
+  },
+  {
+    "speciesId": "zygarde",
+    "speciesName": "Zygarde (50% Forme)",
+    "dex": 718,
+    "sid": 22976,
+    "showdownSlug": "zygarde",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zygarde_10",
+    "speciesName": "Zygarde (10% Forme)",
+    "dex": 718,
+    "sid": 22977,
+    "showdownSlug": "zygarde-10",
+    "shadowEligible": false
+  },
+  {
+    "speciesId": "zygarde_complete",
+    "speciesName": "Zygarde (Complete Forme)",
+    "dex": 718,
+    "sid": 22980,
+    "showdownSlug": "zygarde-complete",
+    "shadowEligible": false
+  }
+]
