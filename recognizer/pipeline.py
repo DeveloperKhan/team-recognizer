@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 
 import numpy as np
 
-from . import train_head
+from . import forms, train_head
 from .assign import assign_team
 from .embed import Gallery, inference_embedder
 from .grid import Grid, locate
@@ -54,7 +54,8 @@ def _softmax(x: np.ndarray) -> np.ndarray:
 
 class SpeciesScorer:
     """Per-class scores for tile embeddings: the trained head if there is one, otherwise
-    nearest-neighbour similarity to the synthetic gallery."""
+    nearest-neighbour similarity to the synthetic gallery. Forms that look the same on the
+    overlay are merged into one class (see forms.py)."""
 
     def __init__(self):
         head = train_head.load()
@@ -64,6 +65,8 @@ class SpeciesScorer:
         else:
             self.gallery = Gallery()
             self.classes = self.gallery.classes
+        species = {sid: min(m, key=lambda s: len(s.speciesId)).speciesId for sid, m in sprite_classes().items()}
+        self.merge = forms.merge_plan([species[int(sid)] for sid in self.classes])
 
     def __call__(self, feats: np.ndarray) -> np.ndarray:
         """(n, n_classes) log-probabilities."""
@@ -71,7 +74,8 @@ class SpeciesScorer:
             logits = train_head.SCALE * feats @ self.weights.T
         else:
             logits = 30 * self.gallery.class_scores(feats)
-        return np.log(_softmax(logits) + 1e-12)
+        probs = forms.merge_probabilities(_softmax(logits), self.merge)
+        return np.log(probs + 1e-12)
 
 
 class Recognizer:
