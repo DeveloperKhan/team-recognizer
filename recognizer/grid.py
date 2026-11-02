@@ -94,6 +94,12 @@ class Grid:
         pad = 0.08 * (x1 - x0)
         return x0 - pad, y0 - 0.6 * self.tile_h, x1 + pad, y0 - 0.02 * self.tile_h
 
+    def country_tag(self) -> tuple[float, float, float, float]:
+        """Where the country tag sits on full frames: just above the name bar."""
+        x0, y0, x1, _ = self.bbox
+        pad = 0.08 * (x1 - x0)
+        return x0 - pad, y0 - 0.95 * self.tile_h, x1 + pad, y0 - 0.45 * self.tile_h
+
     def to_dict(self) -> dict:
         return {
             "bbox": [round(v, 1) for v in self.bbox],

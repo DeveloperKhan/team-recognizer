@@ -17,7 +17,7 @@ from pathlib import Path
 
 import cv2
 import numpy as np
-from scipy.optimize import linear_sum_assignment
+from .assign import min_cost_assignment
 
 from .evaluate import SCREENS_FILE, _truth_team, load_rosters
 from .grid import locate
@@ -66,8 +66,7 @@ def build(screens_dir: Path, embedder, gallery, exclude_events: tuple[str, ...] 
                 continue
             tiles = [crop_tile(img, b) for b in grid.tiles()]
             scores = gallery.class_scores(embedder(tiles))[:, [col[t[0]] for t in truth]]
-            rows, cols = linear_sum_assignment(-scores)
-            for r, c in zip(rows, cols):
+            for r, c in enumerate(min_cost_assignment(-scores)):
                 name = f"{label.get('event')}_{path.stem}_{side}_{r}.png".replace(" ", "_")
                 cv2.imwrite(str(TILES_DIR / name), cv2.cvtColor(tiles[r], cv2.COLOR_RGB2BGR))
                 tiles_all.append(tiles[r])

@@ -9,8 +9,8 @@ classifier identifies sprites, and RapidOCR reads names.
 ## Setup
 
 ```sh
-brew install uv                  # Python is managed by uv (3.11)
-uv sync
+brew install uv                  # Python is managed by uv (3.12)
+uv sync --extra train            # inference-only installs can drop --extra train
 node scripts/export_species.mjs  # species list + Showdown sprite ids (reads ../dracoviz-site)
 uv run recognizer build-refs --screens ~/Desktop/screenshots/Nice\ Regional\ 2027
 ```
@@ -25,6 +25,23 @@ as an untouched test set.
 ```sh
 uv run recognizer recognize path/to/screenshot.png            # or a folder
 uv run recognizer recognize shot.png --event 2027-nice --json  # match names to the event roster
+```
+
+## HTTP API (Vercel)
+
+`server.py` is a FastAPI app: `POST /recognize` with the image (multipart field `image`, or the
+raw bytes) returns each team's player name, country code and six `{speciesId, shadow,
+confidence, alternatives}`. Set `RECOGNIZER_TOKEN` in the Vercel project and send it as
+`Authorization: Bearer <token>`; without the variable the endpoint is open (local development).
+
+Inference needs no PyTorch: the image model ships as `models/dinov2_vits14.onnx` (int8, from
+`recognizer export-onnx`), the species head and shadow probe as `.npz`. The runtime
+dependencies are only the base `[project.dependencies]`, about 350 MB installed, within Vercel's
+500 MB Python limit.
+
+```sh
+uv run uvicorn server:app --port 8000   # local
+vercel deploy                           # Vercel picks up server.py and vercel.json
 ```
 
 ## Train and evaluate
@@ -54,9 +71,9 @@ Ground truth is `data/rosters/<event>.json` (exported) and `labels/rosters/<even
 | Find grids | `grid.py` | Multi-scale search for a 2x3 lattice of tile borders, scored by coherent contrast across each border; both teams of a full frame scored as a pair; lines snapped and the lattice refit |
 | Reference sprites | `refs.py` | Showdown `sprites/ani` GIF frames + HOME renders, one class per Dracoviz `sid` (Megas excluded) |
 | Synthetic tiles | `synth.py` | Sprites composited onto real tile backgrounds (sprite removed) or flat overlay fills, in bright / see-through dimmed / gray states, with stream degradations |
-| Species | `embed.py`, `train_head.py`, `assign.py` | Frozen DINOv2 ViT-S/14 features; a cosine classifier trained on synthetic + real labeled tiles; Hungarian assignment so a team has no duplicate species |
+| Species | `embed.py`, `train_head.py`, `assign.py` | Frozen DINOv2 ViT-S/14 features (ONNX at inference); a cosine classifier trained on synthetic + real labeled tiles; Hungarian assignment so a team has no duplicate species |
 | Shadow | `shadow.py` | Logistic regression on DINOv2 features of each tile's border band (where the smoke shows), trained on real labeled tiles |
-| Names | `ocr.py` | RapidOCR on the name bar above the grid, fuzzy-matched to the event roster |
+| Names | `ocr.py` | RapidOCR on the name bar above the grid (fuzzy-matched to the event roster when given) and on the country tag above it |
 
 The overlay's shape lives in `grid.STYLES`. If a future overlay changes the tile aspect ratio or
 gutters, add a style measured from one clean frame, rerun `build-refs` with a few of its

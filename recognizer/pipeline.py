@@ -8,7 +8,7 @@ import numpy as np
 
 from . import train_head
 from .assign import assign_team
-from .embed import Embedder, Gallery
+from .embed import Gallery, inference_embedder
 from .grid import Grid, locate
 from .refs import sprite_classes
 from .shadow import ShadowClassifier
@@ -22,6 +22,7 @@ class TeamResult:
     grid: Grid
     player: str | None = None
     player_raw: str | None = None
+    country: str | None = None
     pokemon: list[dict] = field(default_factory=list)
 
     def to_dict(self) -> dict:
@@ -29,6 +30,7 @@ class TeamResult:
             "side": self.side,
             "player": self.player,
             "player_raw": self.player_raw,
+            "country": self.country,
             **{k: v for k, v in self.grid.to_dict().items() if k != "side"},
             "pokemon": self.pokemon,
         }
@@ -74,7 +76,7 @@ class SpeciesScorer:
 
 class Recognizer:
     def __init__(self, read_names: bool = True):
-        self.embedder = Embedder()
+        self.embedder = inference_embedder()
         self.species = SpeciesScorer()
         self.shadow = ShadowClassifier(self.embedder)
         self.read_names = read_names
@@ -111,6 +113,7 @@ class Recognizer:
                 )
             if self.read_names:
                 team.player_raw = ocr.read_name(img, grid.name_bar())
+                team.country = ocr.read_country(img, grid.country_tag())
                 team.player, _ = ocr.match_name(team.player_raw, roster_names or [])
                 if team.player is None and not roster_names:
                     team.player = team.player_raw

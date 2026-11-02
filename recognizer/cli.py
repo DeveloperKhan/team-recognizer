@@ -137,6 +137,27 @@ def cmd_train(args) -> None:
     print(f"species head -> {train_head.HEAD_FILE}")
 
 
+def cmd_export_onnx(args) -> None:
+    """Export DINOv2 to ONNX for PyTorch-free inference: full precision to the cache, then int8
+    weights (a quarter of the size, same accuracy on held-out events) to models/."""
+    from onnxruntime.quantization import QuantType, quantize_dynamic
+
+    from . import dataset
+    from .embed import ONNX_FILE, OnnxEmbedder, TorchEmbedder
+    from .paths import CACHE
+
+    full = CACHE / "dinov2_vits14.fp32.onnx"
+    torch_embedder = TorchEmbedder()
+    torch_embedder.export_onnx(full)
+    quantize_dynamic(str(full), str(ONNX_FILE), weight_type=QuantType.QInt8)
+    records, _ = dataset.load()
+    tiles = [dataset.image(r) for r in records[:64]]
+    reference = torch_embedder(tiles)
+    for path in (full, ONNX_FILE):
+        cos = (reference * OnnxEmbedder(path)(tiles)).sum(1)
+        print(f"{path.name} ({path.stat().st_size / 1e6:.0f} MB): cosine to torch features min={cos.min():.4f} mean={cos.mean():.4f}")
+
+
 def cmd_eval(args) -> None:
     from .evaluate import crop_suite, evaluate
     from .pipeline import Recognizer
@@ -177,6 +198,9 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--real-weight", type=float, default=5.0, help="loss weight of real tiles vs synthetic")
     p.add_argument("--augment", type=int, default=8, help="degraded copies of each real tile")
     p.set_defaults(func=cmd_train)
+
+    p = sub.add_parser("export-onnx", help="export the image model to ONNX for PyTorch-free inference")
+    p.set_defaults(func=cmd_export_onnx)
 
     p = sub.add_parser("eval", help="score against labels/screens.json and exported rosters")
     p.add_argument("--screens", default="~/Desktop/screenshots")

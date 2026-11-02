@@ -16,9 +16,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import numpy as np
-import requests
 from PIL import Image, ImageSequence
-from tqdm import tqdm
 
 from .paths import CACHE, DATA
 
@@ -58,7 +56,9 @@ def sprite_classes() -> dict[int, list[Species]]:
     return classes
 
 
-def _download(url: str, dest: Path, session: requests.Session) -> bool:
+def _download(url: str, dest: Path, session) -> bool:
+    import requests
+
     if dest.exists():
         return dest.stat().st_size > 0
     try:
@@ -72,6 +72,9 @@ def _download(url: str, dest: Path, session: requests.Session) -> bool:
 
 
 def download_all(workers: int = 8) -> None:
+    import requests
+    from tqdm import tqdm
+
     session = requests.Session()
     jobs = []
     for sid, members in sprite_classes().items():

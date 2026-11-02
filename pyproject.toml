@@ -2,24 +2,44 @@
 name = "team-recognizer"
 version = "0.1.0"
 description = "Identify Pokémon GO tournament teams from broadcast overlay screenshots"
-requires-python = ">=3.11,<3.13"
+requires-python = ">=3.12,<3.13"
+# Runtime (inference) dependencies only: this is what the Vercel deployment installs.
 dependencies = [
     "numpy",
     "opencv-python-headless",
     "pillow",
-    "requests",
-    "tqdm",
-    "scipy",
-    "scikit-learn",
+    "onnxruntime",
+    "rapidocr-onnxruntime",
+    "rapidfuzz",
+    "fastapi",
+    "python-multipart",
+]
+
+[project.optional-dependencies]
+# Building references, training and evaluating: `uv sync --extra train`.
+train = [
     "torch",
     "torchvision",
     "timm",
-    "rapidocr-onnxruntime",
-    "rapidfuzz",
+    "onnx",
+    "onnxscript",
+    "scikit-learn",
+    "scipy",
+    "requests",
+    "tqdm",
+    "uvicorn",
 ]
 
 [project.scripts]
 recognizer = "recognizer.cli:main"
+
+[tool.vercel]
+entrypoint = "server:app"
+
+[tool.uv]
+# rapidocr asks for the GUI build of OpenCV; the headless build provides the same cv2 module
+# without needing libGL, which serverless Linux images don't have.
+override-dependencies = ["opencv-python; sys_platform == 'never'"]
 
 [build-system]
 requires = ["hatchling"]

@@ -1,0 +1,6 @@
+.venv
+cache
+data/rosters
+labels
+scripts
+__pycache__
