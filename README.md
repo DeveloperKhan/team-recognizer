@@ -72,7 +72,7 @@ Ground truth is `data/rosters/<event>.json` (exported) and `labels/rosters/<even
 | Reference sprites | `refs.py` | Showdown `sprites/ani` GIF frames + HOME renders, one class per Dracoviz `sid` (Megas excluded) |
 | Synthetic tiles | `synth.py` | Sprites composited onto real tile backgrounds (sprite removed) or flat overlay fills, in bright / see-through dimmed / gray states, with stream degradations |
 | Species | `embed.py`, `train_head.py`, `assign.py` | Frozen DINOv2 ViT-S/14 features (ONNX at inference); a cosine classifier trained on synthetic + real labeled tiles; Hungarian assignment so a team has no duplicate species |
-| Shadow | `shadow.py` | Logistic regression on DINOv2 features of each tile's border band (where the smoke shows), trained on real labeled tiles |
+| Shadow | `shadow.py` | Violet-pixel check on each tile's border band; when the smoke has lost its color (compressed crops, fainted tiles) a logistic regression on DINOv2 features of the band, trained on real labeled tiles, decides |
 | Names | `ocr.py` | RapidOCR on the name bar above the grid (fuzzy-matched to the event roster when given) and on the country tag above it |
 
 The overlay's shape lives in `grid.STYLES`. If a future overlay changes the tile aspect ratio or
