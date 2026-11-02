@@ -1,0 +1,22 @@
+{
+  "name": "@dracoviz/team-recognizer-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Browser build of team-recognizer: finds team grids in broadcast screenshots and identifies the Pokémon, entirely client-side",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test --experimental-strip-types test/*.test.ts",
+    "parity": "node --experimental-strip-types test/node-run.ts",
+    "sync": "node scripts/sync.mjs"
+  },
+  "dependencies": {
+    "onnxruntime-web": "^1.23.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "onnxruntime-node": "^1.23.0",
+    "sharp": "^0.34.0",
+    "typescript": "^5.8.0"
+  }
+}

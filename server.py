@@ -2,6 +2,8 @@
 
     POST /recognize   body: the image (multipart field "image", or the raw image bytes)
                       header: Authorization: Bearer $RECOGNIZER_TOKEN (when that env var is set)
+                      Boxes in the response (each tile's "box", each team's "nameBox") are
+                      [x0, y0, x1, y1] as fractions of the image's width and height.
     GET  /health
 
 Run locally with `uv run --extra train uvicorn server:app --port 8000`.
@@ -66,6 +68,14 @@ async def _read_image(request: Request) -> np.ndarray:
     return np.asarray(img)
 
 
+def _relative_box(box, width: int, height: int) -> list[float]:
+    """A pixel box as fractions of the image size, clipped to the image, so a client can cut
+    the same region out of its own copy at any resolution."""
+    x0, y0, x1, y1 = box
+    clip = lambda v: round(min(max(v, 0.0), 1.0), 4)  # noqa: E731
+    return [clip(x0 / width), clip(y0 / height), clip(x1 / width), clip(y1 / height)]
+
+
 @app.get("/health")
 def health() -> dict:
     return {"ok": True}
@@ -77,18 +87,21 @@ async def recognize(request: Request) -> dict:
     img = await _read_image(request)
     start = time.perf_counter()
     teams = recognizer().recognize(img)
+    height, width = img.shape[:2]
     return {
         "teams": [
             {
                 "side": team.side or None,
                 "player": team.player_raw,
                 "country": team.country,
+                "nameBox": _relative_box(team.grid.name_bar(), width, height),
                 "pokemon": [
                     {
                         "speciesId": p["speciesId"].removesuffix("_shadow") if p["shadow"] else p["speciesId"],
                         "shadow": p["shadow"],
                         "confidence": p["confidence"],
                         "alternatives": [{"speciesId": s, "confidence": c} for s, c in p["top3"][1:]],
+                        "box": _relative_box(p["box"], width, height),
                     }
                     for p in team.pokemon
                 ],

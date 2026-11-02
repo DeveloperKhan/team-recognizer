@@ -46,7 +46,13 @@ TILE_PX = 32  # tile width during the coarse search
 REFINE_PX = 96  # tile width during refinement (never upscaled)
 SCALE_STEP = 1.06
 MIN_TILE_PX = 16  # smallest tile, in original pixels, worth searching for
-MIN_TILE_FRAC = 0.04  # ...and relative to the image's longer side
+# ...and relative to the image's longer side. Tiles in real screenshots span 0.097 (full
+# broadcast frames) to 0.31 (tight panel crops); this leaves room for looser crops while
+# skipping the smallest, most expensive scales.
+MIN_TILE_FRAC = 0.065
+# Scales are sampled geometrically from this anchor (then those below MIN_TILE_FRAC skipped), so
+# moving the lower bound doesn't shift which scales are tried: results are sensitive to that.
+SCALE_ANCHOR_FRAC = 0.04
 EDGE_SPAN = (0.2, 0.8)  # portion of each border scored, skipping rounded corners
 STRIP = 0.08  # width of the strips compared on either side of a border, relative to tile width
 CONTRAST_CAP = 60.0  # Lab units; one very strong border can't carry a lattice on its own
@@ -211,7 +217,9 @@ def _iou(a, b) -> float:
 def _coarse(img: np.ndarray, styles: tuple[Style, ...]) -> list[Grid]:
     H, W = img.shape[:2]
     candidates: list[Grid] = []
-    tile = max(MIN_TILE_PX, MIN_TILE_FRAC * max(H, W))
+    tile = max(MIN_TILE_PX, SCALE_ANCHOR_FRAC * max(H, W))
+    while tile < max(MIN_TILE_PX, MIN_TILE_FRAC * max(H, W)):
+        tile *= SCALE_STEP
     # The grid (2 tiles wide, 3 tall) may run a little off the crop, but not much.
     max_tile = min(W / 1.8, H / (2.7 * min(s.aspect for s in styles)))
     while tile <= max_tile:

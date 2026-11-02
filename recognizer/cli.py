@@ -158,12 +158,24 @@ def cmd_export_onnx(args) -> None:
         print(f"{path.name} ({path.stat().st_size / 1e6:.0f} MB): cosine to torch features min={cos.min():.4f} mean={cos.mean():.4f}")
 
 
+def cmd_export_web(args) -> None:
+    from . import web_export
+
+    config = web_export.export()
+    web_export.write_fixtures(web_export.ROOT / "web" / "test" / "fixtures")
+    sizes = {p.name: f"{p.stat().st_size / 1e6:.1f} MB" for p in sorted(web_export.WEB_MODELS.iterdir())}
+    print(f"web/models ({config['version']}):", sizes)
+
+
 def cmd_eval(args) -> None:
     from .evaluate import crop_suite, evaluate
     from .pipeline import Recognizer
 
-    recognizer = Recognizer(read_names=not args.no_names)
     screens = Path(args.screens).expanduser()
+    if args.predictions:
+        evaluate(screens, None, predictions=json.loads(Path(args.predictions).read_text()))
+        return
+    recognizer = Recognizer(read_names=not args.no_names)
     evaluate(screens, recognizer)
     if args.crops:
         print(f"\nCrop robustness ({args.crops} random crops per full-frame team):")
@@ -202,10 +214,14 @@ def main(argv: list[str] | None = None) -> None:
     p = sub.add_parser("export-onnx", help="export the image model to ONNX for PyTorch-free inference")
     p.set_defaults(func=cmd_export_onnx)
 
+    p = sub.add_parser("export-web", help="write the models and settings the browser build uses (web/models)")
+    p.set_defaults(func=cmd_export_web)
+
     p = sub.add_parser("eval", help="score against labels/screens.json and exported rosters")
     p.add_argument("--screens", default="~/Desktop/screenshots")
     p.add_argument("--no-names", action="store_true")
     p.add_argument("--crops", type=int, default=0, help="also test N random re-crops of each full-frame team")
+    p.add_argument("--predictions", help="score predictions from a file (e.g. the web build's parity run) instead")
     p.set_defaults(func=cmd_eval)
 
     args = parser.parse_args(argv)

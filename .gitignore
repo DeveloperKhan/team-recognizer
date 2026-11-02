@@ -4,3 +4,7 @@ cache/
 data/rosters/
 .vercel
 .env*
+web/node_modules/
+web/dist/
+web/models/
+web/test/fixtures/

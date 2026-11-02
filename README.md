@@ -44,6 +44,16 @@ uv run uvicorn server:app --port 8000   # local
 vercel deploy                           # Vercel picks up server.py and vercel.json
 ```
 
+## Browser build
+
+`web/` is the same pipeline ported to TypeScript, running in a Web Worker with onnxruntime-web
+(WebGPU or WebAssembly). play-graphic-tool uses it so screenshots never leave the browser; the
+HTTP API above is its fallback. `uv run recognizer export-web` writes the models and settings
+it needs; see `web/README.md` for building and syncing it into the app.
+
+Extra reference sprites for overlay art the downloaded references miss (e.g. the white-flowered
+Florges) go in `refs/extra/<speciesId>/`; rebuild that class's gallery entries and retrain.
+
 ## Train and evaluate
 
 ```sh

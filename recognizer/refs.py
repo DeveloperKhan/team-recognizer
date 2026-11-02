@@ -18,11 +18,15 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageSequence
 
-from .paths import CACHE, DATA
+from .paths import CACHE, DATA, ROOT
 
 SHOWDOWN_ANI = "https://play.pokemonshowdown.com/sprites/ani/{slug}.gif"
 HOME_RENDER = "https://imagedelivery.net/2qzpDFW7Yl3NqBaOSqtWxQ/home_{sid}.png/public"
 REFS = CACHE / "refs"
+# Extra reference sprites, committed to the repo: refs/extra/<speciesId>/<any name>.{png,gif,webp}.
+# For overlay art the downloaded references don't cover, e.g. the white-flowered Florges the
+# 2027 overlay shows (Showdown's Florges is the red flower).
+EXTRA_REFS = ROOT / "refs" / "extra"
 FRAMES_PER_GIF = 8
 
 
@@ -97,8 +101,36 @@ def _trim(rgba: np.ndarray) -> np.ndarray | None:
     return rgba[ys.min() : ys.max() + 1, xs.min() : xs.max() + 1]
 
 
+def _frames(path: Path) -> list[np.ndarray]:
+    """Up to FRAMES_PER_GIF evenly spaced frames of an image file (one for a still image)."""
+    frames = [f.convert("RGBA") for f in ImageSequence.Iterator(Image.open(io.BytesIO(path.read_bytes())))]
+    picks = np.linspace(0, len(frames) - 1, min(FRAMES_PER_GIF, len(frames))).round().astype(int)
+    out = []
+    for i in sorted(set(picks)):
+        frame = frames[i]
+        frame.thumbnail((256, 256), Image.LANCZOS)
+        out.append(np.asarray(frame))
+    return out
+
+
+def extra_reference_images(sid: int) -> list[np.ndarray]:
+    """Frames of the extra references for any speciesId drawn with this sprite."""
+    images = []
+    for species in sprite_classes().get(sid, []):
+        folder = EXTRA_REFS / species.speciesId
+        if folder.is_dir():
+            for path in sorted(folder.iterdir()):
+                if path.suffix.lower() in {".png", ".gif", ".webp"}:
+                    images.extend(_frames(path))
+    return [t for t in (_trim(i) for i in images) if t is not None]
+
+
 def load_reference_images(sid: int) -> list[np.ndarray]:
-    """All RGBA reference images for a sprite class, trimmed to their content."""
+    """All RGBA reference images for a sprite class, trimmed to their content.
+
+    Extra references are repeated to make up about half of the list, since synthetic tiles
+    cycle through it: they exist because the downloaded art doesn't match the overlay.
+    """
     images = []
     home = REFS / "home" / f"{sid}.png"
     if home.exists() and home.stat().st_size:
@@ -107,7 +139,16 @@ def load_reference_images(sid: int) -> list[np.ndarray]:
         images.append(np.asarray(img))
     gif = REFS / "showdown" / f"{sid}.gif"
     if gif.exists() and gif.stat().st_size:
-        frames = [f.convert("RGBA") for f in ImageSequence.Iterator(Image.open(io.BytesIO(gif.read_bytes())))]
-        picks = np.linspace(0, len(frames) - 1, min(FRAMES_PER_GIF, len(frames))).round().astype(int)
-        images.extend(np.asarray(frames[i]) for i in sorted(set(picks)))
-    return [t for t in (_trim(i) for i in images) if t is not None]
+        images.extend(_frames(gif))
+    base = [t for t in (_trim(i) for i in images) if t is not None]
+    extra = extra_reference_images(sid)
+    if not extra:
+        return base
+    repeat = max(1, round(len(base) / len(extra)))
+    # Interleave so a class's first synthetic tiles already include both looks.
+    mixed = []
+    for i in range(max(len(base), len(extra) * repeat)):
+        if i < len(base):
+            mixed.append(base[i])
+        mixed.append(extra[i % len(extra)])
+    return mixed

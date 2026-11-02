@@ -68,7 +68,32 @@ def _truth_team(entry, event: str | None, rosters) -> tuple[str | None, list[tup
     return entry, [(sid(p["speciesId"]), bool(p["shadow"])) for p in roster]
 
 
-def evaluate(screens_dir: Path, recognizer, verbose: bool = True) -> dict:
+def _teams_from_predictions(entries: list[dict], roster_names: list[str]):
+    """Predictions written by another implementation (the browser build's parity harness), in
+    the shape Recognizer.recognize returns, with names matched to the roster the same way."""
+    from types import SimpleNamespace
+
+    from . import ocr
+
+    teams = []
+    for t in entries:
+        raw = t.get("player")
+        player, _ = ocr.match_name(raw, roster_names)
+        pokemon = [
+            {
+                "speciesId": f"{p['speciesId']}_shadow" if p["shadow"] else p["speciesId"],
+                "shadow": p["shadow"],
+                "top3": [[p["speciesId"], p["confidence"]]] + [[a["speciesId"], a["confidence"]] for a in p["alternatives"]],
+                "shadow_violet": p.get("shadowViolet"),
+                "shadow_probe": p.get("shadowProbe"),
+            }
+            for p in t["pokemon"]
+        ]
+        teams.append(SimpleNamespace(side=t.get("side") or "", player=player or (raw if not roster_names else None), pokemon=pokemon))
+    return teams
+
+
+def evaluate(screens_dir: Path, recognizer, verbose: bool = True, predictions: dict | None = None) -> dict:
     labels = json.loads(SCREENS_FILE.read_text()) if SCREENS_FILE.exists() else {}
     rosters = load_rosters()
     sid = _sid_lookup()
@@ -83,7 +108,10 @@ def evaluate(screens_dir: Path, recognizer, verbose: bool = True) -> dict:
         event = label.get("event")
         group = event or path.parent.name
         names = list(rosters.get(event or "", {}))
-        teams = recognizer.recognize(load_rgb(path), roster_names=names)
+        if predictions is not None:
+            teams = _teams_from_predictions(predictions.get(key, []), names)
+        else:
+            teams = recognizer.recognize(load_rgb(path), roster_names=names)
         expected_sides = [s for s in ("left", "right", "team") if s in label]
         s = stats[group]
         s["screens"] += 1

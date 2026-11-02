@@ -138,6 +138,24 @@ def build_gallery(embedder, per_class: int = GALLERY_PER_CLASS, seed: int = 0) -
     np.savez(GALLERY_FILE, feats=np.concatenate(feats), labels=np.array(labels, np.int32))
 
 
+def rebuild_gallery_classes(embedder, sids: list[int], per_class: int, seed: int = 0) -> None:
+    """Re-render the gallery entries of some sprite classes (e.g. after adding extra
+    references) and leave every other class's entries untouched."""
+    from .refs import load_reference_images
+    from .synth import load_backgrounds, load_palette, synth_tiles
+
+    data = np.load(GALLERY_FILE)
+    keep = ~np.isin(data["labels"], sids)
+    feats, labels = [data["feats"][keep]], [data["labels"][keep]]
+    rng = np.random.default_rng(seed)
+    palette, backgrounds = load_palette(), load_backgrounds()
+    for sid in sids:
+        refs = load_reference_images(sid)
+        feats.append(embedder(synth_tiles(refs, per_class, rng, palette, backgrounds)).astype(np.float16))
+        labels.append(np.full(per_class, sid, np.int32))
+    np.savez(GALLERY_FILE, feats=np.concatenate(feats), labels=np.concatenate(labels))
+
+
 class Gallery:
     def __init__(self, path=GALLERY_FILE):
         from .refs import sprite_classes
