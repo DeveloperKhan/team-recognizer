@@ -8,6 +8,13 @@ import sys
 from pathlib import Path
 
 
+def cmd_update_species(args) -> None:
+    from .species import update
+
+    species = update()
+    print(f"data/species.json: {len(species)} species, {len({s['sid'] for s in species})} sprites")
+
+
 def cmd_build_refs(args) -> None:
     from .embed import Embedder, build_gallery
     from .io import find_images, load_rgb
@@ -186,6 +193,9 @@ def cmd_eval(args) -> None:
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(prog="recognizer", description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
+
+    p = sub.add_parser("update-species", help="rebuild data/species.json from PvPoke, Showdown and Smogon")
+    p.set_defaults(func=cmd_update_species)
 
     p = sub.add_parser("build-refs", help="download sprites, harvest tile colors, build the gallery")
     p.add_argument("--screens", type=Path, help="screenshots to harvest overlay tile colors from")

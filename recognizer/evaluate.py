@@ -1,7 +1,7 @@
 """Score the recognizer against known teams.
 
 Ground truth comes from two places:
-  * data/rosters/<event>.json - official rosters exported from Dracoviz (scripts/export_rosters.mjs);
+  * rosters/<event>.json - each player's team (for Dracoviz events, exported from its API);
   * labels/screens.json - which player each team grid in each screenshot belongs to, keyed by
     the screenshot path relative to the screenshots folder, e.g.
         {"EUIC 2026/image.webp": {"event": "2026-euic", "left": "PlayerOne", "right": "PlayerTwo"}}
@@ -21,7 +21,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 from .io import find_images, load_rgb
-from .paths import DATA, LABELS
+from .paths import LABELS, ROSTERS
 from .refs import load_species
 
 SCREENS_FILE = LABELS / "screens.json"
@@ -30,11 +30,11 @@ SCREENS_FILE = LABELS / "screens.json"
 def load_rosters() -> dict[str, dict[str, list[dict]]]:
     """event -> player name -> team [{speciesId, shadow}].
 
-    Exported Dracoviz rosters live in data/rosters; hand-labeled teams for events that aren't on
-    Dracoviz yet live in labels/rosters, in the same shape.
+    Files in the data directory's rosters/ (paths.ROSTERS), one per event:
+    [{"name": ..., "team": [{"speciesId": ..., "shadow": bool}, ...]}, ...].
     """
     out = {}
-    for path in sorted([*(DATA / "rosters").glob("*.json"), *(LABELS / "rosters").glob("*.json")]):
+    for path in sorted(ROSTERS.glob("*.json")):
         out[path.stem] = {p["name"]: p["team"] for p in json.loads(path.read_text())}
     return out
 

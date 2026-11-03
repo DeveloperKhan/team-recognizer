@@ -1064,6 +1064,14 @@
     "shadowEligible": true
   },
   {
+    "speciesId": "chandelure_mega",
+    "speciesName": "Chandelure (Mega)",
+    "dex": 609,
+    "sid": 19489,
+    "showdownSlug": "chandelure-mega",
+    "shadowEligible": true
+  },
+  {
     "speciesId": "chansey",
     "speciesName": "Chansey",
     "dex": 113,

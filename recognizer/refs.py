@@ -3,7 +3,7 @@
 Two sources per sprite class (keyed by the Dracoviz `sid`):
   * Showdown's animated 3D sprite, sampled to a handful of frames, which covers the poses the
     overlay's animated sprites pass through;
-  * the static Pokémon HOME render the Dracoviz site already serves.
+  * Pokémon Showdown's static HOME render.
 """
 
 from __future__ import annotations
@@ -18,15 +18,14 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageSequence
 
-from .paths import CACHE, DATA, ROOT
+from .paths import CACHE, DATA, EXTRA_REFS
 
 SHOWDOWN_ANI = "https://play.pokemonshowdown.com/sprites/ani/{slug}.gif"
-HOME_RENDER = "https://imagedelivery.net/2qzpDFW7Yl3NqBaOSqtWxQ/home_{sid}.png/public"
+HOME_RENDER = "https://play.pokemonshowdown.com/sprites/home/{slug}.png"
 REFS = CACHE / "refs"
-# Extra reference sprites, committed to the repo: refs/extra/<speciesId>/<any name>.{png,gif,webp}.
-# For overlay art the downloaded references don't cover, e.g. the white-flowered Florges the
-# 2027 overlay shows (Showdown's Florges is the red flower).
-EXTRA_REFS = ROOT / "refs" / "extra"
+# Extra reference sprites live in your data directory (paths.EXTRA_REFS):
+# refs/extra/<speciesId>/<any name>.{png,gif,webp}, for overlay art the downloaded references don't
+# cover, e.g. the white-flowered Florges the 2027 overlay shows (Showdown's Florges is red).
 FRAMES_PER_GIF = 8
 
 
@@ -83,8 +82,8 @@ def download_all(workers: int = 8) -> None:
     jobs = []
     for sid, members in sprite_classes().items():
         slug = next((m.showdownSlug for m in members if m.showdownSlug), None)
-        jobs.append((HOME_RENDER.format(sid=sid), REFS / "home" / f"{sid}.png"))
         if slug:
+            jobs.append((HOME_RENDER.format(slug=slug), REFS / "home" / f"{sid}.png"))
             jobs.append((SHOWDOWN_ANI.format(slug=slug), REFS / "showdown" / f"{sid}.gif"))
     with ThreadPoolExecutor(workers) as pool:
         results = list(tqdm(pool.map(lambda j: _download(*j, session), jobs), total=len(jobs), desc="sprites"))
