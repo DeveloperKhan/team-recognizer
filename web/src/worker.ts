@@ -66,7 +66,7 @@ async function hasWebGpu(): Promise<boolean> {
 async function load(base: string, ortBase: string): Promise<Recognizer> {
   // The bundled onnxruntime-web JavaScript and these files must be the same release.
   ort.env.wasm.wasmPaths = ortBase;
-  ort.env.logLevel = "error"; // not its warnings about ops placed on the CPU, which are expected
+  ort.env.logLevel = "error";
   // Threads need cross-origin isolation (SharedArrayBuffer); otherwise run single-threaded.
   ort.env.wasm.numThreads = self.crossOriginIsolated ? Math.min(4, navigator.hardwareConcurrency || 1) : 1;
 
@@ -78,10 +78,13 @@ async function load(base: string, ortBase: string): Promise<Recognizer> {
   const config: RecognizerConfig = JSON.parse(decoder.decode(configBuf));
   const keys: string[] = JSON.parse(decoder.decode(keysBuf));
 
-  const wasm = { executionProviders: ["wasm"] };
+  // Errors only: sessions otherwise warn that some ops run on the CPU, which is expected.
+  const quiet = { logSeverityLevel: 3 as const };
+  const wasm = { ...quiet, executionProviders: ["wasm"] };
   let embed: ort.InferenceSession;
   try {
     embed = await ort.InferenceSession.create(new Uint8Array(embedModel), {
+      ...quiet,
       executionProviders: backend === "webgpu" ? ["webgpu"] : ["wasm"],
     });
   } catch (error) {
