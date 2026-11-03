@@ -27,13 +27,19 @@ export interface RecognizedTeam {
 
 export type Backend = "webgpu" | "wasm";
 
+/** How long one stage of a recognition took. */
+export interface StageTiming {
+  stage: string;
+  ms: number;
+}
+
 export type WorkerRequest =
-  | { type: "init"; baseUrl: string }
+  | { type: "init"; baseUrl: string; ortBaseUrl: string }
   | { type: "recognize"; id: number; image: Blob };
 
 export type WorkerResponse =
   | { type: "progress"; loaded: number; total: number }
   | { type: "log"; message: string }
   | { type: "ready"; backend: Backend; version: string }
-  | { type: "result"; id: number; teams: RecognizedTeam[]; elapsedMs: number }
+  | { type: "result"; id: number; teams: RecognizedTeam[]; elapsedMs: number; timings: StageTiming[] }
   | { type: "error"; id?: number; message: string };

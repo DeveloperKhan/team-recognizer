@@ -1,21 +1,56 @@
 {
-  "name": "@dracoviz/team-recognizer-web",
+  "name": "@dracoviz/team-recognizer",
   "version": "0.1.0",
-  "private": true,
-  "description": "Browser build of team-recognizer: finds team grids in broadcast screenshots and identifies the Pokémon, entirely client-side",
+  "description": "Reads Pokémon GO teams (species, shadow, player name, country) from broadcast-overlay screenshots, entirely in the browser",
+  "keywords": [
+    "pokemon-go",
+    "pokemon",
+    "screenshot",
+    "recognition",
+    "onnx",
+    "webgpu"
+  ],
+  "homepage": "https://team-recognizer.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeveloperKhan/team-recognizer.git",
+    "directory": "web"
+  },
+  "bugs": "https://github.com/DeveloperKhan/team-recognizer/issues",
+  "license": "MIT",
+  "author": "DeveloperKhan",
   "type": "module",
+  "sideEffects": false,
+  "main": "./dist/client.js",
+  "types": "./dist/client.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/client.d.ts",
+      "default": "./dist/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/client.js",
+    "dist/*.d.ts",
+    "dist/worker.js",
+    "models/",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "node scripts/build.mjs",
+    "demo": "node scripts/build-demo.mjs",
     "test": "node --test --experimental-strip-types test/*.test.ts",
     "parity": "node --experimental-strip-types test/node-run.ts",
-    "sync": "node scripts/sync.mjs"
-  },
-  "dependencies": {
-    "onnxruntime-web": "^1.23.0"
+    "prepublishOnly": "npm run build && npm test"
   },
   "devDependencies": {
     "esbuild": "^0.25.0",
     "onnxruntime-node": "^1.23.0",
+    "onnxruntime-web": "1.31.1",
     "sharp": "^0.34.0",
     "typescript": "^5.8.0"
   }

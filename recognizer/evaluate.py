@@ -4,7 +4,7 @@ Ground truth comes from two places:
   * rosters/<event>.json - each player's team (for Dracoviz events, exported from its API);
   * labels/screens.json - which player each team grid in each screenshot belongs to, keyed by
     the screenshot path relative to the screenshots folder, e.g.
-        {"EUIC 2026/image.webp": {"event": "2026-euic", "left": "PlayerOne", "right": "PlayerTwo"}}
+        {"Nice Regional 2027/frame.png": {"event": "2027-nice", "left": "PlayerOne", "right": "PlayerTwo"}}
     A single-team crop uses the key "team" instead of left/right. Teams of events that are not
     on Dracoviz yet can be written inline: {"team": {"player": "...", "pokemon": ["dunsparce",
     "ninetales_alolan_shadow", ...]}}.

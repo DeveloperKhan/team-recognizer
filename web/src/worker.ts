@@ -1,9 +1,10 @@
 /**
  * Web Worker that runs the recognizer off the page's main thread.
  *
- * Models load once from `baseUrl` (a versioned folder, so the browser can cache them forever):
- * the image model runs on WebGPU in float16 when the browser has it, otherwise on WebAssembly
- * with int8 weights; the OCR models always run on WebAssembly.
+ * Models load once from `baseUrl` (a versioned folder, so the browser can cache them forever),
+ * the ONNX runtime's WebAssembly files from `ortBaseUrl`: the image model runs on WebGPU in
+ * float16 when the browser has it, otherwise on WebAssembly with int8 weights; the OCR models
+ * always run on WebAssembly.
  */
 
 import * as ort from "onnxruntime-web/webgpu";
@@ -11,7 +12,7 @@ import type { RecognizerConfig } from "./config.ts";
 import type { RGBImage } from "./image.ts";
 import { createBackend, decodeHead } from "./models.ts";
 import { limitSize, Recognizer } from "./pipeline.ts";
-import type { Backend, WorkerRequest, WorkerResponse } from "./types.ts";
+import type { Backend, StageTiming, WorkerRequest, WorkerResponse } from "./types.ts";
 
 declare const self: DedicatedWorkerGlobalScope;
 
@@ -62,9 +63,10 @@ async function hasWebGpu(): Promise<boolean> {
   }
 }
 
-async function load(baseUrl: string): Promise<Recognizer> {
-  const base = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
-  ort.env.wasm.wasmPaths = `${base}ort/`;
+async function load(base: string, ortBase: string): Promise<Recognizer> {
+  // The bundled onnxruntime-web JavaScript and these files must be the same release.
+  ort.env.wasm.wasmPaths = ortBase;
+  ort.env.logLevel = "error"; // not its warnings about ops placed on the CPU, which are expected
   // Threads need cross-origin isolation (SharedArrayBuffer); otherwise run single-threaded.
   ort.env.wasm.numThreads = self.crossOriginIsolated ? Math.min(4, navigator.hardwareConcurrency || 1) : 1;
 
@@ -121,7 +123,7 @@ async function decode(image: Blob): Promise<RGBImage> {
 self.onmessage = async (event: MessageEvent<WorkerRequest>) => {
   const message = event.data;
   if (message.type === "init") {
-    ready ??= load(message.baseUrl);
+    ready ??= load(message.baseUrl, message.ortBaseUrl);
     ready.catch((error) => post({ type: "error", message: String(error?.message ?? error) }));
     return;
   }
@@ -132,10 +134,14 @@ self.onmessage = async (event: MessageEvent<WorkerRequest>) => {
         const recognizer = await ready;
         const start = performance.now();
         const image = limitSize(await decode(message.image));
-        const log = (stage: string, ms: number) => post({ type: "log", message: `${stage}: ${Math.round(ms)} ms` });
+        const timings: StageTiming[] = [];
+        const log = (stage: string, ms: number) => {
+          timings.push({ stage, ms: Math.round(ms) });
+          post({ type: "log", message: `${stage}: ${Math.round(ms)} ms` });
+        };
         log(`decode ${image.width}x${image.height}`, performance.now() - start);
         const teams = await recognizer.recognize(image, { log });
-        post({ type: "result", id: message.id, teams, elapsedMs: Math.round(performance.now() - start) });
+        post({ type: "result", id: message.id, teams, elapsedMs: Math.round(performance.now() - start), timings });
       } catch (error) {
         post({ type: "error", id: message.id, message: String((error as Error)?.message ?? error) });
       }

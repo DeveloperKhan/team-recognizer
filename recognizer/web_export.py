@@ -84,11 +84,20 @@ def export() -> dict:
     # Species head and the class list it scores.
     weights, classes = train_head.load()
     weights.astype("<f2").tofile(WEB_MODELS / "head.bin")
-    by_sid = {sid: min(members, key=lambda s: len(s.speciesId)) for sid, members in sprite_classes().items()}
-    species = [
-        {"sid": int(sid), "speciesId": by_sid[int(sid)].speciesId, "shadowEligible": by_sid[int(sid)].shadowEligible}
-        for sid in classes
-    ]
+    members_by_sid = sprite_classes()
+    species = []
+    for sid in classes:
+        members = members_by_sid[int(sid)]
+        rep = min(members, key=lambda s: len(s.speciesId))
+        species.append(
+            {
+                "sid": int(sid),
+                "speciesId": rep.speciesId,
+                "shadowEligible": rep.shadowEligible,
+                # For showing the class's sprite: play.pokemonshowdown.com/sprites/home/<slug>.png
+                "showdownSlug": next((m.showdownSlug for m in members if m.showdownSlug), None),
+            }
+        )
 
     # OCR models, exactly as RapidOCR runs them.
     import onnx

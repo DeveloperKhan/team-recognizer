@@ -1,25 +1,26 @@
-// Bundle the worker (with onnxruntime-web) and collect the runtime's WebAssembly file.
+// Build the package: dist/worker.js (the pipeline with onnxruntime-web bundled), dist/client.js
+// (the main-thread API, no dependencies) and its type declarations.
 import { build } from "esbuild";
-import { copyFileSync, mkdirSync, rmSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { copyFileSync, readFileSync, rmSync } from "node:fs";
 
-const dist = new URL("../dist/", import.meta.url);
-rmSync(dist, { recursive: true, force: true });
-mkdirSync(new URL("ort/", dist), { recursive: true });
+const web = new URL("../", import.meta.url);
+const pkg = JSON.parse(readFileSync(new URL("package.json", web)));
+const ort = JSON.parse(readFileSync(new URL("node_modules/onnxruntime-web/package.json", web)));
+const path = (p) => new URL(p, web).pathname;
 
+rmSync(path("dist"), { recursive: true, force: true });
+const common = { bundle: true, format: "esm", platform: "browser", target: "es2022", legalComments: "none" };
+await build({ ...common, entryPoints: [path("src/worker.ts")], outfile: path("dist/worker.js"), minify: true });
 await build({
-  entryPoints: [new URL("../src/worker.ts", import.meta.url).pathname],
-  outfile: new URL("worker.js", dist).pathname,
-  bundle: true,
-  format: "esm",
-  platform: "browser",
-  target: "es2022",
-  minify: true,
-  legalComments: "none",
+  ...common,
+  entryPoints: [path("src/client.ts")],
+  outfile: path("dist/client.js"),
+  // The client's default URLs: this version's files and the runtime release the worker bundles.
+  define: { __PACKAGE_VERSION__: JSON.stringify(pkg.version), __ORT_VERSION__: JSON.stringify(ort.version) },
 });
+execFileSync("npx", ["tsc", "-p", path("tsconfig.build.json")], { stdio: "inherit" });
 
-// onnxruntime-web/webgpu loads its runtime (WebGPU + WebAssembly backends) from wasmPaths:
-// the .wasm and the JavaScript loader that instantiates it.
-for (const file of ["ort-wasm-simd-threaded.asyncify.wasm", "ort-wasm-simd-threaded.asyncify.mjs"]) {
-  copyFileSync(new URL(`../node_modules/onnxruntime-web/dist/${file}`, import.meta.url), new URL(`ort/${file}`, dist));
-}
-console.log("built dist/worker.js and dist/ort/");
+// npm only picks up files inside the package folder.
+for (const file of ["LICENSE", "THIRD_PARTY_NOTICES.md"]) copyFileSync(path(`../${file}`), path(file));
+console.log(`built dist/ for ${pkg.name}@${pkg.version} (onnxruntime-web ${ort.version})`);

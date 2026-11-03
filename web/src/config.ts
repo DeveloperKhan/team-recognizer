@@ -31,6 +31,8 @@ export interface SpeciesClass {
   sid: number;
   speciesId: string;
   shadowEligible: boolean;
+  /** Pokémon Showdown's sprite name, e.g. "ninetales-alola". */
+  showdownSlug: string | null;
 }
 
 export interface RecognizerConfig {
