@@ -1,6 +1,8 @@
 .venv
-cache
-data/rosters
-labels
-scripts
 __pycache__
+cache
+local
+web/node_modules
+web/dist
+web/models
+web/test/fixtures

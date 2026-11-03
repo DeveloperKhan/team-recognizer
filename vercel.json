@@ -3,7 +3,7 @@
   "functions": {
     "server.py": {
       "maxDuration": 120,
-      "excludeFiles": "{cache/**,labels/**,scripts/**,data/rosters/**,README.md}"
+      "excludeFiles": "{cache/**,local/**,web/**,demo/**,public/**,README.md}"
     }
   }
 }
