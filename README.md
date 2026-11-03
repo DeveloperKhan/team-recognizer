@@ -206,6 +206,13 @@ The overlay's geometry lives in `grid.STYLES` (tile aspect ratio and gutters). F
 2. Rerun `build-refs` with a few of its screenshots.
 3. Label some screenshots so the shadow classifier sees its smoke, then retrain.
 
+## Contributing
+
+Reports of wrong results (with the screenshot) and pull requests are welcome; see
+[CONTRIBUTING.md](CONTRIBUTING.md). Accuracy is measured on labeled screenshots that aren't
+public, so changes to the recognition itself are evaluated by the maintainer before merging.
+Security issues: see [SECURITY.md](SECURITY.md).
+
 ## License
 
 The code and the trained species head and shadow probe are MIT licensed. See

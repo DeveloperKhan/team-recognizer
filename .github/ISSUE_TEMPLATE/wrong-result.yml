@@ -1,0 +1,41 @@
+name: Wrong result
+description: The recognizer misread a Pokémon, a shadow form, a name or a country, or missed a team
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! A screenshot is what makes these fixable. It will be public, so crop out anything you'd rather not share.
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag the image here, exactly as you gave it to the recognizer (not re-cropped).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What it got wrong
+      description: What it read, and what it should have read.
+      placeholder: |
+        Left team, 4th tile: got Stunfisk, should be Stunfisk (Galarian).
+        Right team: shadow missed on Hydreigon.
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where you ran it
+      options:
+        - Demo site (team-recognizer.vercel.app)
+        - npm package in my own app
+        - Python CLI
+        - HTTP API
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The npm package version, or the commit you ran from. Leave blank for the demo site.

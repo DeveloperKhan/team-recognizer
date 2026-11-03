@@ -1,0 +1,28 @@
+name: Bug
+description: Something errors, hangs or doesn't load
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Include the error message or console output.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser and OS for the demo or the package; OS and Python version for the CLI.
+      placeholder: Chrome 142 on macOS 15 / Ubuntu 24.04, Python 3.12
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The npm package version, or the commit you ran from.
