@@ -34,7 +34,7 @@ train = [
 # Tests, lint and the local API server; `uv sync` installs these by default.
 dev = [
     "pytest",
-    "httpx",
+    "httpx2",
     "ruff",
     "uvicorn",
 ]
