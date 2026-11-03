@@ -6,7 +6,7 @@
                       [x0, y0, x1, y1] as fractions of the image's width and height.
     GET  /health
 
-Run locally with `uv run --extra train uvicorn server:app --port 8000`.
+Run locally with `uv run uvicorn server:app --port 8000`.
 """
 
 from __future__ import annotations

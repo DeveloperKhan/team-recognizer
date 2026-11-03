@@ -46,7 +46,9 @@ def cmd_recognize(args) -> None:
             for t in teams:
                 print(f"  [{t.side or 'team'}] {t.player or '?'}  (read: {t.player_raw!r})")
                 for p in t.pokemon:
-                    print(f"    {p['speciesId']:<28} confidence={p['confidence']:.2f} violet={p['shadow_violet']:.2f} probe={p['shadow_probe']:.2f}")
+                    print(
+                        f"    {p['speciesId']:<28} confidence={p['confidence']:.2f} violet={p['shadow_violet']:.2f} probe={p['shadow_probe']:.2f}"
+                    )
     if args.json:
         json.dump(results, sys.stdout, indent=2)
         print()
@@ -128,7 +130,9 @@ def cmd_train(args) -> None:
             owners.append(i)
     owners = np.array(owners, int)
     tile_feats = np.vstack([feats["tile"], embedder(variants)]) if variants else feats["tile"]
-    band_feats = np.vstack([feats["band"], embedder([shadow.band_only(v) for v in variants])]) if variants else feats["band"]
+    band_feats = (
+        np.vstack([feats["band"], embedder([shadow.band_only(v) for v in variants])]) if variants else feats["band"]
+    )
     index = np.concatenate([np.arange(len(records)), owners])
     sids = np.array([r.sid for r in records])[index]
     shadows = np.array([r.shadow for r in records])[index]
@@ -162,16 +166,25 @@ def cmd_export_onnx(args) -> None:
     reference = torch_embedder(tiles)
     for path in (full, ONNX_FILE):
         cos = (reference * OnnxEmbedder(path)(tiles)).sum(1)
-        print(f"{path.name} ({path.stat().st_size / 1e6:.0f} MB): cosine to torch features min={cos.min():.4f} mean={cos.mean():.4f}")
+        print(
+            f"{path.name} ({path.stat().st_size / 1e6:.0f} MB): cosine to torch features min={cos.min():.4f} mean={cos.mean():.4f}"
+        )
 
 
 def cmd_export_web(args) -> None:
     from . import web_export
 
     config = web_export.export()
-    web_export.write_fixtures(web_export.ROOT / "web" / "test" / "fixtures")
+    web_export.write_fixtures(web_export.FIXTURES)
     sizes = {p.name: f"{p.stat().st_size / 1e6:.1f} MB" for p in sorted(web_export.WEB_MODELS.iterdir())}
     print(f"web/models ({config['version']}):", sizes)
+
+
+def cmd_write_fixtures(args) -> None:
+    from . import web_export
+
+    web_export.write_fixtures(web_export.FIXTURES)
+    print(f"wrote {web_export.FIXTURES.relative_to(web_export.ROOT)}")
 
 
 def cmd_eval(args) -> None:
@@ -226,6 +239,9 @@ def main(argv: list[str] | None = None) -> None:
 
     p = sub.add_parser("export-web", help="write the models and settings the browser build uses (web/models)")
     p.set_defaults(func=cmd_export_web)
+
+    p = sub.add_parser("write-fixtures", help="write the web build's image-operation test fixtures (no PyTorch needed)")
+    p.set_defaults(func=cmd_write_fixtures)
 
     p = sub.add_parser("eval", help="score against labels/screens.json and exported rosters")
     p.add_argument("--screens", default="~/Desktop/screenshots")

@@ -1,10 +1,13 @@
-// Image operations against OpenCV reference outputs (written by `recognizer export-web`).
+// Image operations against OpenCV reference outputs, written by `uv run recognizer write-fixtures`.
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { AreaSampler, resizeArea, rgbToLab, type RGBImage } from "../src/image.ts";
 
 const dir = new URL("./fixtures/", import.meta.url);
+if (!existsSync(new URL("meta.json", dir))) {
+  throw new Error("No test fixtures: run `uv run recognizer write-fixtures` from the repository root first.");
+}
 const meta = JSON.parse(readFileSync(new URL("meta.json", dir), "utf8"));
 const src: RGBImage = {
   width: meta.width,

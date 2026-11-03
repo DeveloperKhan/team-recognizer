@@ -29,6 +29,7 @@ from .paths import CACHE, ROOT
 from .refs import sprite_classes
 
 WEB_MODELS = ROOT / "web" / "models"
+FIXTURES = ROOT / "web" / "test" / "fixtures"
 
 
 def _fp16_model(dest: Path) -> None:
@@ -114,9 +115,7 @@ def export() -> dict:
     config = {
         "version": _git_version(),
         "grid": {
-            "styles": [
-                {"name": s.name, "aspect": s.aspect, "gapX": s.gap_x, "gapY": s.gap_y} for s in grid.STYLES
-            ],
+            "styles": [{"name": s.name, "aspect": s.aspect, "gapX": s.gap_x, "gapY": s.gap_y} for s in grid.STYLES],
             "tilePx": grid.TILE_PX,
             "refinePx": grid.REFINE_PX,
             "scaleStep": grid.SCALE_STEP,
