@@ -20,6 +20,8 @@ import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 
+import numpy as np
+
 from .io import find_images, load_rgb
 from .paths import LABELS, ROSTERS
 from .refs import load_species
@@ -83,13 +85,18 @@ def _teams_from_predictions(entries: list[dict], roster_names: list[str]):
             {
                 "speciesId": f"{p['speciesId']}_shadow" if p["shadow"] else p["speciesId"],
                 "shadow": p["shadow"],
-                "top3": [[p["speciesId"], p["confidence"]]] + [[a["speciesId"], a["confidence"]] for a in p["alternatives"]],
+                "top3": [[p["speciesId"], p["confidence"]]]
+                + [[a["speciesId"], a["confidence"]] for a in p["alternatives"]],
                 "shadow_violet": p.get("shadowViolet"),
                 "shadow_probe": p.get("shadowProbe"),
             }
             for p in t["pokemon"]
         ]
-        teams.append(SimpleNamespace(side=t.get("side") or "", player=player or (raw if not roster_names else None), pokemon=pokemon))
+        teams.append(
+            SimpleNamespace(
+                side=t.get("side") or "", player=player or (raw if not roster_names else None), pokemon=pokemon
+            )
+        )
     return teams
 
 
@@ -181,16 +188,17 @@ def _report(stats, mismatches) -> None:
         for p in team.pokemon:
             mark = "*" if p["shadow"] else ""
             alts = ", ".join(f"{n} {v:.2f}" for n, v in p["top3"])
-            print(f"    pred:  {p['speciesId'].removesuffix('_shadow')}{mark} (violet={p['shadow_violet']} probe={p['shadow_probe']})  top3: {alts}")
+            print(
+                f"    pred:  {p['speciesId'].removesuffix('_shadow')}{mark} (violet={p['shadow_violet']} probe={p['shadow_probe']})  top3: {alts}"
+            )
 
 
-def random_crop(img, grid, rng) -> "np.ndarray":
+def random_crop(img, grid, rng) -> np.ndarray:
     """A human-style crop around one team: its grid and name bar plus random margins, rescaled
     and re-encoded."""
     import io as _io
 
     import cv2
-    import numpy as np
     from PIL import Image
 
     H, W = img.shape[:2]
@@ -211,7 +219,6 @@ def random_crop(img, grid, rng) -> "np.ndarray":
 
 def crop_suite(screens_dir: Path, recognizer, n: int = 5, seed: int = 0) -> dict:
     """Re-run every full-frame team on `n` random crops; predictions should not change."""
-    import numpy as np
 
     from .grid import locate
 
@@ -241,5 +248,7 @@ def crop_suite(screens_dir: Path, recognizer, n: int = 5, seed: int = 0) -> dict
                 if teams and got != want:
                     print(f"  {key} [{grid.side}] crop differs: {sorted(set(got) ^ set(want))}")
     for group, s in sorted(stats.items()):
-        print(f"{group:<22} crops={s['crops']}  one grid found={_pct(s['found'], s['crops'])}  same team={_pct(s['same'], s['crops'])}")
+        print(
+            f"{group:<22} crops={s['crops']}  one grid found={_pct(s['found'], s['crops'])}  same team={_pct(s['same'], s['crops'])}"
+        )
     return {k: dict(v) for k, v in stats.items()}

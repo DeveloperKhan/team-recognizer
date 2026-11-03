@@ -17,8 +17,8 @@ from pathlib import Path
 
 import cv2
 import numpy as np
-from .assign import min_cost_assignment
 
+from .assign import min_cost_assignment
 from .evaluate import SCREENS_FILE, _truth_team, load_rosters
 from .grid import locate
 from .io import find_images, load_rgb

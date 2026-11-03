@@ -89,9 +89,7 @@ class Grid:
     def tiles(self) -> list[tuple[float, float, float, float]]:
         """Six (x0, y0, x1, y1) boxes, row-major: top-left, top-right, middle-left, ..."""
         return [
-            (self.xs[2 * c], self.ys[2 * r], self.xs[2 * c + 1], self.ys[2 * r + 1])
-            for r in range(3)
-            for c in range(2)
+            (self.xs[2 * c], self.ys[2 * r], self.xs[2 * c + 1], self.ys[2 * r + 1]) for r in range(3) for c in range(2)
         ]
 
     def name_bar(self) -> tuple[float, float, float, float]:

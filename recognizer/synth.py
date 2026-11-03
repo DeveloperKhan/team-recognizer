@@ -53,8 +53,18 @@ def tile_ring(img: np.ndarray, box, inner: float = 0.12, outer: float = 0.04) ->
     w, h = x1 - x0, y1 - y0
     H, W = img.shape[:2]
     clip = lambda v, hi: int(min(max(round(v), 0), hi))  # noqa: E731
-    ox0, oy0, ox1, oy1 = clip(x0 + outer * w, W), clip(y0 + outer * h, H), clip(x1 - outer * w, W), clip(y1 - outer * h, H)
-    ix0, iy0, ix1, iy1 = clip(x0 + inner * w, W), clip(y0 + inner * h, H), clip(x1 - inner * w, W), clip(y1 - inner * h, H)
+    ox0, oy0, ox1, oy1 = (
+        clip(x0 + outer * w, W),
+        clip(y0 + outer * h, H),
+        clip(x1 - outer * w, W),
+        clip(y1 - outer * h, H),
+    )
+    ix0, iy0, ix1, iy1 = (
+        clip(x0 + inner * w, W),
+        clip(y0 + inner * h, H),
+        clip(x1 - inner * w, W),
+        clip(y1 - inner * h, H),
+    )
     mask = np.zeros((H, W), bool)
     mask[oy0:oy1, ox0:ox1] = True
     mask[iy0:iy1, ix0:ix1] = False

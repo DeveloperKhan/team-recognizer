@@ -60,7 +60,9 @@ def train(
             b = perm[i : i + 1024]
             # Feature dropout stands in for image augmentation, which can't be done on features.
             xb = torch.nn.functional.dropout(x[b], 0.1)
-            loss = (torch.nn.functional.cross_entropy(head(xb), y[b], reduction="none", label_smoothing=0.05) * w[b]).mean()
+            loss = (
+                torch.nn.functional.cross_entropy(head(xb), y[b], reduction="none", label_smoothing=0.05) * w[b]
+            ).mean()
             opt.zero_grad()
             loss.backward()
             opt.step()

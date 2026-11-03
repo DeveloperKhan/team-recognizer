@@ -68,8 +68,16 @@ EXTRA_FORMS = [
 
 # Species with shadow forms in Pokémon GO that PvPoke's gamemaster doesn't mark (yet).
 SHADOW_ELIGIBLE_EXTRA = {
-    "grookey", "thwackey", "rillaboom", "scorbunny", "raboot", "cinderace",
-    "sobble", "drizzile", "inteleon", "morelull",
+    "grookey",
+    "thwackey",
+    "rillaboom",
+    "scorbunny",
+    "raboot",
+    "cinderace",
+    "sobble",
+    "drizzile",
+    "inteleon",
+    "morelull",
 }
 
 

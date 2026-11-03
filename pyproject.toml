@@ -30,6 +30,15 @@ train = [
     "uvicorn",
 ]
 
+[dependency-groups]
+# Tests, lint and the local API server; `uv sync` installs these by default.
+dev = [
+    "pytest",
+    "httpx",
+    "ruff",
+    "uvicorn",
+]
+
 [project.scripts]
 recognizer = "recognizer.cli:main"
 
@@ -40,6 +49,19 @@ entrypoint = "server:app"
 # rapidocr asks for the GUI build of OpenCV; the headless build provides the same cv2 module
 # without needing libGL, which serverless Linux images don't have.
 override-dependencies = ["opencv-python; sys_platform == 'never'"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+# Pyflakes, the error-level pycodestyle checks and import order: real mistakes, not style churn.
+select = ["E4", "E7", "E9", "F", "I"]
+# I (integral images) and l (labels) are the clearest names in the numeric code.
+ignore = ["E741"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
 
 [build-system]
 requires = ["hatchling"]

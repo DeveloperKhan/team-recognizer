@@ -109,7 +109,10 @@ class Recognizer:
                         "shadow_violet": sh["violet"],
                         "shadow_probe": sh["probe"],
                         "top3": [
-                            [self.species_for_sid[int(self.species.classes[i])].speciesId, round(float(np.exp(row[i])), 3)]
+                            [
+                                self.species_for_sid[int(self.species.classes[i])].speciesId,
+                                round(float(np.exp(row[i])), 3),
+                            ]
                             for i in np.argsort(-row)[:3]
                         ],
                         "box": [round(v, 1) for v in box],
