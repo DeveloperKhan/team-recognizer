@@ -53,13 +53,16 @@ It runs three ways, all on the same models:
 
 ## Accuracy
 
-These numbers come from the held-out and training events; species and shadow are counted per
-Pokémon. A "team" counts only if all six species and shadow flags are right.
+Species and shadow are counted per Pokémon. A "team" counts only if all six species and shadow
+flags are right. Gdańsk is measured with a model trained without it (`train --holdout
+2027-gdansk`), so it shows how the recognizer does on an event it hasn't seen. The other three
+were in training. The released models also train on Gdańsk and on accepted
+[shared corrections](#shared-corrections).
 
 | Event | Screenshots | Species | Shadow | Whole team right |
 | --- | --- | --- | --- | --- |
 | Baltimore 2027 | 14 teams | 100% | 100% | 14 / 14 |
-| Gdańsk 2027 (held out of training) | 20 teams | 99.2% | 99.2% | 18 / 20 |
+| Gdańsk 2027 (held out) | 20 teams | 99.2% | 99.2% | 18 / 20 |
 | Nice 2027 | 15 teams | 100% | 100% | 15 / 15 |
 | Puebla 2027 | 32 teams | 99.5% | 100% | 31 / 32 |
 
