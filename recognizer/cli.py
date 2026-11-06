@@ -266,7 +266,7 @@ def main(argv: list[str] | None = None) -> None:
 
     p = sub.add_parser("build-refs", help="download sprites, harvest tile colors, build the gallery")
     p.add_argument("--screens", type=Path, help="screenshots to harvest overlay tile colors from")
-    p.add_argument("--per-class", type=int, default=24, help="synthetic tiles per sprite class")
+    p.add_argument("--per-class", type=int, default=48, help="synthetic tiles per sprite class")
     p.set_defaults(func=cmd_build_refs)
 
     p = sub.add_parser("recognize", help="identify the teams in screenshots")

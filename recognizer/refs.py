@@ -1,6 +1,8 @@
 """Reference sprites: download and decode the images each species is matched against.
 
-Two sources per sprite class (keyed by the Dracoviz `sid`):
+Three sources per sprite class (keyed by the Dracoviz `sid`):
+  * Pokémon GO's own icon art (go_art.py), in each form, costume and shiny the class covers:
+    what the overlay actually draws, so it makes up half of a class's references;
   * Showdown's animated 3D sprite, sampled to a handful of frames, which covers the poses the
     overlay's animated sprites pass through;
   * Pokémon Showdown's static HOME render.
@@ -78,6 +80,11 @@ def download_all(workers: int = 8) -> None:
     import requests
     from tqdm import tqdm
 
+    from . import go_art
+
+    counts = go_art.download(sprite_classes(), workers)
+    print(f"GO art: {counts['icons']} icons for {counts['classes']} classes ({counts['failed']} unavailable)")
+
     session = requests.Session()
     jobs = []
     for sid, members in sprite_classes().items():
@@ -124,12 +131,33 @@ def extra_reference_images(sid: int) -> list[np.ndarray]:
     return [t for t in (_trim(i) for i in images) if t is not None]
 
 
+# Share of a class's references that are GO art, when it has some. Half: GO's icon is how the
+# overlay draws a Pokémon, the other art covers the poses its animation passes through.
+GO_SHARE = 1 / 2
+
+
+def _mix(primary: list, secondary: list, share: float) -> list:
+    """`primary` repeated to make up `share` of the result, spread evenly through `secondary`,
+    since synthetic tiles cycle through the list from the start."""
+    if not primary or not secondary:
+        return primary or secondary
+    n = max(len(primary), round(len(secondary) * share / (1 - share)))
+    first = [primary[i % len(primary)] for i in range(n)]
+    placed = [((k + 0.5) / n, 0, k) for k in range(n)] + [
+        ((k + 0.5) / len(secondary), 1, k) for k in range(len(secondary))
+    ]
+    return [(first if which == 0 else secondary)[k] for _, which, k in sorted(placed)]
+
+
 def load_reference_images(sid: int) -> list[np.ndarray]:
     """All RGBA reference images for a sprite class, trimmed to their content.
 
-    Extra references are repeated to make up about half of the list, since synthetic tiles
-    cycle through it: they exist because the downloaded art doesn't match the overlay.
+    GO art makes up half of the list where a class has some, and extra references about half of
+    the rest, since synthetic tiles cycle through it: both exist because the other art doesn't
+    match the overlay.
     """
+    from . import go_art
+
     images = []
     home = REFS / "home" / f"{sid}.png"
     if home.exists() and home.stat().st_size:
@@ -140,6 +168,8 @@ def load_reference_images(sid: int) -> list[np.ndarray]:
     if gif.exists() and gif.stat().st_size:
         images.extend(_frames(gif))
     base = [t for t in (_trim(i) for i in images) if t is not None]
+    go = [t for t in (_trim(i) for i in go_art.reference_images(sid)) if t is not None]
+    base = _mix(go, base, GO_SHARE)
     extra = extra_reference_images(sid)
     if not extra:
         return base

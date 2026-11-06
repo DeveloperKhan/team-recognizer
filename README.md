@@ -144,7 +144,7 @@ deployment also serves the demo page from `public/`.
 | Stage | Module | Method |
 | --- | --- | --- |
 | Find grids | `grid.py` | Multi-scale search for a 2×3 lattice of tile borders, scored by coherent contrast across each border. Both teams of a full frame are scored as a pair, then lines are snapped and the lattice refit |
-| Reference sprites | `refs.py` | Pokémon Showdown's animated sprites (all frames) and HOME renders, one class per sprite (Megas excluded) |
+| Reference sprites | `refs.py`, `go_art.py` | Pokémon GO's own icon art in every form, costume and shiny (what the overlay draws), plus Pokémon Showdown's animated sprites and HOME renders for poses, one class per sprite (Megas excluded) |
 | Synthetic tiles | `synth.py` | Sprites composited onto real tile backgrounds (sprite removed) or flat overlay fills, in bright, dimmed and fainted states, with stream-compression degradations |
 | Species | `embed.py`, `train_head.py`, `assign.py` | Frozen DINOv2 ViT-S/14 features and a cosine classifier trained on synthetic and real labeled tiles. A Hungarian assignment keeps a team from having the same species twice |
 | Shadow | `shadow.py` | A violet-pixel check on each tile's border band. When the smoke has lost its color (compressed crops, fainted tiles), a logistic regression on DINOv2 features of the band decides |
@@ -303,6 +303,7 @@ The code and the trained species head and shadow probe are MIT licensed. See
 [`LICENSE`](LICENSE) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for the bundled DINOv2
 weights (Apache-2.0) and PaddleOCR models (Apache-2.0).
 
-Sprites are downloaded from Pokémon Showdown at build time and aren't redistributed here. This
+Sprites are downloaded from Pokémon Showdown and Pokémon GO's game assets (as mined by PokeMiners) at
+build time and aren't redistributed here. This
 project isn't affiliated with Niantic, Scopely, Nintendo, Creatures, GAME FREAK or The Pokémon
 Company. Pokémon and Pokémon GO are trademarks of their respective owners.

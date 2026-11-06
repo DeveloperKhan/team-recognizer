@@ -24,7 +24,7 @@ MODEL_NAME = "vit_small_patch14_dinov2.lvd142m"
 INPUT_PX = 224
 ONNX_FILE = MODELS / "dinov2_vits14.onnx"
 GALLERY_FILE = CACHE / "gallery.npz"
-GALLERY_PER_CLASS = 24
+GALLERY_PER_CLASS = 48  # room for both GO art and the other references at full strength
 # ImageNet normalization, which DINOv2 was trained with.
 MEAN = np.array([0.485, 0.456, 0.406], np.float32).reshape(1, 3, 1, 1)
 STD = np.array([0.229, 0.224, 0.225], np.float32).reshape(1, 3, 1, 1)
