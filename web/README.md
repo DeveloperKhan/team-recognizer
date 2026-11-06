@@ -24,7 +24,7 @@ for (const team of teams) {
 ```
 
 To skip the bundler, import it from the CDN:
-`import { createLocalRecognizer } from "https://cdn.jsdelivr.net/npm/@dracoviz/team-recognizer@0.2.0/dist/client.js"`.
+`import { createLocalRecognizer } from "https://cdn.jsdelivr.net/npm/@dracoviz/team-recognizer@0.3.0/dist/client.js"`.
 
 ## API
 
