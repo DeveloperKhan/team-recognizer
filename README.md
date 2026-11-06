@@ -193,6 +193,75 @@ refs/extra/<speciesId>/   extra reference images for a species (PNG/WebP with tr
 `label-screens` proposes these entries by OCR-matching names against the rosters. Teams of
 events without a roster can be written inline, as in the last line.
 
+### Shared corrections
+
+Tools can send back the teams people checked and fixed. play-graphic-tool does this from its
+Auto-Generate review: each imported team, with any Pokémon or shadow form changed by hand. These
+submissions land in the data folder and only train once you've reviewed them:
+
+```
+corrections/inbox/<id>/       as submitted: labels.json and one team-<n>.jpg per team
+corrections/accepted/<id>/    reviewed and accepted: these train
+corrections/rejected/<id>/
+```
+
+Each `team-<n>.jpg` is one team's panel, cut from the screenshot at full resolution: its name
+bar and six tiles, nothing else of the frame. Not every tile of an accepted submission trains:
+- **Changed by hand:** the cases the model got wrong. These train, weighted double.
+- **Left as recognized at 90% or more:** these train.
+- **Left as recognized below 90%:** nobody may have checked them, so these train only if you
+  accept with `--unchecked`.
+- **Left unrecognized:** these never train.
+
+```sh
+uv run recognizer corrections list              # what's in the inbox, accepted and rejected
+uv run recognizer corrections review            # contact sheet: each tile, its guess and its label
+uv run recognizer corrections accept <id>...    # or --all; add --unchecked to trust the rest too
+uv run recognizer corrections reject <id>...
+uv run recognizer eval --corrections            # how the current model reads accepted corrections
+```
+
+`recognizer train` includes accepted corrections; pass `--no-corrections` to leave them out. A
+correction's event comes from its Challonge link (`…/2027_GO_Baltimore` becomes
+`2027-baltimore`), so `--holdout` leaves out that event's corrections too.
+
+`labels.json` (format 1). Boxes are `[x0, y0, x1, y1]` as fractions of the team's image:
+
+```json
+{
+  "format": 1,
+  "createdAt": "2026-11-05T12:00:00Z",
+  "event": { "challongeUrl": "https://pokemongochampionshipseries.challonge.com/2027_GO_Baltimore", "name": "…" },
+  "via": "upload",
+  "teams": [
+    {
+      "image": "team-0.jpg",
+      "side": "left",
+      "read": "PLAYERONE",
+      "dracovizName": null,
+      "player": { "name": "PlayerOne", "challongeName": "PlayerOne", "rank": 3 },
+      "nameMatch": { "via": "read", "edits": 0 },
+      "nameBox": [0.06, 0.06, 0.96, 0.2],
+      "source": "frame.png (left)",
+      "engine": "browser",
+      "modelVersion": "01e6f3e",
+      "slots": [
+        {
+          "speciesId": "forretress",
+          "shadow": true,
+          "edited": true,
+          "predicted": { "speciesId": "forretress", "shadow": false, "confidence": 0.78 },
+          "box": [0.07, 0.24, 0.47, 0.45]
+        }
+      ]
+    }
+  ]
+}
+```
+
+`nameMatch` is `"manual"` when someone picked the team for that player by hand. `review` is added
+when a submission is accepted or rejected.
+
 ### Overlay art the references miss
 
 Sometimes the overlay draws a Pokémon differently from Showdown's sprites. The white-flowered

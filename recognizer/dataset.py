@@ -4,6 +4,9 @@ Rosters say which six species a team has but not which tile shows which, so each
 matched to its roster species with the assignment that best fits the gallery scores (restricted
 to those six species, this is reliable even where the open-set prediction is wrong).
 
+Accepted corrections shared from play-graphic-tool (corrections.py) add tiles whose labels are
+known per tile, so they need no matching; tiles changed by hand weigh more.
+
 The tiles (saved under cache/tiles with their embeddings) train the shadow classifier and the
 species head; `event` lets callers hold events out for testing.
 """
@@ -18,8 +21,9 @@ from pathlib import Path
 import cv2
 import numpy as np
 
+from . import corrections
 from .assign import min_cost_assignment
-from .evaluate import SCREENS_FILE, _truth_team, load_rosters
+from .evaluate import SCREENS_FILE, _sid_lookup, _truth_team, load_rosters
 from .grid import locate
 from .io import find_images, load_rgb
 from .paths import CACHE
@@ -40,9 +44,18 @@ class TileRecord:
     sid: int
     shadow: bool
     file: str
+    # "screens" (labeled screenshots) or "correction"; corrections changed by hand weigh more
+    source: str = "screens"
+    weight: float = 1.0
 
 
-def build(screens_dir: Path, embedder, gallery, exclude_events: tuple[str, ...] = ()) -> list[TileRecord]:
+def build(
+    screens_dir: Path,
+    embedder,
+    gallery,
+    exclude_events: tuple[str, ...] = (),
+    use_corrections: bool = True,
+) -> list[TileRecord]:
     labels = json.loads(SCREENS_FILE.read_text())
     rosters = load_rosters()
     records: list[TileRecord] = []
@@ -81,6 +94,29 @@ def build(screens_dir: Path, embedder, gallery, exclude_events: tuple[str, ...] 
                         file=name,
                     )
                 )
+    if use_corrections:
+        sid = _sid_lookup()
+        for tile in corrections.training_tiles(exclude_events):
+            class_id = sid(tile.species_id)
+            if class_id is None or class_id not in col:
+                continue
+            name = f"correction_{tile.submission}_{tile.team}_{tile.slot}.png"
+            cv2.imwrite(str(TILES_DIR / name), cv2.cvtColor(tile.tile, cv2.COLOR_RGB2BGR))
+            tiles_all.append(tile.tile)
+            records.append(
+                TileRecord(
+                    event=tile.event,
+                    screen=f"corrections/{tile.submission}",
+                    side=str(tile.team),
+                    index=tile.slot,
+                    sid=int(class_id),
+                    shadow=tile.shadow,
+                    file=name,
+                    source="correction",
+                    weight=tile.weight,
+                )
+            )
+
     MANIFEST.write_text(json.dumps([asdict(r) for r in records], indent=1))
     np.savez(FEATURES, tile=embedder(tiles_all), band=embedder([band_only(t) for t in tiles_all]))
     return records

@@ -114,10 +114,19 @@ def cmd_train(args) -> None:
 
     embedder = Embedder()
     gallery = Gallery()
-    dataset.build(Path(args.screens).expanduser(), embedder, gallery, exclude_events=tuple(args.holdout))
+    dataset.build(
+        Path(args.screens).expanduser(),
+        embedder,
+        gallery,
+        exclude_events=tuple(args.holdout),
+        use_corrections=not args.no_corrections,
+    )
     records, feats = dataset.load()
     events = sorted({r.event for r in records})
+    shared = [r for r in records if r.source == "correction"]
     print(f"{len(records)} labeled tiles from {', '.join(events)} ({sum(r.shadow for r in records)} shadow)")
+    if shared:
+        print(f"  of which {len(shared)} from shared corrections ({sum(r.weight > 1 for r in shared)} changed by hand)")
 
     # Screenshots arrive at every size and compression level, so each real tile is also seen
     # degraded the way the synthetic ones are.
@@ -142,7 +151,9 @@ def cmd_train(args) -> None:
 
     x = np.vstack([gallery.feats, tile_feats])
     y = np.concatenate([gallery.labels, sids])
-    w = np.concatenate([np.ones(len(gallery.labels)), np.full(len(sids), args.real_weight)])
+    # Real tiles outweigh synthetic ones; corrections changed by hand count extra
+    real_weights = args.real_weight * np.array([r.weight for r in records])[index]
+    w = np.concatenate([np.ones(len(gallery.labels)), real_weights])
     head = train_head.train(x, y, gallery.classes, w)
     train_head.save(head, gallery.classes)
     print(f"species head -> {train_head.HEAD_FILE}")
@@ -187,9 +198,47 @@ def cmd_write_fixtures(args) -> None:
     print(f"wrote {web_export.FIXTURES.relative_to(web_export.ROOT)}")
 
 
+def cmd_corrections(args) -> None:
+    from . import corrections
+
+    if args.action == "list":
+        for state, counts in corrections.summary().items():
+            print(
+                f"{state:<9} {counts['submissions']:>4} submissions  {counts['teams']:>4} teams  "
+                f"{counts['edited']:>4} edited  {counts['confident']:>4} confident  {counts['unchecked']:>4} unchecked tiles"
+            )
+        print(f"(in {corrections.CORRECTIONS})")
+    elif args.action == "review":
+        print(f"wrote {corrections.review(args.state)}")
+    elif args.action in ("accept", "reject"):
+        state = "accepted" if args.action == "accept" else "rejected"
+        ids = args.ids or ([f.name for f in corrections.submissions("inbox")] if getattr(args, "all", False) else [])
+        if not ids:
+            raise SystemExit("name the submissions to move, or pass --all for everything in the inbox")
+        for submission_id in ids:
+            dest = corrections.move(submission_id, state, unchecked=getattr(args, "unchecked", False))
+            print(f"{submission_id} -> {dest.parent.name}")
+        print("Commit the data folder to keep the decision.")
+
+
 def cmd_eval(args) -> None:
     from .evaluate import crop_suite, evaluate
     from .pipeline import Recognizer
+
+    if args.corrections is not None:
+        from . import corrections
+
+        stats = corrections.score(Recognizer(read_names=False), args.corrections or None)
+        pct = lambda a, b: f"{100 * a / b:.1f}% ({a}/{b})" if b else "-"  # noqa: E731
+        print(f"{'event':<22} {'teams':>6} {'no grid':>8} {'species':>18} {'shadow':>18} {'edited tiles right':>20}")
+        for event, s in sorted(stats.items()):
+            print(
+                f"{event:<22} {s['teams']:>6} {s['no grid']:>8} {pct(s['species'], s['tiles']):>18} "
+                f"{pct(s['shadow'], s['tiles']):>18} {pct(s['edited ok'], s['edited']):>20}"
+            )
+        if not stats:
+            print("No accepted corrections to score.")
+        return
 
     screens = Path(args.screens).expanduser()
     if args.predictions:
@@ -232,6 +281,7 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--holdout", nargs="*", default=[], help="events to leave out (for honest evaluation)")
     p.add_argument("--real-weight", type=float, default=5.0, help="loss weight of real tiles vs synthetic")
     p.add_argument("--augment", type=int, default=8, help="degraded copies of each real tile")
+    p.add_argument("--no-corrections", action="store_true", help="leave out accepted shared corrections")
     p.set_defaults(func=cmd_train)
 
     p = sub.add_parser("export-onnx", help="export the image model to ONNX for PyTorch-free inference")
@@ -248,7 +298,26 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--no-names", action="store_true")
     p.add_argument("--crops", type=int, default=0, help="also test N random re-crops of each full-frame team")
     p.add_argument("--predictions", help="score predictions from a file (e.g. the web build's parity run) instead")
+    p.add_argument(
+        "--corrections",
+        nargs="*",
+        metavar="EVENT",
+        help="score accepted shared corrections instead (optionally only these events)",
+    )
     p.set_defaults(func=cmd_eval)
+
+    p = sub.add_parser("corrections", help="review corrections shared from play-graphic-tool")
+    actions = p.add_subparsers(dest="action", required=True)
+    actions.add_parser("list", help="count submissions and tiles in the inbox, accepted and rejected")
+    a = actions.add_parser("review", help="write an HTML contact sheet of a state's submissions")
+    a.add_argument("--state", choices=["inbox", "accepted", "rejected"], default="inbox")
+    a = actions.add_parser("accept", help="accept submissions so they train")
+    a.add_argument("ids", nargs="*")
+    a.add_argument("--all", action="store_true", help="everything in the inbox")
+    a.add_argument("--unchecked", action="store_true", help="also train on unchanged tiles under 90%% confidence")
+    a = actions.add_parser("reject", help="reject submissions")
+    a.add_argument("ids", nargs="+")
+    p.set_defaults(func=cmd_corrections)
 
     args = parser.parse_args(argv)
     args.func(args)

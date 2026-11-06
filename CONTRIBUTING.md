@@ -80,6 +80,23 @@ recognized; that part is the maintainer's.
 The maintainer publishes the npm package (`web/`) and deploys the demo and API. Pull requests
 shouldn't bump versions.
 
+A model release, with the corrections tools have shared since the last one (see the README's
+"Shared corrections"):
+
+```sh
+git -C ../team-recognizer-data pull
+uv run recognizer corrections review            # open cache/corrections-review.html
+uv run recognizer corrections accept <id>...    # and reject the rest; then commit the data folder
+uv run recognizer train --holdout <newest event>
+uv run recognizer eval                          # must not regress
+uv run recognizer eval --corrections            # are the corrected tiles now right?
+uv run recognizer train                         # the release model, nothing held out
+uv run recognizer export-web
+```
+
+Then commit `models/`, bump `web/package.json`, publish the package and push. The API redeploys
+from the push, and tools pick up the new models when they move to the new package version.
+
 ## License
 
 By contributing, you agree that your contributions are licensed under the repository's MIT
