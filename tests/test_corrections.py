@@ -117,3 +117,98 @@ def test_rejects_unknown_formats(root):
     (folder / "labels.json").write_text(json.dumps({**labels, "format": 99}))
     with pytest.raises(ValueError):
         corrections.tiles(folder)
+
+
+def write_submission_v2(root, name: str, seed: int = 0):
+    """Format 2: only the tiles worth learning from, each its own crop, plus the name bar."""
+    folder = root / "inbox" / name
+    folder.mkdir(parents=True)
+    rng = np.random.default_rng(seed)
+    cv2.imwrite(str(folder / "team-0-name.jpg"), rng.integers(0, 255, (40, 200, 3), dtype=np.uint8))
+    tiles = [
+        (4, "forretress", True, True, ["edited", "species", "shadow"]),  # fixed by hand
+        (5, "carbink", False, False, ["species"]),  # unsure, left as recognized
+        (1, "toxapex", False, False, ["shadow"]),
+    ]
+    slots = []
+    for index, species, shadow, edited, reasons in tiles:
+        image = f"team-0-slot-{index}.jpg"
+        cv2.imwrite(str(folder / image), rng.integers(0, 255, (120, 110, 3), dtype=np.uint8))
+        predicted = {
+            "speciesId": species,
+            "shadow": False,
+            "confidence": 0.6,
+            "shadowViolet": 0.004,
+            "shadowProbe": 0.55,
+        }
+        slots.append(
+            {
+                "index": index,
+                "image": image,
+                "box": [0.083, 0.083, 0.917, 0.917],
+                "speciesId": species,
+                "shadow": shadow,
+                "edited": edited,
+                "reasons": reasons,
+                "predicted": predicted,
+            }
+        )
+    team = {
+        "nameImage": "team-0-name.jpg",
+        "side": "left",
+        "read": "OUTOFPOKET",
+        "dracovizName": None,
+        "player": {"name": "OutOfPoket", "challongeName": "HotPoket777", "rank": 11},
+        "nameMatch": {"via": "read", "edits": 0},
+        "source": "frame.png (left)",
+        "engine": "browser",
+        "modelVersion": "01e6f3e",
+        "slots": slots,
+    }
+    labels = {
+        "format": 2,
+        "createdAt": "2026-11-06T00:00:00Z",
+        "event": {"challongeUrl": "https://x.challonge.com/2027_GO_Gdansk", "name": "Gdańsk"},
+        "via": "discord",
+        "teams": [team],
+    }
+    (folder / "labels.json").write_text(json.dumps(labels))
+    return folder
+
+
+def test_format_2_trains_edits_and_only_trusted_unsure_tiles(root):
+    folder = write_submission_v2(root, "v2")
+    assert [(t.species_id, t.slot, t.kind, t.weight) for t in corrections.tiles(folder)] == [
+        ("forretress", 4, "edited", 2.0)
+    ]
+    trusted = corrections.tiles(folder, unchecked=True, skip=["0:1"])
+    assert [(t.species_id, t.slot) for t in trusted] == [("forretress", 4), ("carbink", 5)]
+    assert trusted[0].shadow and trusted[0].event == "2027-gdansk"
+
+    corrections.move("v2", "accepted", unchecked=True, skip=["0:1"])
+    labels = json.loads((root / "accepted" / "v2" / "labels.json").read_text())
+    assert labels["review"]["skip"] == ["0:1"]
+    assert [t.species_id for t in corrections.training_tiles()] == ["forretress", "carbink"]
+    assert corrections.summary()["accepted"] == {
+        "submissions": 1,
+        "teams": 1,
+        "edited": 1,
+        "confident": 0,
+        "unchecked": 2,
+    }
+
+
+def test_format_2_review_sheet_and_score(root, tmp_path):
+    write_submission_v2(root, "v2")
+    sheet = corrections.review("inbox", out=tmp_path / "review.html").read_text()
+    assert sheet.count("data:image/jpeg;base64,") == 4  # the name bar and three tiles
+    assert "0:4 · edited, species, shadow" in sheet and "0:5 · species" in sheet
+
+    class Recognizer:  # reads every tile as a non-shadow forretress
+        def classify_tiles(self, tiles):
+            return [{"speciesId": "forretress", "shadow": False, "confidence": 0.9} for _ in tiles]
+
+    corrections.move("v2", "accepted")
+    stats = corrections.score(Recognizer())["2027-gdansk"]
+    assert (stats["tiles"], stats["species"], stats["shadow"]) == (3, 1, 2)
+    assert (stats["edited"], stats["edited ok"]) == (1, 0)

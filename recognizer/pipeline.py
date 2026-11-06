@@ -87,6 +87,25 @@ class Recognizer:
         # One speciesId per sprite: cosmetic forms share a sprite, report the plainest id.
         self.species_for_sid = {sid: min(m, key=lambda s: len(s.speciesId)) for sid, m in sprite_classes().items()}
 
+    def classify_tiles(self, tiles: list[np.ndarray]) -> list[dict]:
+        """Tiles on their own, without a team (so without the assignment across six): each
+        one's species, shadow and confidence."""
+        if not tiles:
+            return []
+        logp = self.species(self.embedder(tiles))
+        out = []
+        for row, sh in zip(logp, self.shadow.classify(tiles)):
+            pick = int(np.argmax(row))
+            species = self.species_for_sid[int(self.species.classes[pick])]
+            out.append(
+                {
+                    "speciesId": species.speciesId,
+                    "shadow": bool(sh["shadow"] and species.shadowEligible),
+                    "confidence": round(float(np.exp(row[pick])), 3),
+                }
+            )
+        return out
+
     def recognize(self, img: np.ndarray, roster_names: list[str] | None = None) -> list[TeamResult]:
         from . import ocr
 

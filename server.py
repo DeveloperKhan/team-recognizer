@@ -102,6 +102,9 @@ async def recognize(request: Request) -> dict:
                         "confidence": p["confidence"],
                         "alternatives": [{"speciesId": s, "confidence": c} for s, c in p["top3"][1:]],
                         "box": _relative_box(p["box"], width, height),
+                        # The two shadow checks: violet smoke on the border, the learned probe
+                        "shadowViolet": round(float(p["shadow_violet"]), 3),
+                        "shadowProbe": round(float(p["shadow_probe"]), 3),
                     }
                     for p in team.pokemon
                 ],

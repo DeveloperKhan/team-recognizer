@@ -195,28 +195,36 @@ events without a roster can be written inline, as in the last line.
 
 ### Shared corrections
 
-Tools can send back the teams people checked and fixed. play-graphic-tool does this from its
-Auto-Generate review: each imported team, with any Pokémon or shadow form changed by hand. These
-submissions land in the data folder and only train once you've reviewed them:
+Tools can send back the tiles worth learning from. play-graphic-tool does this from its
+Auto-Generate review. It sends only the tiles that were:
+- **changed by hand**, the model's mistakes;
+- **left as recognized but unsure:** a species under 90% confidence, or a borderline shadow call
+  (a trace of violet smoke, or the learned check near its threshold).
+
+Each tile goes as a small crop at full resolution, with its team's name bar for context. Teams
+with nothing to report aren't sent. Submissions land in the data folder and only train once
+you've reviewed them:
 
 ```
-corrections/inbox/<id>/       as submitted: labels.json and one team-<n>.jpg per team
+corrections/inbox/<id>/       as submitted: labels.json and the crops it names
 corrections/accepted/<id>/    reviewed and accepted: these train
 corrections/rejected/<id>/
 ```
 
-Each `team-<n>.jpg` is one team's panel, cut from the screenshot at full resolution: its name
-bar and six tiles, nothing else of the frame. Not every tile of an accepted submission trains:
-- **Changed by hand:** the cases the model got wrong. These train, weighted double.
-- **Left as recognized at 90% or more:** these train.
-- **Left as recognized below 90%:** nobody may have checked them, so these train only if you
-  accept with `--unchecked`.
+Which tiles of an accepted submission train:
+- **Changed by hand:** these train, weighted double.
+- **Unsure tiles left as recognized:** nobody may have checked them, so these train only when you
+  accept with `--unchecked`. Leave out any that look wrong with `--skip TEAM:TILE`; the review
+  sheet shows each tile's numbers.
 - **Left unrecognized:** these never train.
+
+Submissions in the older format (format 1, a whole panel per team) still load. Their unchanged
+tiles at 90% or more also train.
 
 ```sh
 uv run recognizer corrections list              # what's in the inbox, accepted and rejected
 uv run recognizer corrections review            # contact sheet: each tile, its guess and its label
-uv run recognizer corrections accept <id>...    # or --all; add --unchecked to trust the rest too
+uv run recognizer corrections accept <id>...    # or --all; --unchecked [--skip 8:4 ...] trusts unsure tiles
 uv run recognizer corrections reject <id>...
 uv run recognizer eval --corrections            # how the current model reads accepted corrections
 ```
@@ -225,33 +233,35 @@ uv run recognizer eval --corrections            # how the current model reads ac
 correction's event comes from its Challonge link (`…/2027_GO_Baltimore` becomes
 `2027-baltimore`), so `--holdout` leaves out that event's corrections too.
 
-`labels.json` (format 1). Boxes are `[x0, y0, x1, y1]` as fractions of the team's image:
+`labels.json`, format 2. Each tile's `box` is `[x0, y0, x1, y1]` as fractions of its own crop:
 
 ```json
 {
-  "format": 1,
-  "createdAt": "2026-11-05T12:00:00Z",
-  "event": { "challongeUrl": "https://pokemongochampionshipseries.challonge.com/2027_GO_Baltimore", "name": "…" },
-  "via": "upload",
+  "format": 2,
+  "createdAt": "2026-11-06T12:00:00Z",
+  "event": { "challongeUrl": "https://pokemongochampionshipseries.challonge.com/2027_GO_Gdansk", "name": "…" },
+  "via": "discord",
   "teams": [
     {
-      "image": "team-0.jpg",
+      "nameImage": "team-0-name.jpg",
       "side": "left",
       "read": "PLAYERONE",
       "dracovizName": null,
-      "player": { "name": "PlayerOne", "challongeName": "PlayerOne", "rank": 3 },
+      "player": { "name": "PlayerOne", "challongeName": "PlayerOne", "rank": 11 },
       "nameMatch": { "via": "read", "edits": 0 },
-      "nameBox": [0.06, 0.06, 0.96, 0.2],
-      "source": "frame.png (left)",
+      "source": "10:42 · poster · frame.png (left)",
       "engine": "browser",
       "modelVersion": "01e6f3e",
       "slots": [
         {
+          "index": 4,
+          "image": "team-0-slot-4.jpg",
+          "box": [0.0833, 0.0833, 0.9167, 0.9167],
           "speciesId": "forretress",
           "shadow": true,
           "edited": true,
-          "predicted": { "speciesId": "forretress", "shadow": false, "confidence": 0.78 },
-          "box": [0.07, 0.24, 0.47, 0.45]
+          "reasons": ["edited", "species", "shadow"],
+          "predicted": { "speciesId": "forretress", "shadow": false, "confidence": 0.86, "shadowViolet": 0.004, "shadowProbe": 0.555 }
         }
       ]
     }
@@ -259,8 +269,10 @@ correction's event comes from its Challonge link (`…/2027_GO_Baltimore` become
 }
 ```
 
-`nameMatch` is `"manual"` when someone picked the team for that player by hand. `review` is added
-when a submission is accepted or rejected.
+- `index` is the tile's place in the grid, 0 to 5, row by row.
+- `reasons` says why the tile was sent: `edited`, `species` (unsure) or `shadow` (unsure).
+- `nameMatch` is `"manual"` when someone picked the team for that player by hand.
+- `review` is added when a submission is accepted or rejected.
 
 ### Overlay art the references miss
 

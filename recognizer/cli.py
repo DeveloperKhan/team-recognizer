@@ -216,7 +216,12 @@ def cmd_corrections(args) -> None:
         if not ids:
             raise SystemExit("name the submissions to move, or pass --all for everything in the inbox")
         for submission_id in ids:
-            dest = corrections.move(submission_id, state, unchecked=getattr(args, "unchecked", False))
+            dest = corrections.move(
+                submission_id,
+                state,
+                unchecked=getattr(args, "unchecked", False),
+                skip=getattr(args, "skip", None),
+            )
             print(f"{submission_id} -> {dest.parent.name}")
         print("Commit the data folder to keep the decision.")
 
@@ -314,7 +319,14 @@ def main(argv: list[str] | None = None) -> None:
     a = actions.add_parser("accept", help="accept submissions so they train")
     a.add_argument("ids", nargs="*")
     a.add_argument("--all", action="store_true", help="everything in the inbox")
-    a.add_argument("--unchecked", action="store_true", help="also train on unchanged tiles under 90%% confidence")
+    a.add_argument("--unchecked", action="store_true", help="also train on unsure tiles left as recognized")
+    a.add_argument(
+        "--skip",
+        nargs="+",
+        default=[],
+        metavar="TEAM:TILE",
+        help="tiles to leave out (the numbers under each tile in the review sheet), e.g. 8:4",
+    )
     a = actions.add_parser("reject", help="reject submissions")
     a.add_argument("ids", nargs="+")
     p.set_defaults(func=cmd_corrections)
