@@ -1,6 +1,6 @@
 {
   "name": "@dracoviz/team-recognizer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Reads Pokémon GO teams (species, shadow, player name, country) from broadcast-overlay screenshots, entirely in the browser",
   "keywords": [
     "pokemon-go",

@@ -90,7 +90,7 @@ const { teams, elapsedMs } = await recognizer.recognize(file); // a File or Blob
 ```
 
 You can skip the bundler: `import { createLocalRecognizer } from
-"https://cdn.jsdelivr.net/npm/@dracoviz/team-recognizer@0.1.0/dist/client.js"`.
+"https://cdn.jsdelivr.net/npm/@dracoviz/team-recognizer@0.2.0/dist/client.js"`.
 
 The work happens in a Web Worker, so the page stays responsive.
 - **Downloads:** on first use it fetches about 60 MB of models on WebGPU (40 MB on WebAssembly),
