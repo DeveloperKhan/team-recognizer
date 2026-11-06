@@ -5,8 +5,9 @@
  *   node --experimental-strip-types test/node-run.ts ~/Desktop/screenshots out.json [--model int8|fp16]
  *   uv run recognizer eval --predictions out.json
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import * as ort from "onnxruntime-node";
 import sharp from "sharp";
 import type { RecognizerConfig } from "../src/config.ts";
@@ -29,7 +30,12 @@ const backend = createBackend(ort, {
 });
 const recognizer = new Recognizer(config, keys, decodeHead(head.buffer.slice(head.byteOffset, head.byteOffset + head.length)), backend);
 
-const labels: Record<string, unknown> = JSON.parse(readFileSync(new URL("../../labels/screens.json", import.meta.url), "utf8"));
+// The labels live in the data folder, found the way recognizer/paths.py finds it
+const repo = fileURLToPath(new URL("../../", import.meta.url));
+const dataDir =
+  process.env.RECOGNIZER_DATA_DIR ??
+  [join(repo, "../team-recognizer-data"), join(repo, "local")].find((dir) => existsSync(dir))!;
+const labels: Record<string, unknown> = JSON.parse(readFileSync(join(dataDir, "labels/screens.json"), "utf8"));
 const out: Record<string, unknown> = {};
 const times: number[] = [];
 for (const key of Object.keys(labels)) {
