@@ -46,7 +46,12 @@ for (const key of Object.keys(labels)) {
   } catch {
     file = readFileSync(join(screensDir, key));
   }
-  const { data, info } = await sharp(file).flatten({ background: "#000000" }).raw().toBuffer({ resolveWithObject: true });
+  // Pixels as stored, ignoring any embedded color profile (macOS screenshots carry the display's),
+  // the way OpenCV reads them and the worker decodes them (colorSpaceConversion: "none")
+  const { data, info } = await sharp(file, { ignoreIcc: true })
+    .flatten({ background: "#000000" })
+    .raw()
+    .toBuffer({ resolveWithObject: true });
   const start = performance.now();
   out[key] = await recognizer.recognize({ width: info.width, height: info.height, data: new Uint8Array(data) });
   times.push(performance.now() - start);

@@ -11,7 +11,11 @@ const expected: Record<string, Array<{ xs: number[]; ys: number[]; side: string 
 );
 
 export async function loadRgb(path: string) {
-  const { data, info } = await sharp(path).flatten({ background: "#000000" }).raw().toBuffer({ resolveWithObject: true });
+  // Pixels as stored, ignoring any embedded color profile, as OpenCV and the worker read them
+  const { data, info } = await sharp(path, { ignoreIcc: true })
+    .flatten({ background: "#000000" })
+    .raw()
+    .toBuffer({ resolveWithObject: true });
   return { width: info.width, height: info.height, data: new Uint8Array(data.buffer, data.byteOffset, data.length) };
 }
 
