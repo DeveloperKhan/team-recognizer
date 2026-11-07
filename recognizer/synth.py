@@ -20,12 +20,16 @@ import cv2
 import numpy as np
 from PIL import Image
 
-from .paths import CACHE
+from .paths import CACHE, SMOKE
 
 TILE = 160  # synthetic tile width; height follows the style's aspect ratio
 PALETTE_FILE = CACHE / "palette.json"
 BACKGROUNDS_DIR = CACHE / "backgrounds"
 RING = 0.16  # border band (fraction of the tile) searched for sprite-free patches
+# The overlay draws a Pokémon nearly as large as its tile: its larger side spans this fraction of
+# the tile's, measured on labeled broadcast tiles. Centre jitter is a fraction of the tile.
+SPRITE_FIT = (0.84, 1.05)
+SPRITE_SHIFT = ((-0.03, 0.03), (-0.08, 0.04))
 
 # Fallback tile fills (RGB) if no palette has been harvested from screenshots yet.
 DEFAULT_FILLS = [(108, 196, 92), (60, 170, 110), (36, 120, 96), (30, 92, 78), (24, 84, 70)]
@@ -39,6 +43,8 @@ class TileSpec:
     fill: tuple[int, int, int]
     aspect: float
     background: np.ndarray | None = None  # a real, sprite-free tile background (RGB)
+    opacity: float | None = None  # a dimmed sprite's opacity (random when None)
+    smoke: float | None = None  # shadow smoke strength (random when None)
 
 
 def load_palette() -> list[tuple[int, int, int]]:
@@ -121,6 +127,76 @@ def smoke_mask(h: int, w: int, rng: np.random.Generator) -> np.ndarray:
     return cv2.GaussianBlur(mask, (0, 0), rng.uniform(0.5, 1.5))
 
 
+def extract_smoke(screenshot: np.ndarray) -> np.ndarray:
+    """A shadow smoke texture (RGBA) from a screenshot of one shadow tile: each pixel taken as a
+    mix of the tile's green and the smoke's purple, its opacity how far along that line it sits.
+    Pixels well off the line (the Pokémon) get none, so only the smoke is kept."""
+    hsv = cv2.cvtColor(screenshot, cv2.COLOR_RGB2HSV).astype(int)
+    green = (hsv[..., 0] >= 35) & (hsv[..., 0] <= 95) & (hsv[..., 1] >= 40)
+    # The largest green region is the tile; trim its rounded border
+    _, _, stats, _ = cv2.connectedComponentsWithStats(green.astype(np.uint8))
+    x, y, w, h = stats[1 + np.argmax(stats[1:, cv2.CC_STAT_AREA]), :4]
+    inset = int(0.045 * max(w, h))
+    tile = screenshot[y + inset : y + h - inset, x + inset : x + w - inset]
+
+    t = tile.astype(np.float32)
+    hsv = cv2.cvtColor(tile, cv2.COLOR_RGB2HSV).astype(int)
+    strong = (hsv[..., 0] >= 116) & (hsv[..., 0] <= 165) & (hsv[..., 1] >= 60) & (hsv[..., 2] >= 50)
+    green = (hsv[..., 0] >= 40) & (hsv[..., 0] <= 90) & (hsv[..., 1] >= 50)
+    if strong.sum() < 20 or green.sum() < 20:
+        return np.zeros(tile.shape[:2] + (4,), np.uint8)  # no smoke to speak of (dimmed, fainted)
+    purple = np.median(t[strong], 0)
+    # The green varies across the tile: average it locally, from green pixels only
+    weight = cv2.blur(green.astype(np.float32), (41, 41))[..., None]
+    bg = cv2.blur(np.where(green[..., None], t, 0), (41, 41)) / np.maximum(weight, 1e-3)
+    bg = np.where(weight > 0.05, bg, np.median(t[green], 0))
+    d = purple - bg
+    along = ((t - bg) * d).sum(-1) / np.maximum((d * d).sum(-1), 1)
+    off = np.linalg.norm(t - bg - along[..., None] * d, axis=-1)
+    alpha = np.clip((along - 0.12) / 0.75, 0, 1) * (off < 28)
+    alpha[cv2.dilate((off > 40).astype(np.uint8), np.ones((5, 5), np.uint8)) > 0] = 0
+    alpha = cv2.GaussianBlur(alpha, (0, 0), 0.8)
+    rgba = np.dstack([np.broadcast_to(purple, t.shape[:2] + (3,)), alpha * 255]).astype(np.uint8)
+    dense = alpha > 0.6  # the real smoke's shading where it's dense, its median purple elsewhere
+    rgba[dense, :3] = tile[dense]
+    return rgba
+
+
+_smoke_textures: list[np.ndarray] | None = None
+
+
+def load_smoke() -> list[np.ndarray]:
+    """The smoke textures in the data folder (paths.SMOKE), RGBA; written by `recognizer smoke`."""
+    global _smoke_textures
+    if _smoke_textures is None:
+        files = sorted(SMOKE.glob("*.png")) if SMOKE.is_dir() else []
+        _smoke_textures = [np.asarray(Image.open(f).convert("RGBA")) for f in files]
+    return _smoke_textures
+
+
+def real_smoke(h: int, w: int, rng: np.random.Generator, textures: list[np.ndarray]):
+    """Smoke for an h x w tile from the real textures: one picked, flipped and turned (the smoke
+    hugs the border, so it's never cropped), its color nudged, often with more layered over it.
+    Returns (rgb, alpha) as floats."""
+
+    def one():
+        tex = textures[rng.integers(len(textures))]
+        if rng.random() < 0.5:
+            tex = tex[:, ::-1]
+        if rng.random() < 0.5:
+            tex = tex[::-1]
+        tex = np.ascontiguousarray(np.rot90(tex, int(rng.integers(4))))
+        tex = cv2.resize(tex, (w, h), interpolation=cv2.INTER_AREA).astype(np.float32)
+        return tex[..., :3] * rng.uniform(0.9, 1.1, 3), tex[..., 3:4] / 255
+
+    rgb, alpha = one()
+    for _ in range(int(rng.choice([0, 1, 2], p=[0.5, 0.35, 0.15]))):
+        rgb2, alpha2 = one()
+        rgb = np.where(alpha2 > alpha, rgb2, rgb)
+        alpha = np.maximum(alpha, alpha2)
+    return np.clip(rgb, 0, 255), alpha
+
+
 def render_tile(sprite: np.ndarray, spec: TileSpec, rng: np.random.Generator) -> np.ndarray:
     """Composite an RGBA sprite into a tile; returns RGB uint8."""
     w = TILE
@@ -134,19 +210,27 @@ def render_tile(sprite: np.ndarray, spec: TileSpec, rng: np.random.Generator) ->
         grad = np.linspace(1 + rng.uniform(-0.06, 0.06), 1, h, dtype=np.float32)[:, None, None]
         tile = np.clip(fill[None, None] * grad + rng.normal(0, 1.5, (h, w, 3)), 0, 255)
 
-    if spec.shadow and spec.background is None:
-        m = smoke_mask(h, w, rng)[..., None]
-        purple = np.array(SMOKE_PURPLE[rng.integers(len(SMOKE_PURPLE))], np.float32)
-        strength = rng.uniform(0.75, 1.0) if spec.state == "bright" else rng.uniform(0.2, 0.55)
-        tile = tile * (1 - m * strength) + purple * m * strength
+    if spec.shadow:
+        textures = load_smoke()
+        strength = spec.smoke or (rng.uniform(0.85, 1.0) if spec.state == "bright" else rng.uniform(0.35, 0.7))
+        if textures:
+            # Smoke cut from real shadow tiles, on flat fills and real backgrounds alike
+            purple, m = real_smoke(h, w, rng, textures)
+            tile = tile * (1 - m * strength) + purple * m * strength
+        elif spec.background is None:
+            m = smoke_mask(h, w, rng)[..., None]
+            purple = np.array(SMOKE_PURPLE[rng.integers(len(SMOKE_PURPLE))], np.float32)
+            strength = rng.uniform(0.75, 1.0) if spec.state == "bright" else rng.uniform(0.2, 0.55)
+            tile = tile * (1 - m * strength) + purple * m * strength
 
     # Scale the sprite to fit, with the jitter seen between overlays and animation frames.
     sh, sw = sprite.shape[:2]
-    fit = rng.uniform(0.62, 0.92) * min(w / sw, h / sh)
+    fit = rng.uniform(*SPRITE_FIT) * min(w / sw, h / sh)
     nw, nh = max(1, int(sw * fit)), max(1, int(sh * fit))
     spr = np.asarray(Image.fromarray(sprite).resize((nw, nh), Image.LANCZOS)).astype(np.float32)
-    x0 = int((w - nw) / 2 + rng.uniform(-0.06, 0.06) * w)
-    y0 = int((h - nh) / 2 + rng.uniform(-0.05, 0.08) * h)
+    (sx0, sx1), (sy0, sy1) = SPRITE_SHIFT
+    x0 = int((w - nw) / 2 + rng.uniform(sx0, sx1) * w)
+    y0 = int((h - nh) / 2 + rng.uniform(sy0, sy1) * h)
     xa, ya = max(0, x0), max(0, y0)
     xb, yb = min(w, x0 + nw), min(h, y0 + nh)
     crop = spr[ya - y0 : yb - y0, xa - x0 : xb - x0]
@@ -155,7 +239,7 @@ def render_tile(sprite: np.ndarray, spec: TileSpec, rng: np.random.Generator) ->
     if spec.state == "dim":
         # Dimmed sprites are see-through (the tile, smoke included, shows behind them) and
         # slightly tinted toward the fill.
-        alpha = alpha * rng.uniform(0.3, 0.65)
+        alpha = alpha * (spec.opacity or rng.uniform(0.3, 0.65))
         tint = rng.uniform(0, 0.3)
         rgb = rgb * (1 - tint) + fill * tint
     region = tile[ya:yb, xa:xb]
@@ -193,36 +277,34 @@ def degrade(tile: np.ndarray, rng: np.random.Generator) -> np.ndarray:
 def sprite_free_background(tile: np.ndarray, rng: np.random.Generator) -> np.ndarray | None:
     """A tile's background with the sprite removed, or None if too little of it is clean.
 
-    The center is refilled with patches copied from the tile's border band, which keeps its fill,
-    gradient and any smoke pattern. Sprites often reach into that band (wings, tails), so only
-    patches made entirely of the band's two dominant colors (fill and smoke) are used.
+    The tile's fill is a smooth gradient, so a low-order surface fitted to the clean fill pixels
+    of its border band (green, not smoke, not sprite) reproduces it over the whole tile: its
+    color, gradient and darker corners, with no seams. Smoke isn't kept; shadow tiles get theirs
+    from the real smoke textures.
     """
     h, w = tile.shape[:2]
     bh, bw = max(2, int(RING * h)), max(2, int(RING * w))
-    lab = cv2.cvtColor(tile, cv2.COLOR_RGB2LAB).astype(np.float32)
     ring = np.ones((h, w), bool)
     ring[bh : h - bh, bw : w - bw] = False
-    _, _, centers = cv2.kmeans(
-        lab[ring], 2, None, (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 20, 0.5), 2, cv2.KMEANS_PP_CENTERS
-    )
-    dist = np.min(np.linalg.norm(lab[..., None, :] - centers[None, None], axis=-1), axis=-1)
-    clean = dist < 14
-
-    ph, pw = bh // 2, bw // 2
-    patches = []
-    for y in range(0, h - ph + 1, ph):
-        for x in range(0, w - pw + 1, pw):
-            inside_ring = ring[y : y + ph, x : x + pw].all()
-            if inside_ring and clean[y : y + ph, x : x + pw].all():
-                patches.append(tile[y : y + ph, x : x + pw])
-    if len(patches) < 12:
+    hsv = cv2.cvtColor(tile, cv2.COLOR_RGB2HSV).astype(int)
+    green = (hsv[..., 0] >= 35) & (hsv[..., 0] <= 95) & (hsv[..., 1] >= 30)
+    candidates = ring & green
+    if candidates.sum() < 200:
         return None
-    out = np.zeros_like(tile)
-    for y in range(0, h, ph):
-        for x in range(0, w, pw):
-            patch = patches[rng.integers(len(patches))]
-            out[y : y + ph, x : x + pw] = patch[: h - y, : w - x]
-    return cv2.GaussianBlur(out, (0, 0), 1.0)
+    # Sprites reach into the band (wings, tails): keep pixels close to the band's typical fill
+    lab = cv2.cvtColor(tile, cv2.COLOR_RGB2LAB).astype(np.float32)
+    fill = np.median(lab[candidates], 0)
+    clean = candidates & (np.linalg.norm(lab - fill, axis=-1) < 22)
+    if clean.sum() < 200:
+        return None
+
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+    u, v = xx / (w - 1) * 2 - 1, yy / (h - 1) * 2 - 1
+    basis = np.stack([np.ones_like(u), u, v, u * u, v * v, u * v], -1)
+    coef, *_ = np.linalg.lstsq(basis[clean], tile[clean].astype(np.float32), rcond=None)
+    out = basis @ coef
+    out += rng.normal(0, 1.5, out.shape)  # the fill's faint grain
+    return np.clip(cv2.GaussianBlur(out, (0, 0), 0.6), 0, 255).astype(np.uint8)
 
 
 def harvest_backgrounds(images: list[np.ndarray], seed: int = 0) -> int:
@@ -270,6 +352,35 @@ def random_spec(
     else:
         aspect = float(aspects[rng.integers(len(aspects))])
     return TileSpec(state=str(state), shadow=shadow, fill=fill, aspect=aspect, background=background)
+
+
+# The plain look in every state the overlay shows it, at set opacities and smoke strengths:
+# (state, opacity when dimmed, shadow, smoke strength)
+PLAIN_GRID = [
+    ("bright", None, False, None),
+    ("bright", None, False, None),
+    ("dim", 0.3, False, None),
+    ("dim", 0.45, False, None),
+    ("dim", 0.6, False, None),
+    ("gray", None, False, None),
+    ("bright", None, True, 0.6),
+    ("bright", None, True, 0.95),
+    ("dim", 0.35, True, 0.45),
+    ("dim", 0.55, True, 0.65),
+    ("dim", 0.45, True, 0.55),
+    ("gray", None, True, 0.8),
+]
+
+
+def plain_variants(sprite: np.ndarray, rng: np.random.Generator, palette=None, backgrounds=()) -> list[np.ndarray]:
+    """Degraded synthetic tiles of one image (a class's plain art) across PLAIN_GRID."""
+    palette = palette or load_palette()
+    out = []
+    for state, opacity, shadow, smoke in PLAIN_GRID:
+        spec = random_spec(rng, palette, backgrounds, shadow=shadow)
+        spec.state, spec.opacity, spec.smoke = state, opacity, smoke
+        out.append(degrade(render_tile(sprite, spec, rng), rng))
+    return out
 
 
 def synth_tiles(

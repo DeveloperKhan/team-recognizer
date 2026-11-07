@@ -22,3 +22,4 @@ DATA_DIR = _data_dir()
 LABELS = DATA_DIR / "labels"  # screens.json, events.json
 ROSTERS = DATA_DIR / "rosters"  # <event>.json
 EXTRA_REFS = DATA_DIR / "refs" / "extra"  # <speciesId>/<image>
+SMOKE = DATA_DIR / "refs" / "smoke"  # shadow smoke textures cut from real tiles (synth.py)

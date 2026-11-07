@@ -73,3 +73,73 @@ def test_plain_art_comes_first_and_is_capped():
     out = assign(*names)[21472]
     assert out[:2] == ["pm671.icon.png", "pm671.s.icon.png"]
     assert len(out) == go_art.MAX_PER_CLASS
+
+
+ZYGARDE_AND_FRIENDS = {
+    22976: species("zygarde", dex=718),
+    22977: species("zygarde_10", dex=718),
+    22980: species("zygarde_complete", dex=718),
+    28032: species("indeedee", "indeedee_male", dex=876),
+    28033: species("indeedee_female", dex=876),
+    17760: species("darmanitan_standard", dex=555),
+    17762: species("darmanitan_galarian_standard", dex=555),
+}
+
+
+def test_zygarde_indeedee_and_battle_forms():
+    icons = [
+        go_art.parse(n)
+        for n in [
+            "pm718.fTEN_PERCENT.icon.png",
+            "pm718.fCOMPLETE_TEN_PERCENT.icon.png",
+            "pm718.fFIFTY_PERCENT.icon.png",
+            "pm876.fFEMALE.icon.png",
+        ]
+    ]
+    names = go_art.species_dex(
+        [SimpleNamespace(speciesName=n, dex=d) for n, d in [("Indeedee", 876), ("Darmanitan", 555), ("Zygarde", 718)]]
+    )
+    icons += [
+        go_art.parse_fandom(t, "https://x/" + t, names)
+        for t in [
+            "Indeedee female.png",
+            "Darmanitan zen galarian.png",
+            "Darmanitan galarian.png",
+            "Zygarde 10percent.png",
+        ]
+    ]
+    assigned, _ = go_art.assign(icons, ZYGARDE_AND_FRIENDS)
+    out = {sid: sorted(i.name for i in found) for sid, found in assigned.items()}
+    assert out[22977] == ["fandom_Zygarde_10percent.png"]  # one image per look, Fandom's
+    assert out[22980] == ["pm718.fCOMPLETE_TEN_PERCENT.icon.png"]
+    assert out[22976] == ["pm718.fFIFTY_PERCENT.icon.png"]
+    assert out[28033] == ["fandom_Indeedee_female.png", "pm876.fFEMALE.icon.png"]
+    assert out[17762] == ["fandom_Darmanitan_galarian.png"]  # the Zen form is skipped
+    assert 17760 not in out
+
+
+def test_fandom_names():
+    names = go_art.species_dex(
+        [
+            SimpleNamespace(speciesName=n, dex=d)
+            for n, d in [("Nidoran Female", 29), ("Mr. Mime", 122), ("Flabébé", 669)]
+        ]
+    )
+    nidoran = go_art.parse_fandom("Nidoran♀ shiny.png", "u", names)
+    assert (nidoran.dex, nidoran.form, nidoran.shiny, nidoran.source) == (29, "", True, "fandom")
+    assert go_art.parse_fandom("Mr. Mime galarian.png", "u", names).form == "GALARIAN"
+    assert go_art.parse_fandom("Flabébé blue.png", "u", names).form == "BLUE"
+    assert go_art.parse_fandom("Missingno.png", "u", names) is None
+    assert go_art.parse_fandom("Mr. Mime cry.ogg", "u", names) is None
+
+
+def test_fandom_is_preferred_for_the_same_look():
+    names = go_art.species_dex([SimpleNamespace(speciesName="Florges", dex=671)])
+    icons = [go_art.parse("pm671.fWHITE.icon.png"), go_art.parse_fandom("Florges white.png", "u", names)]
+    out = assign_icons(icons)
+    assert out[21472] == ["fandom_Florges_white.png"]
+
+
+def assign_icons(icons):
+    assigned, _ = go_art.assign(icons, CLASSES)
+    return {sid: [i.name for i in found] for sid, found in assigned.items()}

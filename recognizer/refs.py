@@ -1,11 +1,12 @@
 """Reference sprites: download and decode the images each species is matched against.
 
-Three sources per sprite class (keyed by the Dracoviz `sid`):
-  * Pokémon GO's own icon art (go_art.py), in each form, costume and shiny the class covers:
-    what the overlay actually draws, so it makes up half of a class's references;
+Two kinds of reference per sprite class (keyed by the Dracoviz `sid`):
+  * Pokémon GO's own art (go_art.py: the GO wiki's sprites and PokeMiners' mined icons), in each
+    form, costume and shiny the class covers: what the overlay actually draws, so it makes up half
+    of a class's references;
   * Showdown's animated 3D sprite, sampled to a handful of frames, which covers the poses the
-    overlay's animated sprites pass through;
-  * Pokémon Showdown's static HOME render.
+    overlay's animated sprites pass through.
+HOME renders were dropped: their poses often differ from the overlay's (Stunfisk face-on).
 """
 
 from __future__ import annotations
@@ -23,7 +24,6 @@ from PIL import Image, ImageSequence
 from .paths import CACHE, DATA, EXTRA_REFS
 
 SHOWDOWN_ANI = "https://play.pokemonshowdown.com/sprites/ani/{slug}.gif"
-HOME_RENDER = "https://play.pokemonshowdown.com/sprites/home/{slug}.png"
 REFS = CACHE / "refs"
 # Extra reference sprites live in your data directory (paths.EXTRA_REFS):
 # refs/extra/<speciesId>/<any name>.{png,gif,webp}, for overlay art the downloaded references don't
@@ -90,7 +90,6 @@ def download_all(workers: int = 8) -> None:
     for sid, members in sprite_classes().items():
         slug = next((m.showdownSlug for m in members if m.showdownSlug), None)
         if slug:
-            jobs.append((HOME_RENDER.format(slug=slug), REFS / "home" / f"{sid}.png"))
             jobs.append((SHOWDOWN_ANI.format(slug=slug), REFS / "showdown" / f"{sid}.gif"))
     with ThreadPoolExecutor(workers) as pool:
         results = list(tqdm(pool.map(lambda j: _download(*j, session), jobs), total=len(jobs), desc="sprites"))
@@ -159,11 +158,6 @@ def load_reference_images(sid: int) -> list[np.ndarray]:
     from . import go_art
 
     images = []
-    home = REFS / "home" / f"{sid}.png"
-    if home.exists() and home.stat().st_size:
-        img = Image.open(home).convert("RGBA")
-        img.thumbnail((256, 256), Image.LANCZOS)
-        images.append(np.asarray(img))
     gif = REFS / "showdown" / f"{sid}.gif"
     if gif.exists() and gif.stat().st_size:
         images.extend(_frames(gif))

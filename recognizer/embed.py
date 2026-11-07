@@ -122,7 +122,7 @@ def build_gallery(embedder, per_class: int = GALLERY_PER_CLASS, seed: int = 0) -
     from tqdm import tqdm
 
     from .refs import load_reference_images, sprite_classes
-    from .synth import load_backgrounds, load_palette, synth_tiles
+    from .synth import load_backgrounds, load_palette
 
     rng = np.random.default_rng(seed)
     palette = load_palette()
@@ -132,17 +132,31 @@ def build_gallery(embedder, per_class: int = GALLERY_PER_CLASS, seed: int = 0) -
         refs = load_reference_images(sid)
         if not refs:
             continue
-        feats.append(embedder(synth_tiles(refs, per_class, rng, palette, backgrounds)).astype(np.float16))
-        labels.extend([sid] * per_class)
+        tiles = class_tiles(sid, refs, per_class, rng, palette, backgrounds)
+        feats.append(embedder(tiles).astype(np.float16))
+        labels.extend([sid] * len(tiles))
     GALLERY_FILE.parent.mkdir(parents=True, exist_ok=True)
     np.savez(GALLERY_FILE, feats=np.concatenate(feats), labels=np.array(labels, np.int32))
+
+
+def class_tiles(sid: int, refs, per_class: int, rng, palette, backgrounds) -> list[np.ndarray]:
+    """A class's synthetic tiles: `per_class` cycling through its references, plus its plain GO
+    art in every state at set opacities and smoke strengths (synth.PLAIN_GRID)."""
+    from . import go_art
+    from .synth import plain_variants, synth_tiles
+
+    tiles = synth_tiles(refs, per_class, rng, palette, backgrounds)
+    plain = go_art.plain_image(sid)
+    if plain is not None:
+        tiles += plain_variants(plain, rng, palette, backgrounds)
+    return tiles
 
 
 def rebuild_gallery_classes(embedder, sids: list[int], per_class: int, seed: int = 0) -> None:
     """Re-render the gallery entries of some sprite classes (e.g. after adding extra
     references) and leave every other class's entries untouched."""
     from .refs import load_reference_images
-    from .synth import load_backgrounds, load_palette, synth_tiles
+    from .synth import load_backgrounds, load_palette
 
     data = np.load(GALLERY_FILE)
     keep = ~np.isin(data["labels"], sids)
@@ -151,8 +165,9 @@ def rebuild_gallery_classes(embedder, sids: list[int], per_class: int, seed: int
     palette, backgrounds = load_palette(), load_backgrounds()
     for sid in sids:
         refs = load_reference_images(sid)
-        feats.append(embedder(synth_tiles(refs, per_class, rng, palette, backgrounds)).astype(np.float16))
-        labels.append(np.full(per_class, sid, np.int32))
+        tiles = class_tiles(sid, refs, per_class, rng, palette, backgrounds)
+        feats.append(embedder(tiles).astype(np.float16))
+        labels.append(np.full(len(tiles), sid, np.int32))
     np.savez(GALLERY_FILE, feats=np.concatenate(feats), labels=np.concatenate(labels))
 
 

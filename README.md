@@ -144,8 +144,8 @@ deployment also serves the demo page from `public/`.
 | Stage | Module | Method |
 | --- | --- | --- |
 | Find grids | `grid.py` | Multi-scale search for a 2×3 lattice of tile borders, scored by coherent contrast across each border. Both teams of a full frame are scored as a pair, then lines are snapped and the lattice refit |
-| Reference sprites | `refs.py`, `go_art.py` | Pokémon GO's own icon art in every form, costume and shiny (what the overlay draws), plus Pokémon Showdown's animated sprites and HOME renders for poses, one class per sprite (Megas excluded) |
-| Synthetic tiles | `synth.py` | Sprites composited onto real tile backgrounds (sprite removed) or flat overlay fills, in bright, dimmed and fainted states, with stream-compression degradations |
+| Reference sprites | `refs.py`, `go_art.py` | Pokémon GO's own art in every form, costume and shiny (the GO wiki's sprites, then PokeMiners' mined icons), which is what the overlay draws, plus Pokémon Showdown's animated sprites for the poses the overlay's animation passes through; one class per sprite (Megas excluded) |
+| Synthetic tiles | `synth.py` | Sprites at the size the overlay draws them, composited onto real tile backgrounds (sprite removed) or flat overlay fills, in bright, dimmed and fainted states, shadow ones with smoke cut from real shadow tiles, with stream-compression degradations. Plain art outweighs forms, shinies and costumes, and each class also gets its plain art at a range of dimming and smoke levels |
 | Species | `embed.py`, `train_head.py`, `assign.py` | Frozen DINOv2 ViT-S/14 features and a cosine classifier trained on synthetic and real labeled tiles. A Hungarian assignment keeps a team from having the same species twice |
 | Shadow | `shadow.py` | A violet-pixel check on each tile's border band. When the smoke has lost its color (compressed crops, fainted tiles), a logistic regression on DINOv2 features of the band decides |
 | Names | `ocr.py` | RapidOCR (PaddleOCR PP-OCRv4) on the name bar and the country tag, optionally fuzzy-matched to an event roster |
@@ -159,6 +159,7 @@ Training needs the extra dependencies, `uv sync --extra train`. The steps:
 
 ```sh
 uv run recognizer update-species                # species list from PvPoke, Showdown and Smogon
+uv run recognizer smoke --from-tiles [shots...] # cut shadow smoke from shadow tiles into the data folder
 uv run recognizer build-refs --screens <folder> # download sprites, learn the overlay's tile colors, build the gallery
 uv run recognizer label-screens                 # propose who is on screen in each screenshot (review it!)
 uv run recognizer train --holdout <event>       # fit the shadow probe and species head
@@ -303,7 +304,7 @@ The code and the trained species head and shadow probe are MIT licensed. See
 [`LICENSE`](LICENSE) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for the bundled DINOv2
 weights (Apache-2.0) and PaddleOCR models (Apache-2.0).
 
-Sprites are downloaded from Pokémon Showdown and Pokémon GO's game assets (as mined by PokeMiners) at
-build time and aren't redistributed here. This
+Sprites are downloaded from Pokémon Showdown, the Pokémon GO wiki on Fandom and Pokémon GO's game
+assets (as mined by PokeMiners) at build time and aren't redistributed here. This
 project isn't affiliated with Niantic, Scopely, Nintendo, Creatures, GAME FREAK or The Pokémon
 Company. Pokémon and Pokémon GO are trademarks of their respective owners.

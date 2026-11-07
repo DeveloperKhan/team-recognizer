@@ -198,6 +198,43 @@ def cmd_write_fixtures(args) -> None:
     print(f"wrote {web_export.FIXTURES.relative_to(web_export.ROOT)}")
 
 
+def cmd_smoke(args) -> None:
+    import cv2
+    import numpy as np
+
+    from .io import load_rgb
+    from .paths import SMOKE
+    from .synth import extract_smoke
+
+    SMOKE.mkdir(parents=True, exist_ok=True)
+    sources = [(Path(image).stem.replace(" ", "_"), load_rgb(image)) for image in args.images]
+    if args.from_tiles:
+        from . import dataset
+
+        def purple_body(tile) -> bool:
+            # The smoke is told apart by color, so a purple Pokémon would pass for smoke
+            h, w = tile.shape[:2]
+            hsv = cv2.cvtColor(tile[int(0.3 * h) : int(0.75 * h), int(0.3 * w) : int(0.7 * w)], cv2.COLOR_RGB2HSV)
+            hue, sat = hsv[..., 0].astype(int), hsv[..., 1].astype(int)
+            return float(np.mean((hue >= 116) & (hue <= 165) & (sat >= 50))) > 0.04
+
+        records, _ = dataset.load()
+        for r in records:
+            tile = dataset.image(r)
+            if r.shadow and r.source == "screens" and not purple_body(tile):
+                sources.append((f"tile_{Path(r.file).stem}", tile))
+    kept = 0
+    for name, img in sources:
+        rgba = extract_smoke(img)
+        cover = float((rgba[..., 3] > 128).mean())
+        if cover < 0.04:
+            continue  # too faint to teach anything (dimmed or fainted shadows)
+        cv2.imwrite(str(SMOKE / f"{name}.png"), cv2.cvtColor(rgba, cv2.COLOR_RGBA2BGRA))
+        kept += 1
+    print(f"{kept} smoke textures from {len(sources)} images in {SMOKE}")
+    print("Rebuild the gallery (build-refs) to use them; commit the data folder to keep them.")
+
+
 def cmd_corrections(args) -> None:
     from . import corrections
 
@@ -310,6 +347,11 @@ def main(argv: list[str] | None = None) -> None:
         help="score accepted shared corrections instead (optionally only these events)",
     )
     p.set_defaults(func=cmd_eval)
+
+    p = sub.add_parser("smoke", help="cut shadow smoke textures from screenshots of shadow tiles")
+    p.add_argument("images", nargs="*", help="screenshots, each of one shadow tile")
+    p.add_argument("--from-tiles", action="store_true", help="also cut them from the labeled shadow tiles")
+    p.set_defaults(func=cmd_smoke)
 
     p = sub.add_parser("corrections", help="review corrections shared from play-graphic-tool")
     actions = p.add_subparsers(dest="action", required=True)

@@ -23,7 +23,8 @@ onnxruntime and onnxruntime-web (MIT), timm (Apache-2.0), PyTorch (BSD-3-Clause)
 - Species ids come from PvPoke's gamemaster (https://github.com/pvpoke/pvpoke, MIT).
 - Sprite ids and names come from Pokémon Showdown and Smogon's sprite index.
 - Reference sprites are downloaded when building the gallery (`recognizer build-refs`): Pokémon
-  Showdown's sprites, and Pokémon GO's icon art from PokeMiners' mined game assets
+  Showdown's sprites, and Pokémon GO's art from the Pokémon GO wiki on Fandom
+  (https://pokemongo.fandom.com/wiki/Category:Pokémon_sprites) and PokeMiners' mined game assets
   (https://github.com/PokeMiners/pogo_assets, pinned to a commit). They are not included in this
   repository or the npm package; only the models trained on them are.
 
